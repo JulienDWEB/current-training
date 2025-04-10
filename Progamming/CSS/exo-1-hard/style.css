@@ -1,0 +1,16 @@
+@font-face {
+    font-family:'Montserrat-Bold' ;
+    src: url(/CSS/exo-1-hard/asset/font/Montserrat-Bold.ttf);
+    font-family:'Montserrat-Regular' ;
+    src: url(/CSS/exo-1-hard/asset/font/Montserrat-Regular.ttf);
+    font-family:'OpenSans-Bold' ;
+    src: url(/CSS/exo-1-hard/asset/font/OpenSans_Condensed-Bold.ttf);
+    font-family:'OpenSans-Regular' ;
+    src: url(/CSS/exo-1-hard/asset/font/OpenSans_Condensed-Regular.ttf);
+}
+body {
+    margin: 0;
+}
+.cont-header {
+    background-color: orange;
+}
