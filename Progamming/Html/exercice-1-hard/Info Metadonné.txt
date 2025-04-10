@@ -1,0 +1,5 @@
+Charset : indique que UTF-8 et le format d'encodage utiliser
+UTF-8 : Format d'encodage de caraxtère ASCII,
+permet d'afficher les 110 000 Glyphe unicode et de couvrir toutes les langues.
+Viewport : est utiliser pour définir les dimension d'affichage largeur,hauteur
+Width = device = Widht garantie que la page est redimmensionner pour correspondre a la largeur de l'ecran.
