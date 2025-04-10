@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'segoeuithis';
+    src: url('/CSS/exo-1-medium/asset/font/segoe-ui-this/segoeuithis.ttf');
+}
+
+#title-header {
+    font-family: 'segoeuithis';
+    text-align: center;
+    color: rgb(61, 66, 90);
+}
+#art {
+    text-align: center;
+    font-family: 'segoeuithis';
+    font-size: 0.8rem;
+    color: gray;
+}
+.content {
+    margin-left: 15px;
+    font-family:'segoeuithis' ;
+}
+
+#title-main {
+    font-family:'segoeuithis' ;
+    color: rgb(83, 94, 146);
+
+}
+.typo {
+    font-size: 0.8rem;
+    color: gray;
+}
+#p2 {
+    font-weight: bold;
+}
+#p3 {
+    margin-left: 15px;
+}
+#Steve {
+    margin-left: 15px;
+    font-size: 0.7rem;
+}
+.police  {
+    color: rgb(65, 64, 64);
+}
+.proprietes {
+color:rgb(65, 64, 64);
+}
+#transform {
+    text-transform: uppercase;
+}
+#spacing {
+    letter-spacing:5px;
+}
+#line {
+    line-height: 150px;
+}
+#align {
+    text-align: center;
+}
+#decoration {
+    text-decoration: rgb(0, 128, 128) wavy underline;
+}
+#credit {
+    text-align: center;
+    font-size: 0.6rem;
+    color: rgb(117, 117, 117);
+}
