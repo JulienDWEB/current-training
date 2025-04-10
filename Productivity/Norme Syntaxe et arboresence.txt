@@ -1,0 +1,18 @@
+Formation-DWWM = formation-dwwm
+Formation-DWWM != formation-dwwm
+
+Formation-DWWM != formation-dwwm
+
+current-training
+	productivity
+		git
+		readme.md
+	programming
+		html-css 
+			cours
+			readme.md
+			playground
+				structure-page-html	
+					exercices-1-es
+		javascript
+	readme.md
