@@ -109,6 +109,7 @@ border-bottom:  1px solid white;
 }
 .title-p , p {
     text-align: left;
+    margin-bottom: 10px;
 }
 .Fonts {
     display: flex ;
@@ -184,4 +185,68 @@ border-bottom:  1px solid white;
 }
 .local-bold-mont {
     font-family: 'Montserrat-Bold' ;
+}
+ul {
+  list-style-type: decimal;
+  text-align: left;
+  font-family: 'Montserrat-Regular';
+
+  
+}
+li {
+  text-transform: uppercase;
+  font-family: 'Montserrat-Bold' ;
+  font-weight: 600;
+  padding: 10px 0 10px 0;
+}
+#li1 {
+  letter-spacing: 5px;
+}
+#li2 {
+  line-height: 40px;
+}
+#typo-avc {
+  text-align: left;
+    color: rgba(87, 162, 255, 0.918);
+    padding: 10px 0 10px;
+}
+#li5 {
+text-shadow: 0 0 3px blue;
+}
+#resp {
+  padding: 10px 0 10px;
+  text-align: left;
+  color: rgba(87, 162, 255, 0.918);
+}
+
+#credit {
+  position: relative;
+  left: -50%;
+  font-size: 0.8rem;
+  color: gray;
+}
+@media (max-width: 480px) {
+  #title-font-cont {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+#taille-resp {
+  font-size: 0.8rem;
+  letter-spacing: 5px;
+}
+  #resp, .typo-resp p {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  #h5-resp {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  #credit {
+    font-size: 0.7rem;
+    text-align: center;
+    padding-top: 20px;
+  }
 }
