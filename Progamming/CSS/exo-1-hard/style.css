@@ -14,6 +14,7 @@
   
   * {
     margin: 0;
+    
   }
   
   body {
@@ -87,7 +88,7 @@ border-bottom:  1px solid white;
     margin-top: 30px;
 }
 .cont-font {
-    background-color:  rgba(100, 100, 100, 0.432) ;
+    background-color:  rgba(224, 224, 224, 0.432) ;
 }
 #title-fonts {
     text-align: left;
@@ -96,12 +97,91 @@ border-bottom:  1px solid white;
 }
 #p1 {
     text-align: left;
-    color: rgba(0, 107, 194, 0.795);
+    color: rgba(87, 162, 255, 0.918);
     padding-top: 5px;
+    font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 0.8rem;
 }
 .cont-google-fonts {
     margin-bottom: 20px;
 }
 .title-p , p {
     text-align: left;
+}
+.Fonts {
+    display: flex ;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+    font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.Fonts > div {
+    flex: 1 1 200px; 
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 3px rgba(255, 255, 255, 0.61);
+    background-color:  rgba(236, 236, 236, 0.904) ;
+    max-width: 300px;
+   
+    
+}
+.Fonts > div:last-child {
+    margin-right: auto;
+}
+.Fonts > div > p {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    font-size: 0.7rem;
+    font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+#title-font-cont {
+    text-align: left;
+    color: rgba(87, 162, 255, 0.918);
+    padding-top: 5px;
+    font-family: "OpenSans-Bold", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  padding-bottom: 10px;
+}
+.Local {
+    display: flex ;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.Local > div {
+    flex: 1 1 200px; 
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 3px rgba(255, 255, 255, 0.61);
+    background-color:  rgba(236, 236, 236, 0.904) ;
+    max-width: 300px;
+   
+    
+}.Local > div:last-child {
+    margin-right: auto;
+}
+.cont-local {
+    margin-bottom: 20px;
+}
+.local-regu {
+    font-family: 'OpenSans-Regular';
+}
+.local-bold {
+    font-family: 'OpenSans-Bold';
+}
+.local-regular {
+     font-family: 'Montserrat-Regular'
+}
+.local-bold-mont {
+    font-family: 'Montserrat-Bold' ;
 }
