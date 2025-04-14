@@ -1,0 +1,46 @@
+.background-element {
+    background-image: url(/CSS/backgroud-exo/exo-1-easy/img/Background-2.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+  
+    display: flex;
+    align-items: center;   /* vertical */
+    justify-content: space-between;
+    flex-direction: column;
+
+}
+.background-element h1 {
+    color: aliceblue;
+    text-shadow: 5px 5px 5px black;
+    display: inline-block; 
+ }
+ .cont-1 {
+    background-color: rgba(0, 0, 0, 0.486);
+    margin: 50px auto;
+    display: inline-block;
+    width: 70%;
+    padding: 0 10px 0 10px;
+
+ }
+ .cont-2 {
+    background-color: rgba(0, 0, 0, 0.486);
+    margin: 50px auto;
+    display: inline-block;
+    width: 70%;
+    padding: 0 10px 0 10px;
+ }
+ .cont-1 p {
+color: aliceblue;
+
+ }
+ .cont-2 p {
+    color: aliceblue;
+ }
+ #background-footer {
+    color: aliceblue;
+    background-color: rgba(0, 0, 0, 0.486);
+    width: 100%;
+    text-align: center;
+ }
