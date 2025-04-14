@@ -1,0 +1,13 @@
+.background-element {
+    background-image: url(/CSS/backgroud-exo/exo-1-easy/img/Background-2.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    position: absolute;
+}
+.background-element h1 {
+    color: aliceblue;
+    text-align: center;
+    position: relative;
+}
