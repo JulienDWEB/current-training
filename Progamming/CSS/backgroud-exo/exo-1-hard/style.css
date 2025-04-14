@@ -1,7 +1,8 @@
-* {
+body {
     color: aliceblue;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 .background-body {
     background-image: url(/CSS/backgroud-exo/exo-1-hard/img/background-1.jpg);
     background-repeat: no-repeat;
@@ -66,4 +67,8 @@ margin: 0;
     background-color: rgba(128, 128, 128, 0.288);
     margin: 0 10px 0 10px;
     padding: 10px 10px;
+}
+#form {
+    display: flex;
+    flex-direction: column;
 }
