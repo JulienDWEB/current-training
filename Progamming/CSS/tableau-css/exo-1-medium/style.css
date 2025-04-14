@@ -3,7 +3,7 @@
 }
 
 #title-tab {
-    background: #2A7B9B;
+background: #2A7B9B;
 background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);  
 padding: 10px 15px ;
 width: 100%;
@@ -47,4 +47,13 @@ td, th {
 }
 #t-amerique {
     font-weight: bold;
+}
+.europe {
+    background-color: #2a7b9b5d;
+}
+#amerique {
+    background-color: #708f9b5d;
+}
+#total {
+    background-color: rgb(166, 245, 196);
 }
