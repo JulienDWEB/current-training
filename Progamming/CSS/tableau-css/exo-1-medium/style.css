@@ -1,0 +1,50 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#title-tab {
+    background: #2A7B9B;
+background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);  
+padding: 10px 15px ;
+width: 100%;
+border-radius:  10px 10px 0 0;
+margin-bottom: 0;
+box-sizing: border-box;
+text-align: center;
+color: white;
+}
+.tab-1 {
+display: block;
+width: 50%;
+}
+.categorie {
+    background-color: rgba(36, 36, 36, 0.74);
+   
+}
+table {
+    border-spacing: 0;
+}
+.categorie > th {
+    text-align: left;
+    color: white;
+    height: 30px;
+}
+#t1 {
+    width: 100%;
+}
+td, th {
+    padding: 8px 15px;
+  }
+#total  {
+    text-align: right;
+    
+}
+#toto {
+    text-align: left;
+}
+#t-europe {
+    font-weight: bold;
+}
+#t-amerique {
+    font-weight: bold;
+}
