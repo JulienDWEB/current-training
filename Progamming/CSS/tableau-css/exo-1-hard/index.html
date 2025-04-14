@@ -6,6 +6,7 @@
     <title>exo-1-hard-tab</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+  <section class="cont-main">
   <header>
     <section class="cont-header">
       <h1 id="title-header">TechSolutions SAS</h1>
@@ -15,35 +16,91 @@
         <li>Email; contact@techsolution.fr</li>
         <li>+33 1 23 45 67 89</li>
         <li>SIRET: 123 456 789 00012</li>
-      </ul>
+      </ul></section>
       <section class="cont-header-right">
         <h1>Facture</h1>
         <ul>
-          <li>Facture N° FA-2023-0458</li>
-          <li>Date 10/04/2025</li>
-          <li>Echéance 10/05/2025</li>
+          <li><span id="span-header">Facture N°</span> FA-2023-0458</li>
+          <li><span id="span-header">Date</span> 10/04/2025</li>
+          <li><span id="span-header">Echéance</span> 10/05/2025</li>
         </ul>
       </section>
-    </section>
+    
   </header>
   <body>
     <main>
-      <h3>facturer à:</h3>
+      <h3 id="title-main">facturer à:</h3>
       <section class="cont-digital">
         <div id="trait">
-        <h6>Digital Innovations SARL</h6>
+        
         <ul>
+            <h6>Digital Innovations SARL</h6>
           <li>56 Rue du Commerce</li>
           <li>69002 Lyon, France</li>
           <li>SIRET: 987 654 321 00021</li></div>
         </ul>
       </section>
       <section class="cont-tab">
-        <table>
-            
+        <table id="tab">
+            <tr class="categorie">
+                <th>Description</th>
+                <th>Quantité</th>
+                <th>Prix unitaire</th>
+                <th>Total HT</th>
+              </tr>
+              <tr>
+                <td>Développement Site Web E-commerce Design et développement front-end Responsive</td>
+                <td>1</td>
+                <td>6.500.00 &#8364;</td>
+                <td>6 500.00 &#8364;</td>
+              </tr>
+              <tr>
+                <td>API Paiement intégration des solutions de paiement</td>
+                <td>1</td>
+                <td>1.200.00 &#8364;</td>
+                <td>1.200.00 &#8364;</td>
+              </tr>
+              <tr>
+                <td>Hébergement Premium Scaleway Cloud - 12 mois</td>
+                <td>12</td>
+                <td>150.00 &#8364;</td>
+                <td>1 800.00 &#8364;</td>
+              </tr>
+              <tr>
+                <td>Formation Utilisateur Session de 4 heures (tarif horaire)</td>
+                <td>8</td>
+                <td>120.00 &#8364;</td>
+                <td>960.00 &#8364;</td>
+              </tr>
+              <tr>
+                <td>Sous-total HT</td>
+                <td></td>
+                <td></td>
+                <td>10 460.00 &#8364;</td>
+              </tr>
+              <tr>
+                <td>TVA (20%)</td>
+                <td></td>
+                <td></td>
+                <td>2.092.00 &#8364;</td>
+              </tr>
+              <tr>
+                <td>Total TTC</td>
+                <td></td>
+                <td></td>
+                <td>12.552.00 &#8364;</td>
+              </tr>
         </table>
+        <h4>Informations de paiement</h4>
+        <p><span>IBAN :</span>FR76 1234 5678 9101 1121 3141 516</p>
+        <P><span>BIC :</span>AGRIFPPR</P>
+        <p><span>Banque :</span>Credit Agricole Paris</p>
       </section>
-      
+      <footer>
+        <h3>Conditions de paiement</h3>
+        <p>Paiement du à 30 jours date de facture.Un intérêt de 10% sera appliqué sur les paiements effectués après la date d'échéance.</p>
+        <span>Nous vous remercions pour votre confiance : </span>
+      </footer>
     </main>
-  </body>
+  </body> </section>
 </html>
