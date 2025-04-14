@@ -211,8 +211,6 @@ ul {
   list-style-type: decimal;
   text-align: left;
   font-family: 'Montserrat-Regular';
-
-  
 }
 li {
   text-transform: uppercase;
@@ -249,7 +247,7 @@ text-shadow: 0 0 3px blue;
 .cont-typo-resp {
   background-color:  rgba(190, 255, 130, 0.623) ;
   padding: 15px;
-  box-shadow: 0 0 3px gray;
+  box-shadow: 0 0 3px rgb(24, 24, 24);
   border: 10px;
   margin-bottom: 15px;
 }
