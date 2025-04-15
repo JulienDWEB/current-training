@@ -1,0 +1,55 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.contact {
+    display: grid;
+    flex-direction: column;
+    align-items: center;
+   margin: 0 30px 0 30px;
+   border: 1px solid rgb(164, 252, 164);
+background-color: rgb(198, 227, 253);
+box-shadow: -5px -5px 13px -7px #000000;
+}
+.contact h1 {
+    text-align: center;
+}
+.contact label {
+    font-weight: bold;
+    padding: 5px 0 5px 0;
+}
+#msg {
+    height: 100px;
+    border: 1px solid rgb(164, 252, 164);
+}
+input[type="radio"]:checked + label .custom-radio::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 5px;
+    height: 5px;
+    background-color: #333;
+  }
+  input[type="radio"] {
+    display: none;
+  }
+
+  .custom-radio {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #333;
+    margin-right: 10px;
+    vertical-align: middle;
+    position: relative;
+  }
+  button {
+    width: 20%;
+    height: 30px;
+    border-radius: 5px 5px 5px 5px;
+    background-color: rgba(81, 211, 146, 0.925);
+    border: 0;
+  }
+  input {
+    border: 1px solid rgb(164, 252, 164);
+  }

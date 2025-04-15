@@ -10,19 +10,23 @@ body {
     width: 100%;
     height: 100vh;
     background-size: cover;
-    display: grid;
-    align-items: center;
-    align-content: space-between;
-  justify-content: center;
+    display: grid;  
+    /*transforme un élément en grille CSS (grid container). C’est un système de mise en page en 2 dimensions (lignes et colonnes) super puissant et flexible. */
+    align-items: center; /*  Cible les éléments enfants individuellement, Centre chaque élément dans sa propre cellule (ou ligne) sur l'axe vertical (axe cross-axis) 
+    Pour centrer verticalement les éléments dans leurs cases..*/
+    align-content: space-between; 
+   justify-content: center; /*Aligne les éléments sur l’axe principal (horizontale par défaut) */
+  
 }
 .nav {
-    display: flex;
+    display: flex; /*transforme un élément en conteneur flexible (flex container).
+    Ça te permet d’aligner facilement les éléments à l’intérieur, horizontalement ou verticalement, sans galérer avec float, margin, ou position.*/
     justify-content: space-between;
 }
 .nav ul {
     list-style-type: none;
     display: flex;
-align-items: center;
+    align-items: center;
 
 }
 .nav ul > li {
@@ -94,9 +98,10 @@ margin: 0;
     padding: 10px 10px;
 }
 #form {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     align-items: center;
+    justify-content: center;
+    justify-items: center;
 }
 .cont-form {
     background-color:rgba(0, 0, 0, 0.651) ;
@@ -106,15 +111,12 @@ footer {
     text-align: center;
 }
 #form input {
-    width: 50%;
+    width: 100%;
     height: 2vh;
     margin-bottom: 15px;
 }
 #form > input:nth-last-child(2) {
-    width: 50%;
+    width: 100%;
     height: 10vh;
     margin-bottom: 15px;
-}
-form > input > .myButton {
-    
 }
