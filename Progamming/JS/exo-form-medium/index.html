@@ -23,33 +23,29 @@
       <input type="date" id="bdate" />
       <div class="genre">
         <h3>Genre</h3>
-        <label for="check"><span class="custom-radio"></span> Homme</label>
-        <label for="check"><span class="custom-radio"></span> Femme</label>
-        <label for="check"><span class="custom-radio"></span> Autre</label>
+        <label for="valide1"><input  type="checkbox" class="valide1"></input> Homme</label>
+        <label for="valide1"><input type="checkbox" class="valide1"></input> Femme</label>
+        <label for="valide1"><input type="checkbox" class="valide1"></input> Autre</label>
       </div>
-      <div class="pays">
+      <div class="pays"> 
         <h3>Pays</h3>
         <select name="pays" id="pays">
           <option value="select">Sélectionnez votre pays</option>
         </select>
       </div>
-      <input type="checkbox" id="check" name="condition" />
-      <label for="check">
-        <span class="custom-radio"></span>
-        J'accepte les
+      <div class="cont-check">
+        <div class="check-right">
+     <input type="checkbox" class="valide1">
+   <span> J'accepte les
         <a href="https://urlr.me/conditions-generales-d-utilisation"
-          >conditions d'utilisation</a
-        >
-        et la
+          >conditions d'utilisation</a> et la
         <a href="https://urlr.me/politique-de-confidentialite"
-          >politique de confidentialite</a
-        >
-      </label>
-      <input type="radio" id="check" name="condition" />
-      <label for="check">
-        <span class="custom-radio"></span>
-        je souhaite recevoir la newsletter
-      </label>
+          >politique de confidentialite</a></span>
+      </label></div>
+      <div class="check-left">
+      <input type="checkbox" class="valide1">
+      <span>je souhaite recevoir la newsletter</span>  
+    </div> </div>
       <div id="button">
         <button>Réinitialiser</button>
         <button>S'inscrire</button>

@@ -23,15 +23,6 @@ justify-items: center;
     border: 1px solid rgb(164, 252, 164);
 }
 
-  .custom-radio {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    border: 1px solid #333;
-    margin-right: 10px;
-    vertical-align: middle;
-    position: relative;
-  }
   button {
     width: 80%;
     height: 30px;
@@ -43,20 +34,38 @@ justify-items: center;
     border: 1px solid rgb(164, 252, 164);
     width:80%;
     height: 40px;
+    border-radius: 8px ;
+   
   }
   #info {
     width: 80%;
   }
   button {
-    margin: 10px 0 10px 0 ;
+    margin: 10px 0px 10px 40px ;
   }
   h3 {
     margin: 0;
   }
  #pays {
 font-weight: bold;
+width: 85vh;
+height: 30px;
+margin-top: 5px;
+border-radius: 8px ;
+border: 1px solid rgb(164, 252, 164);
+margin-bottom: 20px;
  }
 #button {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 3fr 7fr;
+   width: 100%;
+   
+}
+label {
+    text-align: left;
+
+}
+.valide1 {
+  height: 15px;  
+  width: 15px;
 }
