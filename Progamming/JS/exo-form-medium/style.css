@@ -23,9 +23,17 @@ justify-items: center;
     border: 1px solid rgb(164, 252, 164);
 }
 
-
+  .custom-radio {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #333;
+    margin-right: 10px;
+    vertical-align: middle;
+    position: relative;
+  }
   button {
-    width: 20%;
+    width: 80%;
     height: 30px;
     border-radius: 5px 5px 5px 5px;
     background-color: rgba(81, 211, 146, 0.925);
@@ -34,6 +42,7 @@ justify-items: center;
   input {
     border: 1px solid rgb(164, 252, 164);
     width:80%;
+    height: 40px;
   }
   #info {
     width: 80%;
@@ -41,11 +50,13 @@ justify-items: center;
   button {
     margin: 10px 0 10px 0 ;
   }
-  .cont-check {
-   display: flex;
-   align-items: center;
-   align-content: center;
+  h3 {
+    margin: 0;
   }
-  #check {
-    width: 50px;
-  }
+ #pays {
+font-weight: bold;
+ }
+#button {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}

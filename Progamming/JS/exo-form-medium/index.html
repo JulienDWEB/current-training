@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="contact">
+      <h1>Contactez-nous</h1>
+      <label for="prenom">Prénom</label>
+      <input type="text" id="prenom" />
+      <label for="nom">Nom</label>
+      <input type="text" id="nom" />
+      <label for="email">Email</label>
+      <input type="text" id="email" />
+      <label for="mdp">Mot de passe</label>
+      <input type="text" id="mdp" />
+      <label for="confirmer">Confirmer le Mot de passe</label>
+      <input type="text" id="confirmer" />
+      <label for="bdate">Date de naissance</label>
+      <input type="date" id="bdate" />
+      <div class="genre">
+        <h3>Genre</h3>
+        <label for="check"><span class="custom-radio"></span> Homme</label>
+        <label for="check"><span class="custom-radio"></span> Femme</label>
+        <label for="check"><span class="custom-radio"></span> Autre</label>
+      </div>
+      <div class="pays">
+        <h3>Pays</h3>
+        <select name="pays" id="pays">
+          <option value="select">Sélectionnez votre pays</option>
+        </select>
+      </div>
+      <input type="checkbox" id="check" name="condition" />
+      <label for="check">
+        <span class="custom-radio"></span>
+        J'accepte les
+        <a href="https://urlr.me/conditions-generales-d-utilisation"
+          >conditions d'utilisation</a
+        >
+        et la
+        <a href="https://urlr.me/politique-de-confidentialite"
+          >politique de confidentialite</a
+        >
+      </label>
+      <input type="radio" id="check" name="condition" />
+      <label for="check">
+        <span class="custom-radio"></span>
+        je souhaite recevoir la newsletter
+      </label>
+      <div id="button">
+        <button>Réinitialiser</button>
+        <button>S'inscrire</button>
+      </div>
+    </section>
+  </body>
+</html>

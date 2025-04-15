@@ -9,21 +9,28 @@
   <body>
     <section class="contact">
       <h1>Contactez-nous</h1>
+
       <label for="nom">Nom</label>
-      <input type="text" />
+      <input type="text" id="nom" />
+
       <label for="email">Email</label>
-      <input type="text" />
-      <label for="sujet">Sujet</label>
+      <input type="text" id="email" />
+
+      <label for="info">Sujet</label>
       <select name="info" id="info">
         <option value="demande">Demande d'information</option>
       </select>
-      <label for="message">Message</label>
+
+      <label for="msg">Message</label>
       <input type="text" id="msg" />
-      <input type="radio" id="check" name="condition" />
-      <label for="check">
-        <span class="custom-radio"></span>
-        J'accepte les conditions d'utilisation
-      </label>
+      <div class="cont-check">
+        <input type="checkbox" id="check" name="condition" />
+        <label for="check">
+          <span class="custom-radio"></span>
+          J'accepte les conditions d'utilisation
+        </label>
+      </div>
+
       <button>Envoyer</button>
     </section>
   </body>
