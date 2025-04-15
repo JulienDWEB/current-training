@@ -10,6 +10,8 @@ body {
 background-color: rgb(198, 227, 253);
 box-shadow: -3px 11px 20px 0px #000000;
 justify-items: center;
+justify-content: center;
+width: 40%;
 }
 .contact h1 {
     text-align: center;
@@ -40,15 +42,12 @@ justify-items: center;
   #info {
     width: 80%;
   }
-  button {
-    margin: 10px 0px 10px 40px ;
-  }
   h3 {
     margin: 0;
   }
  #pays {
 font-weight: bold;
-width: 85vh;
+width: 37vh;
 height: 30px;
 margin-top: 5px;
 border-radius: 8px ;
@@ -69,3 +68,38 @@ label {
   height: 15px;  
   width: 15px;
 }
+.form-group {
+  display: grid;
+  width: 100%;
+
+}
+.form-wrapper {
+  display: grid;
+  grid-template-columns: 1fr; 
+  width: 80%; 
+  max-width: 600px;
+}
+.mybutton {
+	box-shadow: 0px 10px 14px -7px #3e7327;
+	background:linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
+	background-color:#77b55a;
+	border-radius:4px;
+	border:1px solid #4b8f29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	font-weight:bold;
+	padding:6px 12px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #5b8a3c;
+    margin-bottom: 20px;
+}
+.mybutton:hover {
+	background:linear-gradient(to bottom, #414141 5%, #3b4934 100%);
+	background-color:#72b352;
+}
+.mybutton:active {
+	position:relative;
+	top:1px;  }

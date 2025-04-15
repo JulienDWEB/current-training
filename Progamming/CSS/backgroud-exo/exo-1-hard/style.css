@@ -37,7 +37,7 @@ body {
     text-align: center;
    
 }
-.myButton {
+.mybutton {
 	box-shadow: 0px 10px 14px -7px #3e7327;
 	background:linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
 	background-color:#77b55a;
@@ -54,11 +54,11 @@ body {
 	text-shadow:0px 1px 0px #5b8a3c;
     margin-bottom: 20px;
 }
-.myButton:hover {
+.mybutton:hover {
 	background:linear-gradient(to bottom, #414141 5%, #3b4934 100%);
 	background-color:#72b352;
 }
-.myButton:active {
+.mybutton:active {
 	position:relative;
 	top:1px;
 }

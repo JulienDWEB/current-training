@@ -8,31 +8,53 @@
   </head>
   <body>
     <section class="contact">
-      <h1>Contactez-nous</h1>
-      <label for="prenom">Prénom</label>
-      <input type="text" id="prenom" />
-      <label for="nom">Nom</label>
-      <input type="text" id="nom" />
-      <label for="email">Email</label>
-      <input type="text" id="email" />
+      <div class="form-wrapper"> <h1>Contactez-nous</h1></div>
+      <div class="form-wrapper">
+        <div class="form-group">
+          <label for="prenom">Prénom</label>
+          <input type="text" id="prenom" />
+        </div></div>
+    
+        <div class="form-wrapper">
+         <div class="form-group">
+        <label for="nom">Nom</label>
+        <input type="text" id="nom" />
+     </div> </div>
+    
+     <div class="form-wrapper">
+     <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" id="email" />
+      </div></div>
+      <div class="form-wrapper">
+      <div class="form-group">
       <label for="mdp">Mot de passe</label>
       <input type="text" id="mdp" />
-      <label for="confirmer">Confirmer le Mot de passe</label>
+    </div> </div>
+    <div class="form-wrapper">
+      <div class="form-group">
+      <label for="confirmer" >Confirmer le Mot de passe</label>
       <input type="text" id="confirmer" />
+    </div> </div>
+    <div class="form-wrapper">
+    <div class="form-group">
       <label for="bdate">Date de naissance</label>
-      <input type="date" id="bdate" />
+      <input type="date" id="bdate" /> </div></div>
+      <div class="form-wrapper">
       <div class="genre">
         <h3>Genre</h3>
-        <label for="valide1"><input  type="checkbox" class="valide1"></input> Homme</label>
-        <label for="valide1"><input type="checkbox" class="valide1"></input> Femme</label>
-        <label for="valide1"><input type="checkbox" class="valide1"></input> Autre</label>
+        <label for="valide1"><input  type="checkbox" class="valide1" id="valide1"></input> Homme</label>
+        <label for="valide2"><input type="checkbox" class="valide1" id="valide2"></input> Femme</label>
+        <label for="valide3"><input type="checkbox" class="valide1" id="valide3"></input> Autre</label></div>
       </div>
+      <div class="form-wrapper">
       <div class="pays"> 
         <h3>Pays</h3>
         <select name="pays" id="pays">
           <option value="select">Sélectionnez votre pays</option>
         </select>
-      </div>
+      </div></div>
+      <div class="form-wrapper">
       <div class="cont-check">
         <div class="check-right">
      <input type="checkbox" class="valide1">
@@ -41,15 +63,16 @@
           >conditions d'utilisation</a> et la
         <a href="https://urlr.me/politique-de-confidentialite"
           >politique de confidentialite</a></span>
-      </label></div>
+      </label></div> </div>
       <div class="check-left">
       <input type="checkbox" class="valide1">
       <span>je souhaite recevoir la newsletter</span>  
     </div> </div>
+    <div class="form-wrapper">
       <div id="button">
-        <button>Réinitialiser</button>
-        <button>S'inscrire</button>
-      </div>
+        <button class="mybutton" type="reset">Réinitialiser</button>
+        <button class="mybutton" type="submit">S'inscrire</button>
+      </div></div>
     </section>
   </body>
 </html>
