@@ -11,32 +11,47 @@
     <form action="page-2" method="post">
       <section class="cont-1">
         <h1>Demande de devis</h1>
-        <div class="cont-onglet">
-          <div id="1">
-            <label for="onglet-1"> <input type="checkbox" /></label>
+        <div class="cont-onglet" class="tab-content">
+          <div class="o-1">
+            <div id="tab-1">
+              <input type="checkbox" id="onglet-1" onclick="changeTab(1)" />
+              <label for="onglet-1">1</label>
+            </div>
           </div>
-          <div id=" 2">
-            <label for="onglet-2"> <input type="checkbox" /></label>
+          <div class="trait"></div>
+          <div class="o-1">
+            <input type="checkbox" id="onglet-2" onclick="changeTab(2)" />
+            <label for="onglet-2">2</label>
           </div>
-          <div id="3">
-            <label for="onglet-3"> <input type="checkbox" /></label>
+          <div class="trait"></div>
+          <div class="o-1">
+            <input type="checkbox" id="onglet-3" onclick="changeTab(3)" />
+            <label for="onglet-3">3</label>
           </div>
         </div>
         <h2>Informations personnelles</h2>
         <section id="info-perso">
-          <label for="input-prenom"
-            >Prénom <input type="text" id="input-prenom"
-          /></label>
-          <label for="input-nom"
-            >Nom <input type="text" id="input-nom"
-          /></label>
-          <label for="input-email"
-            >Email <input type="text" id="input-email"
-          /></label>
-          <label for="input-telephone"
-            >Télephone <input type="text" id="input-telephone"
-          /></label>
-          <button type="submit">Suivant</button>
+          <div class="cont-input">
+            <label for="input-prenom"
+              >Prénom <input type="text" id="input-prenom"
+            /></label>
+          </div>
+          <div class="cont-input">
+            <label for="input-nom"
+              >Nom <input type="text" id="input-nom"
+            /></label>
+          </div>
+          <div class="cont-input">
+            <label for="input-email"
+              >Email <input type="text" id="input-email"
+            /></label>
+          </div>
+          <div class="cont-input">
+            <label for="input-telephone"
+              >Télephone <input type="text" id="input-telephone"
+            /></label>
+          </div>
+          <button type="submit" class="myButton">Suivant</button>
         </section>
       </section>
     </form>
