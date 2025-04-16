@@ -1,129 +1,120 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-.contact {
-    display: grid;
-    flex-direction: column;
-    align-items: center;
-   margin: 0 30px 0 30px;
-   border: 1px solid rgb(164, 252, 164);
-background-color: rgb(198, 227, 253);
-box-shadow: -3px 11px 20px 0px #000000;
-justify-items: center;
-justify-content: center;
-width: 40%;
+
+/* CONTAINER AND FORMS */
+#contact-form {
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid rgb(164, 252, 164);
+  background-color: rgb(198, 227, 253);
+  box-shadow: -3px 11px 20px 0px #000000;
+  padding: 30px;
 }
+
 .contact h1 {
-    text-align: center;
+  text-align: center;
 }
 .contact label {
-    font-weight: bold;
-    padding: 5px 0 5px 0;
-}
-#msg {
-    height: 100px;
-    border: 1px solid rgb(164, 252, 164);
+  font-weight: bold;
+  padding: 5px 0 5px 0;
 }
 
-  button {
-    width: 80%;
-    height: 30px;
-    border-radius: 5px 5px 5px 5px;
-    background-color: rgba(81, 211, 146, 0.925);
-    border: 0;
-  }
-  input {
-    border: 1px solid rgb(164, 252, 164);
-    width:80%;
-    height: 40px;
-    border-radius: 8px ;
-   
-  }
-  #info {
-    width: 80%;
-  }
-  h3 {
-    margin: 0;
-  }
- #pays {
-font-weight: bold;
-width: 37vh;
-height: 30px;
-margin-top: 5px;
-border-radius: 8px ;
-border: 1px solid rgb(164, 252, 164);
-margin-bottom: 20px;
- }
-#button {
-    display: grid;
-    grid-template-columns: 3fr 7fr;
-   width: 100%;
-   
+/* BUTTON AND INPUT*/
+
+input {
+  border: 1px solid rgb(164, 252, 164);
+  width: 100%;
+  height: 40px;
+  border-radius: 8px;
 }
+
 label {
-    text-align: left;
-
+  text-align: left;
+  display: block;
 }
+
+.mybutton {
+  box-shadow: 0px 10px 14px -7px #3e7327;
+  background: linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
+  background-color: #77b55a;
+  border-radius: 4px;
+  border: 1px solid #4b8f29;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 6px 12px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #5b8a3c;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.mybutton:hover {
+  background: linear-gradient(to bottom, #414141 5%, #3b4934 100%);
+  background-color: #72b352;
+}
+.mybutton:active {
+  position: relative;
+  top: 1px;
+}
+#button {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+}
+
+button {
+  height: 40px;
+  border-radius: 5px 5px 5px 5px;
+  background-color: rgba(81, 211, 146, 0.925);
+  border: 0;
+}
+
+/* Paramettre Other */
+
 .valide1 {
-  height: 15px;  
+  height: 15px;
   width: 15px;
 }
 .check1 {
-  height: 15px;  
+  height: 15px;
   width: 15px;
 }
 .check2 {
-  height: 15px;  
+  height: 15px;
   width: 15px;
 }
-.form-group {
-  display: grid;
+#pays {
+  font-weight: bold;
   width: 100%;
+  height: 40px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid rgb(164, 252, 164);
+  margin-bottom: 20px;
+}
+#msg {
+  height: 100px;
+  border: 1px solid rgb(164, 252, 164);
+}
+#mdp-caract {
+  padding-top: 5px;
+  font-size: 0.7rem;
+  color: grey;
+}
 
+.genre > h3 {
+  margin: 0px 0 10px 0;
 }
-.form-wrapper {
-  display: grid;
-  grid-template-columns: 1fr; 
-  width: 80%; 
-  max-width: 600px;
+.genre {
+  margin: 10px 0 10px 0;
 }
-.mybutton {
-	box-shadow: 0px 10px 14px -7px #3e7327;
-	background:linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
-	background-color:#77b55a;
-	border-radius:4px;
-	border:1px solid #4b8f29;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:13px;
-	font-weight:bold;
-	padding:6px 12px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #5b8a3c;
-    margin-bottom: 20px;
-    margin-top: 20px;
+#info {
+  width: 80%;
 }
-.mybutton:hover {
-	background:linear-gradient(to bottom, #414141 5%, #3b4934 100%);
-	background-color:#72b352;
+h3 {
+  margin: 0;
 }
-.mybutton:active {
-	position:relative;
-	top:1px;  }
-  #mdp-caract {
-    padding-top: 5px;
-    font-size: 0.7rem;
-    color: grey;
-  }
-  #contact-form {
-    display: grid;
-    justify-items: center;
-  }
-  .genre > h3 {
-    margin: 0px 0 10px 0;
-  }
-  .genre {
-    margin: 10px 0 10px 0;
-  }
