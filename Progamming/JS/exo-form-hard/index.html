@@ -5,30 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
+    <!-- // utilisation < defer >  -->
+    <!-- // permet de charger la partie js en parrallèle et  -->
+    <!-- // execute qu'une fois le HTML pret  -->
+    <script src="script.js" defer></script>
   </head>
   <body>
-    <form action="page-2" method="post">
-      <section class="cont-1">
+    <!-- PAGE 1 DU FORMULAIRE -->
+
+    <!-- ONGLET 1.2.3 -->
+      <section id="tab1" class="contenu actif">
         <h1>Demande de devis</h1>
-        <div class="cont-onglet" class="tab-content">
-          <div class="o-1">
-            <div id="tab-1">
-              <input type="checkbox" id="onglet-1" onclick="changeTab(1)" />
-              <label for="onglet-1">1</label>
-            </div>
-          </div>
-          <div class="trait"></div>
-          <div class="o-1">
-            <input type="checkbox" id="onglet-2" onclick="changeTab(2)" />
-            <label for="onglet-2">2</label>
-          </div>
-          <div class="trait"></div>
-          <div class="o-1">
-            <input type="checkbox" id="onglet-3" onclick="changeTab(3)" />
-            <label for="onglet-3">3</label>
+        <div id="cont-onglet" class="tab-content">
+          <div class="onglet" data-target="tab1">1</div>
+          <div class="onglet" data-target="tab2">2</div>
+          <div data-target="tab3" class="onglet">3</div>
           </div>
         </div>
+        <!-- INFORMATION PERSONNELLES INPUT  -->
         <h2>Informations personnelles</h2>
         <section id="info-perso">
           <div class="cont-input">
@@ -51,9 +45,34 @@
               >Télephone <input type="text" id="input-telephone"
             /></label>
           </div>
-          <button type="submit" class="myButton">Suivant</button>
+          <!-- BOUTTON SUIVANT -->
+          <button type="button" class="next">Suivant</button>
         </section>
       </section>
-    </form>
+    
+
+<section id="tab2" class="contenu">
+<h1>Demande de devis</h1>
+<div id="cont-onglet" class="tab-content">
+  <div class="onglet" data-target="tab1">1</div>
+  <div class="trait-1"></div>
+  <div class="onglet" data-target="tab2">2</div>
+  <div data-target="tab3" class="onglet">3</div>
+  </div>
+  <h2>Détail du projet</h2>
+  
+<button type="button" class="next">Suivant</button>
+
+
+</section>
+
+
+<section id="tab3" class="contenu">
+  <h2>Résumé</h2>
+  <p>Merci pour votre demande !</p>
+  <button type="submit">Envoyer</button>
+</section>
+
+    
   </body>
 </html>

@@ -11,14 +11,14 @@ body {
 }
 
 /* Containers - Mise en Page */
-.cont-1 {
+.contenu {
   width: 80%;
   margin: 0 auto;
   padding: 30px;
   background-color: rgba(0, 0, 0, 0.212);
   box-shadow: -3px 11px 20px 0px #000000;
 }
-.cont-onglet {
+#cont-onglet {
   display: flex;
   justify-content: space-around;
 }
@@ -29,7 +29,7 @@ body {
   margin: 5px 0 5px 0;
 }
 /* Texte */
-.cont-1 h1 {
+.contenu h1 {
   text-align: center;
   color: rgb(255, 255, 255);
   text-shadow: 3px 1px 0px rgba(41, 140, 138, 0.295);
@@ -51,7 +51,7 @@ input {
   border-radius: 8px;
 }
 /* Button : Hover */
-.myButton {
+.next {
   box-shadow: inset 0px 0px 15px 3px #23395e;
   background: linear-gradient(to bottom, #2e466e 5%, #415989 100%);
   background-color: #2e466e;
@@ -67,20 +67,20 @@ input {
   text-shadow: 0px 1px 0px #263666;
   margin-top: 10px;
 }
-.myButton:hover {
+.next:hover {
   background: linear-gradient(to bottom, #415989 5%, #2e466e 100%);
   background-color: #415989;
 }
-.myButton:active {
+.next:active {
   position: relative;
   top: 1px;
 }
 /* Onglet CHECKBOX */
-.o-1 input[type="checkbox"] {
+.onglet input[type="checkbox"] {
   display: none; /* cache la checkbox native */
 }
 
-.o-1 label {
+.onglet {
   display: inline-block;
   width: 30px;
   height: 30px;
@@ -94,21 +94,33 @@ input {
   transition: background-color 0.2s ease;
 }
 
-.o-1 input[type="checkbox"]:checked + label {
+.onglet {
   background-color: #5ab;
   color: white;
   border-color: #389;
 }
-.cont-onglet {
+#cont-onglet {
   position: relative;
 }
-.trait {
+.trait-1,
+.trait-2 {
   position: absolute;
   border: 2px rgb(0, 0, 0);
   height: 5px;
-  width: 100%;
+  width: 33%;
   top: 50%;
   background-color: white;
   border-radius: 3px;
   z-index: -1;
+}
+/* Affichage */
+
+.contenu {
+  display: none;
+}
+.contenu.actif {
+  display: block;
+}
+.trait-1 {
+  right: 50%;
 }
