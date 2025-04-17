@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,65 +14,171 @@
     <!-- PAGE 1 DU FORMULAIRE -->
 
     <!-- ONGLET 1.2.3 -->
-      <section id="tab1" class="contenu actif">
-        <h1>Demande de devis</h1>
-        <div id="cont-onglet" class="tab-content">
-          <div class="onglet" data-target="tab1">1</div>
-          <div class="onglet" data-target="tab2">2</div>
-          <div data-target="tab3" class="onglet">3</div>
-          </div>
+    <section id="tab1" class="contenu actif">
+      <h1>Demande de devis</h1>
+      <div class="cont-onglet tab-content">
+        <div class="onglet" data-target="tab1">1</div>
+        <div class="onglet" data-target="tab2">2</div>
+        <div data-target="tab3" class="onglet">3</div>
+      </div>
+
+      <!-- INFORMATION PERSONNELLES INPUT  -->
+      <h2>Informations personnelles</h2>
+      <div id="info-perso">
+        <div class="cont-input">
+          <label for="input-prenom"
+            >Prénom <input type="text" id="input-prenom"
+          /></label>
         </div>
-        <!-- INFORMATION PERSONNELLES INPUT  -->
-        <h2>Informations personnelles</h2>
-        <section id="info-perso">
-          <div class="cont-input">
-            <label for="input-prenom"
-              >Prénom <input type="text" id="input-prenom"
-            /></label>
-          </div>
-          <div class="cont-input">
-            <label for="input-nom"
-              >Nom <input type="text" id="input-nom"
-            /></label>
-          </div>
-          <div class="cont-input">
-            <label for="input-email"
-              >Email <input type="text" id="input-email"
-            /></label>
-          </div>
-          <div class="cont-input">
-            <label for="input-telephone"
-              >Télephone <input type="text" id="input-telephone"
-            /></label>
-          </div>
-          <!-- BOUTTON SUIVANT -->
-          <button type="button" class="next">Suivant</button>
-        </section>
-      </section>
-    
+        <div class="cont-input">
+          <label for="input-nom"
+            >Nom <input type="text" id="input-nom"
+          /></label>
+        </div>
+        <div class="cont-input">
+          <label for="input-email"
+            >Email <input type="text" id="input-email"
+          /></label>
+        </div>
+        <div class="cont-input">
+          <label for="input-telephone"
+            >Télephone <input type="text" id="input-telephone"
+          /></label>
+        </div>
+        <!-- BOUTTON SUIVANT -->
+        <button type="button" class="next next1">Suivant</button>
+      </div>
+    </section>
 
-<section id="tab2" class="contenu">
-<h1>Demande de devis</h1>
-<div id="cont-onglet" class="tab-content">
-  <div class="onglet" data-target="tab1">1</div>
-  <div class="trait-1"></div>
-  <div class="onglet" data-target="tab2">2</div>
-  <div data-target="tab3" class="onglet">3</div>
-  </div>
-  <h2>Détail du projet</h2>
-  
-<button type="button" class="next">Suivant</button>
+    <!-- Page 2 -->
 
+    <section id="tab2" class="contenu">
+      <h1>Demande de devis</h1>
+      <div class="cont-onglet tab-content">
+        <div class="onglet" data-target="tab1">1</div>
+        <div class="trait-1"></div>
+        <div class="onglet" data-target="tab2">2</div>
+        <div data-target="tab3" class="onglet">3</div>
+      </div>
+      <h2>Détail du projet</h2>
+      <div class="cont-select">
+        Type de projet
+        <select name="type-projet" id="type-projet">
+          <option value="select">Sélectionnez un type</option>
+          <option value="web">Site Web</option>
+          <option value="mobile">Application mobile</option>
+          <option value="commerce">E-commerce</option>
+          <option value="autre">Autre</option>
+        </select>
+      </div>
+      <div class="cont-select">
+        Budget approximatif
+        <select name="budget" id="budget">
+          <option value="select">Sélectionnez une fourchette</option>
+          <option value="-1k">Moins de 1 000 &#8364;</option>
+          <option value="1k">1 000 &#8364;- 5 000 &#8364;</option>
+          <option value="5k">5 000 &#8364; - 10 000 &#8364;</option>
+          <option value="10k">plus de 10 000 &#8364;</option>
+        </select>
+      </div>
 
-</section>
+      <div class="date">
+        <label for="bdate">Date de livraison souhaitée</label>
+        <input type="date" id="bdate" />
+      </div>
 
+      <div class="info-projet">
+        Description du projet
+        <input type="text" class="input-projet" />
+      </div>
+      <div class="cont-button">
+        <button type="button" class="precedent">Précédent</button>
+        <button type="button" class="next next2">Suivant</button>
+      </div>
+    </section>
 
-<section id="tab3" class="contenu">
-  <h2>Résumé</h2>
-  <p>Merci pour votre demande !</p>
-  <button type="submit">Envoyer</button>
-</section>
-
-    
+    <section id="tab3" class="contenu">
+      <h1>Demande de devis</h1>
+      <div class="cont-onglet tab-content">
+        <div class="trait-2"></div>
+        <div class="onglet" data-target="tab1">1</div>
+        <div class="onglet" data-target="tab2">2</div>
+        <div data-target="tab3" class="onglet">3</div>
+      </div>
+      <h2>Préférences et soumission</h2>
+      <div class="fonc-check">
+        <h3>Fonctionnalités souhaitées</h3>
+        <label for="valide1"
+          ><input type="checkbox" class="valide valide1" id="valide1" /> Design
+          responsive</label
+        >
+        <label for="valide2"
+          ><input type="checkbox" class="valide valide2" id="valide2" /> Systeme
+          de gestion de contenu</label
+        >
+        <label for="valide3"
+          ><input type="checkbox" class="valide valide3" id="valide3" /> Outils
+          d'analyse</label
+        >
+        <label for="valide4"
+          ><input type="checkbox" class="valide valide4" id="valide4" />
+          Optimisation SEO</label
+        >
+        <label for="valide5"
+          ><input type="checkbox" class="valide valide5" id="valide5" />
+          Intégration réseaux sociaux</label
+        >
+      </div>
+      <div class="select-contact">
+        <h3>Préférence de contact</h3>
+        <select name="preference" id="preference">
+          <option value="email">Email</option>
+          <option value="telephone">Téléphone</option>
+          <option value="visioconference">Visioconférence</option>
+        </select>
+      </div>
+      <div class="info-projet">
+        <label for="infos-sup">Informations complémentaires</label>
+        <input
+          type="text"
+          class="input-projet"
+          id="infos-sup"
+          name="infos-sup"
+        />
+      </div>
+      <div class="contact-check">
+        <label for="condition"
+          ><input type="checkbox" id="condition" /><span>
+            J'accepte que mes informations soient utilisées pour me
+            contacter</span
+          >
+        </label>
+      </div>
+      <div class="cont-button">
+        <button type="button" class="precedent">Précédent</button>
+        <button type="button" class="next" data-target="tab4">
+          Envoyer ma demande
+        </button>
+      </div>
+    </section>
+    <section id="tab4" class="contenu">
+      <h1>Demande de devis</h1>
+      <div class="cont-onglet tab-content">
+        <div class="onglet" data-target="tab1">1</div>
+        <div class="onglet" data-target="tab2">2</div>
+        <div class="trait-3"></div>
+        <div data-target="tab3" class="onglet">3</div>
+      </div>
+      <h2 id="h2-t4">Merci Pour votre demande !</h2>
+      <div id="p-t4">
+      <p>
+        Nous avons bien reçu votre demande de devis et nous vous contacterons
+        très prochainement.
+      </p>
+      <p>
+        Un email de confirmation a été envoyé a l'adresse :
+        <span>younes.manjal@test.com</span></div>
+      </p>
+    </section>
   </body>
 </html>
