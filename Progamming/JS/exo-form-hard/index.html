@@ -27,23 +27,31 @@
       <div id="info-perso">
         <div class="cont-input">
           <label for="input-prenom"
-            >Prénom <input type="text" id="input-prenom"
+            >Prénom <input type="text" id="input-prenom" placeholder=""
           /></label>
+          <small id="usernameerror">Prénom invalide</small>
+
         </div>
         <div class="cont-input">
           <label for="input-nom"
-            >Nom <input type="text" id="input-nom"
+            >Nom <input type="text" id="input-nom" placeholder=""
           /></label>
+          <small id="nameerror">Nom invalide</small>
+
         </div>
         <div class="cont-input">
           <label for="input-email"
-            >Email <input type="text" id="input-email"
+            >Email <input type="text" id="input-email" placeholder=""
           /></label>
+          <small id="emailerror">Adresse email invalide</small>
+
         </div>
         <div class="cont-input">
           <label for="input-telephone"
-            >Télephone <input type="text" id="input-telephone"
-          /></label>
+            >Télephone <input type="tel" id="input-telephone" pattern="[0-9]{10}" placeholder="Votre numéro de téléphone" maxlength="10" minlength="10"
+            title="Le numéro doit être composé de 10 chiffres uniquement."/></label>
+          <small id="telephoneerror">Le numéro n'est pas valide</small>
+
         </div>
         <!-- BOUTTON SUIVANT -->
         <button type="button" class="next next1">Suivant</button>
@@ -148,15 +156,17 @@
       </div>
       <div class="contact-check">
         <label for="condition"
-          ><input type="checkbox" id="condition" /><span>
+          ><input type="checkbox" id="condition" value=""/><span>
             J'accepte que mes informations soient utilisées pour me
             contacter</span
           >
+          <small id="checkboxError" style="color: red; display: none;">Veuillez accepter les conditions.</small>
+
         </label>
       </div>
       <div class="cont-button">
         <button type="button" class="precedent">Précédent</button>
-        <button type="button" class="next" data-target="tab4">
+        <button type="button" class="next" data-target="tab4" disabled>
           Envoyer ma demande
         </button>
       </div>
