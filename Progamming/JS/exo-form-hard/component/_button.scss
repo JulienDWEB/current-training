@@ -1,0 +1,84 @@
+// Boutton suivant
+
+.next {
+    box-shadow: inset 0px 0px 15px 3px #23395e;
+    background: linear-gradient(to bottom, #2e466e 5%, #415989 100%);
+    background-color: #2e466e;
+    border-radius: 8px;
+    border: 1px solid #1f2f47;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 15px;
+    padding: 6px 13px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #263666;
+    margin-top: 10px;
+  }
+  /* Button : Hover */
+  .next:hover {
+    background: linear-gradient(to bottom, #415989 5%, #2e466e 100%);
+    background-color: #415989;
+  }
+  .next:active {
+    position: relative;
+    top: 1px;
+  }
+
+// Boutton suivant 2
+  .next2 {
+    box-shadow: inset 0px 0px 15px 3px #23395e;
+    background: linear-gradient(to bottom, #2e466e 5%, #415989 100%);
+    background-color: #2e466e;
+    border-radius: 8px;
+    border: 1px solid #1f2f47;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 15px;
+    padding: 6px 13px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #263666;
+    margin-top: 10px;
+  }
+  .next2:hover {
+    background: linear-gradient(to bottom, #415989 5%, #2e466e 100%);
+    background-color: #415989;
+  }
+  .next2:active {
+    position: relative;
+    top: 1px;
+  }
+/* Button précedent  */
+  .precedent {
+    box-shadow: inset 0px 0px 15px 3px #737573;
+    background: linear-gradient(to bottom, #333133 5%, #9488db 100%);
+    background-color: #333133;
+    border-radius: 8px;
+    border: 1px solid #a38ca3;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 15px;
+    padding: 6px 13px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #ffffff;
+    margin-top: 10px;
+  }
+  .precedent:hover {
+    background: linear-gradient(to bottom, #9488db 5%, #333133 100%);
+    background-color: #9488db;
+  }
+  .precedent:active {
+    position: relative;
+    top: 1px;
+  }
+
+  /* Position button */
+.cont-button {
+  display: flex;
+  justify-content: space-between;
+}

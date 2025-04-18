@@ -1,0 +1,27 @@
+/* Onglet CHECKBOX */
+.onglet input[type="checkbox"] {
+    display: none; /* cache la checkbox native */
+  }
+  
+  .onglet {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #eee;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    border: 1px solid #aaa;
+    transition: background-color 0.2s ease;
+  }
+  
+  .onglet {
+    background-color: #5ab;
+    color: white;
+    border-color: #389;
+  }
+  .cont-onglet {
+    position: relative;
+  }

@@ -1,0 +1,22 @@
+
+/* Transitions de style de trait onglet */
+.trait-1,
+.trait-2,
+.trait-3 {
+  position: absolute;
+  border: 2px rgb(0, 0, 0);
+  height: 5px;
+  width: 33%;
+  top: 50%;
+  background-color: white;
+  border-radius: 3px;
+  z-index: -1;
+}
+
+.trait-1 {
+  right: 50%;
+}
+.trait-2,
+.trait-3 {
+  width: 65%;
+}

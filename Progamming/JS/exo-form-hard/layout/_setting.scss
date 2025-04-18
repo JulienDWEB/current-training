@@ -1,0 +1,50 @@
+$color1: rgb(57, 119, 255);
+$color2: rgb(0, 90, 150);
+$white: rgb(241, 241, 241);  
+$black: rgb(0, 0, 0);  
+
+@mixin centerChild {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Affichage */
+
+.contenu {
+    display: none;
+  }
+  .contenu.actif {
+    display: block;
+  }
+  /* Fonts AND Background*/
+body {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    background: #020024;
+    background: linear-gradient(
+      90deg,
+      rgb(24, 22, 75) 0%,
+      rgb(132, 142, 240) 0%,
+      rgb(89, 33, 126) 100%
+    );
+  }
+  .contenu {
+    opacity: 0;
+    visibility: hidden; /* Masque l'élément sans le retirer du flux */
+    transform: translateX(100%);
+    pointer-events: none; /* L'élément n'est pas interactif lorsqu'il est masqué */
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out,
+      visibility 0s ease-in-out 0.5s;
+  }
+  
+  /* Onglet actif avec position et opacité correctes */
+  .contenu.actif {
+    opacity: 1;
+    visibility: visible; /* L'élément devient visible */
+    pointer-events: auto; /* L'élément devient interactif */
+    transform: translateX(
+      0
+    ); /* Applique la translation à 0 pour la rendre visible */
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  }
+  

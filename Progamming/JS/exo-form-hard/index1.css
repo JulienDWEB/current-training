@@ -1,13 +1,35 @@
-/* Fonts */
+@charset "UTF-8";
+/* Affichage */
+.contenu {
+  display: none;
+}
+
+.contenu.actif {
+  display: block;
+}
+
+/* Fonts AND Background*/
 body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   background: #020024;
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(41, 140, 139, 1) 0%,
-    rgba(1, 41, 48, 1) 100%
-  );
+  background: linear-gradient(90deg, rgb(24, 22, 75) 0%, rgb(132, 142, 240) 0%, rgb(89, 33, 126) 100%);
+}
+
+.contenu {
+  opacity: 0;
+  visibility: hidden; /* Masque l'élément sans le retirer du flux */
+  transform: translateX(100%);
+  pointer-events: none; /* L'élément n'est pas interactif lorsqu'il est masqué */
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0s ease-in-out 0.5s;
+}
+
+/* Onglet actif avec position et opacité correctes */
+.contenu.actif {
+  opacity: 1;
+  visibility: visible; /* L'élément devient visible */
+  pointer-events: auto; /* L'élément devient interactif */
+  transform: translateX(0); /* Applique la translation à 0 pour la rendre visible */
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
 /* Containers - Mise en Page */
@@ -18,39 +40,80 @@ body {
   background-color: rgba(0, 0, 0, 0.212);
   box-shadow: -3px 11px 20px 0px #000000;
 }
+
 .cont-onglet {
   display: flex;
   justify-content: space-around;
 }
+
 .cont-input {
   display: block;
 }
+
 .cont-input input {
   margin: 5px 0 5px 0;
 }
-/* Texte */
-.contenu h1 {
-  text-align: center;
-  color: rgb(255, 255, 255);
-  text-shadow: 3px 1px 0px rgba(41, 140, 138, 0.295);
-  text-transform: uppercase;
-  font-size: 1.5rem;
-}
-h2 {
-  color: rgb(255, 255, 255);
-  text-shadow: 3px 1px 0px rgba(3, 124, 122, 0.336);
-}
-.cont-input label {
+
+/* Style page 2  */
+select {
   font-weight: bold;
-  color: #ffffff;
-}
-/* Input Label */
-input {
   width: 100%;
   height: 40px;
+  margin-top: 5px;
   border-radius: 8px;
+  border: 1px solid rgb(164, 252, 164);
+  margin-bottom: 20px;
 }
-/* Button : Hover */
+
+.input-projet {
+  height: 20vh;
+}
+
+/* margin input */
+#type {
+  margin: 10px auto;
+}
+
+#bdate {
+  margin: 10px auto;
+}
+
+.input-projet {
+  margin: 10px auto;
+}
+
+/* Style page 3 */
+.fonc-check {
+  display: grid;
+}
+
+.fonc-check {
+  font-size: 1.1rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+  margin: 10px 0;
+  color: white;
+}
+
+.info-projet > label {
+  font-size: 1.1rem;
+  color: white;
+}
+
+#h2-t4 {
+  text-align: center;
+}
+
+#p-t4 {
+  text-align: center;
+}
+
+#p-t4 span {
+  font-weight: bold;
+}
+
 .next {
   box-shadow: inset 0px 0px 15px 3px #23395e;
   background: linear-gradient(to bottom, #2e466e 5%, #415989 100%);
@@ -67,15 +130,17 @@ input {
   text-shadow: 0px 1px 0px #263666;
   margin-top: 10px;
 }
+
+/* Button : Hover */
 .next:hover {
   background: linear-gradient(to bottom, #415989 5%, #2e466e 100%);
   background-color: #415989;
 }
+
 .next:active {
   position: relative;
   top: 1px;
 }
-/* Button : page 2 */
 
 .next2 {
   box-shadow: inset 0px 0px 15px 3px #23395e;
@@ -93,14 +158,17 @@ input {
   text-shadow: 0px 1px 0px #263666;
   margin-top: 10px;
 }
+
 .next2:hover {
   background: linear-gradient(to bottom, #415989 5%, #2e466e 100%);
   background-color: #415989;
 }
+
 .next2:active {
   position: relative;
   top: 1px;
 }
+
 /* Button précedent  */
 .precedent {
   box-shadow: inset 0px 0px 15px 3px #737573;
@@ -118,22 +186,54 @@ input {
   text-shadow: 0px 1px 0px #ffffff;
   margin-top: 10px;
 }
+
 .precedent:hover {
   background: linear-gradient(to bottom, #9488db 5%, #333133 100%);
   background-color: #9488db;
 }
+
 .precedent:active {
   position: relative;
   top: 1px;
 }
+
 /* Position button */
 .cont-button {
   display: flex;
   justify-content: space-between;
 }
 
+/* taille checkbox */
+.valide {
+  height: 20px;
+  width: 15px;
+}
+
+#condition {
+  height: 20px;
+  width: 15px;
+}
+
+#condition > span {
+  color: white;
+}
+
+/* Input Label */
+input {
+  width: 100%;
+  height: 40px;
+  border-radius: 8px;
+}
+
+input:focus,
+.next:focus,
+.precedent:focus {
+  outline: 2px solid #4a90e2;
+  box-shadow: 0 0 5px rgba(74, 144, 226, 0.8);
+}
+
 /* Onglet CHECKBOX */
-.onglet input[type="checkbox"] {
+.onglet input[type=checkbox] {
   display: none; /* cache la checkbox native */
 }
 
@@ -156,106 +256,28 @@ input {
   color: white;
   border-color: #389;
 }
+
 .cont-onglet {
   position: relative;
 }
 
-/* Affichage */
-
-.contenu {
-  display: none;
-}
-.contenu.actif {
-  display: block;
-}
-
-/* Style page 2  */
-
-select {
-  font-weight: bold;
-  width: 100%;
-  height: 40px;
-  margin-top: 5px;
-  border-radius: 8px;
-  border: 1px solid rgb(164, 252, 164);
-  margin-bottom: 20px;
-}
-
-.input-projet {
-  height: 20vh;
-}
-
-/* margin input */
-#type {
-  margin: 10px auto;
-}
-#bdate {
-  margin: 10px auto;
-}
-.input-projet {
-  margin: 10px auto;
-}
-
-/* Style page 3 */
-
-.fonc-check {
-  display: grid;
-}
-.fonc-check {
-  font-size: 1.1rem;
-}
-h3 {
-  font-size: 1.1rem;
-  margin: 10px 0;
-  color: white;
-}
-.info-projet > label {
-  font-size: 1.1rem;
-  color: white;
-}
-/* taille checkbox */
-.valide {
-  height: 20px;
-  width: 15px;
-}
-#condition {
-  height: 20px;
-  width: 15px;
-}
-#condition > span {
-  color: white;
-}
-/* Style page 4 */
-
-#h2-t4 {
+/* Texte */
+.contenu h1 {
   text-align: center;
-}
-#p-t4 {
-  text-align: center;
-}
-#p-t4 span {
-  font-weight: bold;
-}
-/* Transition page */
-/* Transition page */
-.contenu {
-  opacity: 0;
-  visibility: hidden; /* Masque l'élément sans le retirer du flux */
-  transform: translateX(100%);
-  pointer-events: none; /* L'élément n'est pas interactif lorsqu'il est masqué */
-  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out,
-    visibility 0s ease-in-out 0.5s;
+  color: rgb(255, 255, 255);
+  text-shadow: 3px 1px 0px rgba(41, 140, 138, 0.295);
+  text-transform: uppercase;
+  font-size: 1.5rem;
 }
 
-/* Onglet actif avec position et opacité correctes */
-.contenu.actif {
-  opacity: 1;
-  visibility: visible; /* L'élément devient visible */
-  pointer-events: auto; /* L'élément devient interactif */
-  transform: translateX(
-    0
-  ); /* Applique la translation à 0 pour la rendre visible */
-  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+h2 {
+  color: rgb(255, 255, 255);
+  text-shadow: 3px 1px 0px rgba(3, 124, 122, 0.336);
+}
+
+.cont-input label {
+  font-weight: bold;
+  color: #ffffff;
 }
 
 /* Transitions de style de trait onglet */
@@ -275,14 +297,8 @@ h3 {
 .trait-1 {
   right: 50%;
 }
+
 .trait-2,
 .trait-3 {
   width: 65%;
-}
-/*  */
-input:focus,
-.next:focus,
-.precedent:focus {
-  outline: 2px solid #4a90e2;
-  box-shadow: 0 0 5px rgba(74, 144, 226, 0.8);
-}
+}/*# sourceMappingURL=index1.css.map */
