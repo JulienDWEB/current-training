@@ -1,0 +1,56 @@
+nav i {
+  color: rgb(241, 241, 241);
+}
+
+body {
+  background-image: url(/JS/exo-integration/images/bg.jpg);
+  background-position: center;
+  background-repeat: repeat-y;
+}
+body header {
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+  color: rgb(241, 241, 241);
+}
+body header p {
+  font-size: 0.8rem;
+}
+body #circle {
+  height: 30px;
+  width: 30px;
+  border: 1px solid rgb(241, 241, 241);
+  border-radius: 50%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body #circle i {
+  color: white;
+  font-size: 16px;
+}
+body #circle:hover {
+  background-color: rgba(32, 32, 32, 0.452);
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+body nav {
+  display: flex;
+  justify-content: space-between;
+}
+body nav #ul-left {
+  display: flex;
+  list-style-type: none;
+  gap: 10px;
+  justify-content: space-between;
+}
+body nav #ul-right {
+  display: flex;
+  list-style-type: none;
+  gap: 10px;
+}/*# sourceMappingURL=index.css.map */

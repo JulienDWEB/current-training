@@ -30,21 +30,23 @@ body {
   }
   .contenu {
     opacity: 0;
-    visibility: hidden; /* Masque l'élément sans le retirer du flux */
+    visibility: hidden;
     transform: translateX(100%);
-    pointer-events: none; /* L'élément n'est pas interactif lorsqu'il est masqué */
-    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out,
-      visibility 0s ease-in-out 0.5s;
-  }
-  
-  /* Onglet actif avec position et opacité correctes */
-  .contenu.actif {
-    opacity: 1;
-    visibility: visible; /* L'élément devient visible */
-    pointer-events: auto; /* L'élément devient interactif */
-    transform: translateX(
-      0
-    ); /* Applique la translation à 0 pour la rendre visible */
+    pointer-events: none;
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
   }
+  
+  .contenu.actif {
+    opacity: 1;
+    transform: translateX(0);
+    visibility: visible;
+    pointer-events: auto;
+  }
+  
+  .contenu.inactif {
+    opacity: 0;
+    transform: translateX(100%);
+    pointer-events: none;
+  }
+  
   

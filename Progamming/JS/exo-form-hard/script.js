@@ -76,30 +76,33 @@ document.addEventListener("DOMContentLoaded", () => {
   function activerOnglet(targetId) {
     const contenus = document.querySelectorAll('.contenu');
   
-    // Cacher tous les contenus
     contenus.forEach(c => {
-      c.classList.remove('actif');  // Supprimer la classe 'actif'
-      c.classList.add('inactif');   // Ajouter la classe 'inactif'
+      if (c.classList.contains('actif')) {
+        c.classList.remove('actif');
+        c.classList.add('inactif');
+  
+        // Attendre la fin de la transition de sortie
+        setTimeout(() => {
+          c.classList.remove('inactif');
+          c.style.visibility = 'hidden';
+          c.style.pointerEvents = 'none';
+        }, 500); // Transition out : 0.5s
+      }
     });
   
-    // Afficher l'onglet cible
     const targetContent = document.getElementById(targetId);
-    targetContent.classList.remove('inactif');  // Retirer 'inactif' du contenu cible
-    targetContent.classList.add('actif');       // Ajouter 'actif' pour rendre visible
+  
+    // Important : afficher le nouveau tout de suite pour que la transition entre fonctionne
+    targetContent.style.visibility = 'visible';
+    targetContent.style.pointerEvents = 'auto';
+  
+    // Ajouter léger délai pour forcer le navigateur à "voir" le changement
+    setTimeout(() => {
+      targetContent.classList.add('actif');
+    }, 20); // un petit délai (10–20ms) pour que le DOM force la reflow et applique la transition
   }
   
   
-  // Clic sur les onglets avec restriction d'étape
-  onglets.forEach((onglet, index) => {
-    onglet.addEventListener('click', () => {
-      if (index + 1 <= etapeValidee) {
-        const target = onglet.dataset.target;
-        activerOnglet(target);
-      } else {
-        alert("Veuillez compléter les étapes précédentes avant de continuer.");
-      }
-    });
-  });
 
  // Bouton "Suivant"
  boutonsSuivant.forEach(btn => {

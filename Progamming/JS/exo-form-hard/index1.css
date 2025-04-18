@@ -17,19 +17,23 @@ body {
 
 .contenu {
   opacity: 0;
-  visibility: hidden; /* Masque l'élément sans le retirer du flux */
+  visibility: hidden;
   transform: translateX(100%);
-  pointer-events: none; /* L'élément n'est pas interactif lorsqu'il est masqué */
-  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0s ease-in-out 0.5s;
+  pointer-events: none;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
-/* Onglet actif avec position et opacité correctes */
 .contenu.actif {
   opacity: 1;
-  visibility: visible; /* L'élément devient visible */
-  pointer-events: auto; /* L'élément devient interactif */
-  transform: translateX(0); /* Applique la translation à 0 pour la rendre visible */
-  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  transform: translateX(0);
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.contenu.inactif {
+  opacity: 0;
+  transform: translateX(100%);
+  pointer-events: none;
 }
 
 /* Containers - Mise en Page */
@@ -82,9 +86,43 @@ select {
   margin: 10px auto;
 }
 
+.info-projet {
+  color: rgb(241, 241, 241);
+  text-shadow: 1px 1px 5px #000000;
+}
+
+#tab2 h2 {
+  text-shadow: 1px 1px 5px #000000;
+}
+#tab2 h3 {
+  text-shadow: 1px 1px 5px #000000;
+}
+#tab2 label {
+  color: rgb(241, 241, 241);
+  text-shadow: 1px 1px 5px #000000;
+}
+
+.cont-select {
+  color: rgb(241, 241, 241);
+  text-shadow: 1px 1px 5px #000000;
+}
+
 /* Style page 3 */
 .fonc-check {
   display: grid;
+}
+
+#tab3 h2 {
+  text-shadow: 1px 1px 5px #000000;
+}
+#tab3 h3 {
+  text-shadow: 1px 1px 5px #000000;
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+#tab3 label {
+  color: rgb(241, 241, 241);
+  text-shadow: 1px 1px 5px #000000;
 }
 
 .fonc-check {
@@ -92,18 +130,27 @@ select {
 }
 
 h3 {
-  font-size: 1.1rem;
-  margin: 10px 0;
   color: white;
 }
 
 .info-projet > label {
   font-size: 1.1rem;
+  font-weight: bold;
   color: white;
+}
+
+.contact-check span {
+  font-weight: bold;
+  color: rgb(241, 241, 241);
+}
+
+#tab4 h1 {
+  text-shadow: 1px 1px 20px #000000;
 }
 
 #h2-t4 {
   text-align: center;
+  text-shadow: 1px 1px 5px #000000;
 }
 
 #p-t4 {
@@ -248,7 +295,8 @@ input:focus,
   cursor: pointer;
   font-weight: bold;
   border: 1px solid #aaa;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.4s ease;
+  box-shadow: 0px 0px 20px 0px #301541;
 }
 
 .onglet {
@@ -292,6 +340,7 @@ h2 {
   background-color: white;
   border-radius: 3px;
   z-index: -1;
+  box-shadow: 2px 2px 10px 0px #b4b4b4;
 }
 
 .trait-1 {

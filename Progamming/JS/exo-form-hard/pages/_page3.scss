@@ -2,16 +2,37 @@
 
 .fonc-check {
     display: grid;
+    
+  }
+  #tab3 {
+    h2 {
+        text-shadow: 1px 1px 5px #000000; 
+    }
+    h3 {
+        text-shadow: 1px 1px 5px #000000; 
+         font-size: 1.1rem;
+    margin: 10px 0;
+    }
+    label {
+        color: $white;
+        text-shadow: 1px 1px 5px #000000;
+    }
   }
   .fonc-check {
     font-size: 1.1rem;
   }
   h3 {
-    font-size: 1.1rem;
-    margin: 10px 0;
+   
     color: white;
   }
   .info-projet > label {
     font-size: 1.1rem;
+    font-weight: bold;
     color: white;
+  }
+  .contact-check {
+    span {
+        font-weight: bold;
+        color: $white;
+    }
   }
