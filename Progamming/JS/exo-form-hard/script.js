@@ -74,14 +74,21 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function activerOnglet(targetId) {
-    onglets.forEach(o => o.classList.remove('actif'));
-    contenus.forEach(c => c.classList.remove('actif'));
-
-    document.getElementById(targetId).classList.add('actif');
-    const ongletCible = [...onglets].find(o => o.dataset.target === targetId);
-    if (ongletCible) ongletCible.classList.add('actif');
+    const contenus = document.querySelectorAll('.contenu');
+  
+    // Cacher tous les contenus
+    contenus.forEach(c => {
+      c.classList.remove('actif');  // Supprimer la classe 'actif'
+      c.classList.add('inactif');   // Ajouter la classe 'inactif'
+    });
+  
+    // Afficher l'onglet cible
+    const targetContent = document.getElementById(targetId);
+    targetContent.classList.remove('inactif');  // Retirer 'inactif' du contenu cible
+    targetContent.classList.add('actif');       // Ajouter 'actif' pour rendre visible
   }
-
+  
+  
   // Clic sur les onglets avec restriction d'étape
   onglets.forEach((onglet, index) => {
     onglet.addEventListener('click', () => {
