@@ -1,0 +1,27 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: cadetblue;
+  height: 10vh;
+  #nav-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    h1 {
+      color: white;
+      box-shadow: 7px 5px 10px 0px #696a6d;
+    }
+  }
+  #nav-mb {
+    visibility: hidden;
+    span {
+      padding: 10px;
+      color: white;
+    }
+    @media (max-width: 768px) {
+      visibility: visible;
+    }
+  }
+}

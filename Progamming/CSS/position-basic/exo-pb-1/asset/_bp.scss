@@ -1,12 +1,12 @@
 video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-  }   &::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  &::before {
     content: "";
     position: absolute;
     top: 0;
@@ -17,3 +17,4 @@ video {
     backdrop-filter: blur(8px);
     z-index: -1; // Entre la vidéo et le contenu
   }
+}
