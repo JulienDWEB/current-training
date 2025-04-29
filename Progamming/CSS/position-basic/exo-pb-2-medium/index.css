@@ -79,7 +79,7 @@ header {
 }
 
 main #service {
-  margin: auto 25px;
+  margin: 20px 25px;
 }
 main .cont-service {
   display: flex;
@@ -211,7 +211,7 @@ nav {
   color: white;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 760px) {
   nav {
     display: flex;
     flex-wrap: wrap;
@@ -219,5 +219,17 @@ nav {
     justify-content: center;
     justify-items: center;
     text-align: center;
+  }
+  header {
+    font-size: 0.8rem;
+  }
+  main h3 {
+    font-size: 0.8rem;
+  }
+  main #service {
+    font-size: 0.8rem;
+  }
+  .cont-service {
+    font-size: 0.8rem;
   }
 }/*# sourceMappingURL=index.css.map */
