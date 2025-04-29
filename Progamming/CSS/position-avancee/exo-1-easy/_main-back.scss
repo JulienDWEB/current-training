@@ -1,15 +1,40 @@
+nav {
+  h1 {
+    text-align: center;
+  }
+}
 
 main {
-    font-family: "PT Sans", sans-serif;
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-  
-} img {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  grid-template-columns: repeat(4, 250px);
+  grid-template-rows: repeat(4, 250px);
+  gap: 10px;
+
+  #i1 {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+  }
+  #i2 {
+    grid-column: 3 / span 2;
+  }
+  #i5 {
+    grid-row: 3 / 5;
+  }
+  #i7 {
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+  }
+  #i8 {
+    grid-column: 3 / span 2;
+    grid-row: 3 / span 2;
+  }
+
+  img {
+    height: 100%;
     width: 100%;
-}
-#1 {
-    grid-area: "1 1 2 2" ;
-    
+    object-fit: cover;
+    object-position: center;
+  }
 }
