@@ -104,8 +104,11 @@ main .cont-portfolio #box-cont {
   text-align: center;
   background-color: white;
   height: 50px;
-  cursor: pointer;
   margin-top: 10px;
+}
+main .cont-portfolio #box-cont:hover {
+  cursor: pointer;
+  background-color: rgba(209, 209, 209, 0.514);
 }
 main .cont-propos {
   display: grid;
@@ -129,8 +132,11 @@ main .cont-contact #box-contact {
   text-align: center;
   background-color: white;
   height: 50px;
-  cursor: pointer;
   margin-top: 10px;
+}
+main .cont-contact #box-contact:hover {
+  cursor: pointer;
+  background-color: rgba(209, 209, 209, 0.514);
 }
 main i {
   display: block;
