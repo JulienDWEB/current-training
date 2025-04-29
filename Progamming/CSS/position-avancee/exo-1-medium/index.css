@@ -88,24 +88,66 @@ body nav ul li {
 body nav ul li:hover {
   cursor: pointer;
   background-color: rgb(53, 164, 255);
+  border-radius: 8px;
   color: white;
 }
 body main {
   display: grid;
-  grid-template-columns: 15% 70% 15%;
+  grid-template-columns: 20% 60% 20%;
 }
 body main .cont-middle {
   display: grid;
   grid-column: 2/3;
   width: 100%;
   max-width: 900px;
-  padding: 0 2rem;
+  padding: 0 8rem;
   box-sizing: border-box;
+}
+body main .cont-middle h1 {
+  padding: 10px 0;
 }
 body main .cont-right {
   height: 100vh;
   background-color: rgba(219, 219, 219, 0.37);
   box-shadow: 2px 2px 10px 0px rgb(180, 180, 180);
+  padding: 10px;
+}
+body main .cont-right #box-left1 ul {
+  padding: 0;
+  list-style-type: none;
+}
+body main .cont-right #box-left1 ul li {
+  padding: 10px 0;
+}
+body main .cont-right #box-left2 p {
+  padding: 10px 0;
+}
+body main .cont-right #box-left2 input {
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgba(128, 128, 128, 0.466);
+  box-shadow: 0px -2px 6px rgb(216, 216, 216);
+  border-radius: 5px 5px 0 0;
+  text-align: center;
+}
+body main .cont-right #box-left3 span {
+  display: inline-block;
+  margin: 5px;
+  padding: 8px;
+  border: 1px solid black;
+  background-color: white;
+}
+body main .cont-right #box-left3 span:hover {
+  background-color: rgba(184, 184, 184, 0.418);
+  cursor: pointer;
+}
+body #middle-part {
+  display: flex;
+  gap: 5px;
+}
+body #middle-part ul {
+  list-style-type: none;
+  padding: 0;
 }
 
 header {
@@ -136,4 +178,71 @@ header #nav-mb span {
   header #nav-mb {
     visibility: visible;
   }
+}
+
+button {
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgba(128, 128, 128, 0.466);
+  box-shadow: 0px 2px 6px rgb(216, 216, 216);
+  border-radius: 0 0 5px 5px;
+}
+button:hover {
+  background-color: rgba(2, 250, 126, 0.699);
+  cursor: pointer;
+  color: white;
+}
+
+footer {
+  background-color: cadetblue;
+}
+footer .cont-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+footer .cont-footer #title-form {
+  padding: 10px;
+  color: white;
+}
+footer .cont-footer #title-form span {
+  font-size: 0.8rem;
+  color: rgb(0, 7, 104);
+}
+footer .cont-footer #title-form div {
+  display: flex;
+  align-items: center;
+}
+footer .cont-footer #title-form div h3 {
+  margin-left: 10px;
+}
+footer #onglet-form {
+  padding: 10px;
+  color: white;
+}
+footer #onglet-form ul {
+  list-style-type: none;
+  padding: 5px 0;
+  color: rgb(0, 7, 104);
+  font-size: 0.8rem;
+}
+footer #contact-form {
+  padding: 10px;
+  color: white;
+}
+footer #contact-form span {
+  padding: 5px 0;
+  color: rgb(0, 7, 104);
+  font-size: 0.8rem;
+}
+footer #icon-form {
+  padding: 10px;
+  color: white;
+  margin: 0 auto;
+}
+footer #copy {
+  text-align: center;
+  color: rgb(0, 7, 104);
+}
+footer #copy span {
+  margin-left: 5px;
 }/*# sourceMappingURL=index.css.map */

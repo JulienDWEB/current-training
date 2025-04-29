@@ -1,0 +1,53 @@
+footer {
+  background-color: cadetblue;
+  .cont-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    #title-form {
+      padding: 10px;
+      color: white;
+      span {
+        font-size: 0.8rem;
+        color: rgb(0, 7, 104);
+      }
+      div {
+        display: flex;
+        align-items: center;
+        h3 {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+  #onglet-form {
+    padding: 10px;
+    color: white;
+    ul {
+      list-style-type: none;
+      padding: 5px 0;
+      color: rgb(0, 7, 104);
+      font-size: 0.8rem;
+    }
+  }
+  #contact-form {
+    padding: 10px;
+    color: white;
+    span {
+      padding: 5px 0;
+      color: rgb(0, 7, 104);
+      font-size: 0.8rem;
+    }
+  }
+  #icon-form {
+    padding: 10px;
+    color: white;
+    margin: 0 auto;
+  }
+  #copy {
+    text-align: center;
+    color: rgb(0, 7, 104);
+    span {
+      margin-left: 5px;
+    }
+  }
+}
