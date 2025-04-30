@@ -1,0 +1,109 @@
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+#title-main {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  margin: 10px;
+}
+#title-main p {
+  margin: 0;
+}
+
+#cont-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 80%;
+  margin: 50px auto;
+  gap: 20px;
+  background-color: rgba(199, 199, 199, 0.192);
+  padding: 20px;
+  border-radius: 6px;
+}
+#cont-main div {
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.384);
+  padding: 10px;
+  border-radius: 6px;
+}
+#cont-main div h3 {
+  color: rgba(94, 182, 253, 0.9058823529);
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  height: 80px;
+  background-color: rgba(199, 199, 199, 0.192);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.21);
+  padding: 10px;
+  align-items: center;
+}
+nav h1 {
+  color: rgba(94, 182, 253, 0.9058823529);
+}
+nav ul {
+  list-style-type: none;
+  display: flex;
+}
+nav ul li {
+  list-style-type: none;
+  position: relative;
+  cursor: pointer;
+  padding: 10px;
+}
+nav ul li:hover {
+  color: rgba(94, 182, 253, 0.9058823529);
+}
+nav ul li::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  transition: width 0.3s ease-in-out;
+}
+nav ul li:hover::after {
+  width: 100%;
+}
+
+#btn-theme {
+  grid-column: -3/-2;
+  margin: 0 auto;
+  border-radius: 6px;
+}
+#btn-theme button {
+  border: 1px solid black;
+  border-radius: 6px;
+  padding: 10px;
+  background: linear-gradient(to bottom, rgb(255, 255, 255) 50%, rgb(0, 0, 0) 50%);
+  background-size: 100% 200%;
+  background-position: top;
+  transition: background-position 0.5s ease-in-out;
+  cursor: pointer;
+  color: rgb(5, 129, 179);
+}
+#btn-theme button:hover {
+  background-position: bottom;
+  color: white;
+}
+
+body.alt-style {
+  color: rgb(241, 241, 241);
+  background-color: rgba(0, 0, 0, 0.788);
+}
+
+body.alt-style nav ul li::after {
+  background-color: #ffffff; /* Exemple pour le mode sombre */
+}/*# sourceMappingURL=index.css.map */

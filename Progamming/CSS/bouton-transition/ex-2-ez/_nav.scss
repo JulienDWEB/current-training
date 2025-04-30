@@ -1,0 +1,41 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.21);
+  padding: 10px;
+  align-items: center;
+  h1 {
+    color: #5eb6fde7;
+  }
+  ul {
+    list-style-type: none;
+    display: flex;
+
+    li {
+      list-style-type: none;
+      position: relative;
+      cursor: pointer;
+      padding: 10px;
+      &:hover {
+        color: #5eb6fde7; // ou toute autre couleur
+      }
+
+      // Trait animé
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: black;
+        transition: width 0.3s ease-in-out;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+}

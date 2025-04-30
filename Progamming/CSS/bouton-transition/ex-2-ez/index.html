@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+    <script
+      src="https://kit.fontawesome.com/04b078361d.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="theme-clair">
+    <header>
+      <nav>
+        <div id="title-nav"><h1>ThèmeCraft</h1></div>
+        <div id="right-nav">
+          <ul>
+            <li>Accueil</li>
+            <li>Services</li>
+            <li>A propos</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div id="title-main">
+      <h1>Bienvenue sur ThèmeCraft</h1>
+      <p>
+        Découvrez la puissance des variables CSS pour créer des thèmes
+        dynamiques.
+      </p>
+    </div>
+
+    <section id="cont-main">
+      <div>
+        <h3>Variables CSS</h3>
+        <p>
+          Les variables CSS permettent de centraliser les valeurs de style et de
+          les réutiliser dans toute votre feuille de style.
+        </p>
+      </div>
+      <div>
+        <h3>Thèmes Dynamiques</h3>
+        <p>
+          Changez facilement l'apparence complète de votre site en modifiant
+          simplement quelques variables.
+        </p>
+      </div>
+      <div>
+        <h3>Transitions Fluides</h3>
+        <p>
+          Créez des transitions fluides entre différents états visuels grâce aux
+          transitions CSS.
+        </p>
+      </div>
+      <div id="btn-theme"><button id="btn1">Changer de thèmes</button></div>
+    </section>
+    <footer>
+      <i class="fa-solid fa-copyright"></i
+      ><span>2025 ThèmeCraft - Tous droits réservés</span>
+    </footer>
+    <script>
+      document.getElementById("btn1").addEventListener("click", function () {
+        document.body.classList.toggle("alt-style");
+      });
+    </script>
+  </body>
+</html>
