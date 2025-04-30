@@ -28,6 +28,9 @@ header {
     @media (max-width: 750px) {
       visibility: visible;
     }
+    @media (max-width: 550px) {
+      visibility: hidden;
+    }
   }
 }
 body.alt-style header {

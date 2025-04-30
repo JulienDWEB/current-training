@@ -185,6 +185,11 @@ header #nav-mb span {
     visibility: visible;
   }
 }
+@media (max-width: 550px) {
+  header #nav-mb {
+    visibility: hidden;
+  }
+}
 
 body.alt-style header {
   background-color: black;
@@ -287,5 +292,24 @@ footer #copy span {
   .cont-right {
     order: 3;
     width: 30%;
+  }
+}
+@media (max-width: 560px) {
+  body main nav ul {
+    display: block;
+  }
+  body main .cont-middle {
+    padding: 0.5rem 1rem;
+    width: 100%;
+  }
+  body main .cont-right {
+    font-size: 0.8rem;
+    width: 100%;
+  }
+  footer .cont-footer {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    font-size: 0.8rem;
   }
 }/*# sourceMappingURL=index.css.map */
