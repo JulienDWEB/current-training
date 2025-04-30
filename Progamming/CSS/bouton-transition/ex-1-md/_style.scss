@@ -1,0 +1,7 @@
+body.alt-style {
+  color: $white;
+  background-color: rgba(0, 0, 0, 0.788);
+}
+body.alt-style nav ul li::after {
+  background-color: #ffffff; /* Exemple pour le mode sombre */
+}

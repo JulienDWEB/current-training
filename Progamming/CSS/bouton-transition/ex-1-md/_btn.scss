@@ -1,0 +1,24 @@
+#btn-theme {
+  grid-column: -3 / -2;
+  margin: 0 auto;
+  border-radius: 6px;
+  button {
+    border: 1px solid black;
+    border-radius: 6px;
+    padding: 10px;
+    background: linear-gradient(
+      to bottom,
+      rgb(255, 255, 255) 50%,
+      rgb(0, 0, 0) 50%
+    );
+    background-size: 100% 200%;
+    background-position: top;
+    transition: background-position 0.5s ease-in-out;
+    cursor: pointer;
+    color: rgb(5, 129, 179);
+    &:hover {
+      background-position: bottom;
+      color: white;
+    }
+  }
+}
