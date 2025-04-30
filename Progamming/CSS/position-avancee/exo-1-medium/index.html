@@ -10,20 +10,20 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <header>
-    <div id="nav-left">
-      <i class="fa-solid fa-leaf" style="color: #63e6be"></i>
-      <h1>EcoDesign</h1>
-    </div>
-    <div id="nav-mb">
-      <i class="fa-solid fa-display" style="color: #63e6be"></i>
-      <span>Changer de layout</span>
-      <i class="fa-solid fa-moon" style="color: #63e6be"></i>
-      <span>Mode Sombre</span>
-    </div>
-  </header>
-
   <body>
+    <header>
+      <div id="nav-left">
+        <i class="fa-solid fa-leaf" style="color: #63e6be"></i>
+        <h1>EcoDesign</h1>
+      </div>
+      <div id="nav-mb">
+        <i class="fa-solid fa-display" style="color: #63e6be"></i>
+        <span>Changer de layout</span>
+        <i class="fa-solid fa-moon" style="color: #63e6be"></i>
+        <span id="toggle-style">Mode Sombre</span>
+      </div>
+    </header>
+
     <main>
       <nav>
         <ul>
@@ -35,6 +35,7 @@
           <li>Contact</li>
         </ul>
       </nav>
+
       <section class="cont-middle">
         <h1>Conception web écologique</h1>
         <span>Publié le 21 avril 2025</span>
@@ -93,7 +94,7 @@
           aujourd'hui près de 4% des émissions mondiales de gaz à effet de
           serre.
         </p>
-        <button>En savoir plus</button>
+        <button id="btmd">En savoir plus</button>
       </section>
       <section class="cont-right">
         <div id="box-left1">
@@ -124,43 +125,51 @@
         </div>
       </section>
     </main>
-  </body>
-  <footer>
-    <section class="cont-footer">
-      <div id="title-form">
-        <div>
-          <i class="fa-solid fa-leaf" style="color: #63e6be"></i>
-          <h3>EcoDesign</h3>
-        </div>
-        <span>Pour un web plus respectueux de notre planète</span>
-      </div>
-      <div id="onglet-form">
-        <h3>Liens rapides</h3>
-        <ul>
-          <li>Acuueil</li>
-          <li>Services</li>
-          <li>Blog</li>
-          <li>Contact</li>
-        </ul>
-      </div>
-      <div id="contact-form">
-        <h3>Contact</h3>
-        <span>123 Rue de l'Ecologie 75000 Paris, France </span>
-        <span>Email: contact@ecodesign.fr</span>
-        <span>Tél: + 33 1 23 45 67 89</span>
-      </div>
 
-      <div id="icon-form">
-        <h3>Suivez-nous</h3>
-        <i class="fa-brands fa-twitter" style="color: rgb(0, 7, 104)"></i>
-        <i class="fa-brands fa-facebook" style="color: rgb(0, 7, 104)"></i>
-        <i class="fa-brands fa-instagram" style="color: rgb(0, 7, 104)"></i>
-        <i class="fa-brands fa-linkedin" style="color: rgb(0, 7, 104)"></i>
+    <footer>
+      <section class="cont-footer">
+        <div id="title-form">
+          <div>
+            <i class="fa-solid fa-leaf" style="color: #63e6be"></i>
+            <h3>EcoDesign</h3>
+          </div>
+          <span>Pour un web plus respectueux de notre planète</span>
+        </div>
+        <div id="onglet-form">
+          <h3>Liens rapides</h3>
+          <ul>
+            <li>Acuueil</li>
+            <li>Services</li>
+            <li>Blog</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+        <div id="contact-form">
+          <h3>Contact</h3>
+          <span>123 Rue de l'Ecologie 75000 Paris, France </span>
+          <span>Email: contact@ecodesign.fr</span>
+          <span>Tél: + 33 1 23 45 67 89</span>
+        </div>
+
+        <div id="icon-form">
+          <h3>Suivez-nous</h3>
+          <i class="fa-brands fa-twitter" style="color: rgb(0, 7, 104)"></i>
+          <i class="fa-brands fa-facebook" style="color: rgb(0, 7, 104)"></i>
+          <i class="fa-brands fa-instagram" style="color: rgb(0, 7, 104)"></i>
+          <i class="fa-brands fa-linkedin" style="color: rgb(0, 7, 104)"></i>
+        </div>
+      </section>
+      <div id="copy">
+        <i class="fa-solid fa-copyright" style="color: rgb(0, 7, 104)"></i
+        ><span>2025 EcoDesign. Tous droits réservés.</span>
       </div>
-    </section>
-    <div id="copy">
-      <i class="fa-solid fa-copyright" style="color: rgb(0, 7, 104)"></i
-      ><span>2025 EcoDesign. Tous droits réservés.</span>
-    </div>
-  </footer>
+    </footer>
+    <script>
+      document
+        .getElementById("toggle-style")
+        .addEventListener("click", function () {
+          document.body.classList.toggle("alt-style");
+        });
+    </script>
+  </body>
 </html>

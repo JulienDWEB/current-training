@@ -1,0 +1,27 @@
+@media (max-width: 750px) {
+  body main {
+    display: flex;
+    flex-direction: row; // ou column selon le rendu souhaité
+    flex-wrap: wrap;
+  }
+
+  body main nav {
+    height: 100%;
+    ul {
+      display: flex;
+    }
+    order: 1;
+    width: 100%;
+  }
+
+  body main .cont-middle {
+    order: 2;
+    width: 70%;
+    padding: 50px;
+  }
+
+  .cont-right {
+    order: 3;
+    width: 30%;
+  }
+}

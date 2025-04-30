@@ -25,12 +25,11 @@ body {
     grid-template-columns: 20% 60% 20%;
 
     .cont-middle {
-      display: grid;
-      grid-column: 2 / 3;
       width: 100%;
       max-width: 900px;
-      padding: 0 8rem; // marges internes responsives
+      padding: 0 4rem; // marges internes responsives
       box-sizing: border-box;
+      font-size: 0.8rem;
       h1 {
         padding: 10px 0;
       }
@@ -65,10 +64,12 @@ body {
       #box-left3 {
         span {
           display: inline-block;
-          margin: 5px;
-          padding: 8px;
+          margin: 2px;
+          padding: 4px;
           border: 1px solid black;
+          border-radius: 4px;
           background-color: white;
+          font-size: 0.9rem;
           &:hover {
             background-color: rgba(184, 184, 184, 0.418);
             cursor: pointer;

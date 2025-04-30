@@ -12,16 +12,27 @@ header {
     h1 {
       color: white;
       box-shadow: 7px 5px 10px 0px #696a6d;
+      &:hover {
+        cursor: pointer;
+        box-shadow: 7px 5px 10px 0px #113c6e;
+      }
     }
   }
   #nav-mb {
     visibility: hidden;
     span {
+      cursor: pointer;
       padding: 10px;
       color: white;
     }
-    @media (max-width: 768px) {
+    @media (max-width: 750px) {
       visibility: visible;
     }
   }
+}
+body.alt-style header {
+  background-color: black;
+}
+body.alt-style footer {
+  background-color: black;
 }
