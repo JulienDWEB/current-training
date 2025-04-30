@@ -38,7 +38,7 @@ body button {
   background-color: #94949483;
   border-radius: 8px;
   border: 0;
-  transition: transform 0.5rem;
+  transition: transform 0.5s;
   &:hover {
     box-shadow: 0px 2px 10px 0 black;
     transform: scale(1.1);
@@ -48,9 +48,9 @@ body button {
   background-color: #fa000083;
   border-radius: 8px;
   border: 0;
-  transition: transform 0.5rem;
+  transition: transform 0.5s;
   &:hover {
     box-shadow: 0px 2px 10px 0 black;
-    transform: rotateX(15deg);
+    transform: rotate(15deg);
   }
 }
