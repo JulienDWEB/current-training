@@ -1,0 +1,56 @@
+body button {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 12px 24px; /*0.75em 1.5em*/
+  font-size: 16px;
+}
+#btn1 {
+  background-color: rgb(131, 131, 248);
+  border-radius: 8px;
+  border: 0;
+  transition: transform 0.5s ease;
+
+  &:hover {
+    cursor: pointer;
+    transform: translateY(-5px); // ou translate(-5px, 5px) selon effet désiré
+    background-color: blue;
+    box-shadow: 0px 2px 10px 0 black;
+    animation: bounce 0.6s ease;
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-4px);
+  }
+  50% {
+    transform: translateY(4px);
+  }
+  70% {
+    transform: translateY(-4px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+#btn2 {
+  background-color: #94949483;
+  border-radius: 8px;
+  border: 0;
+  transition: transform 0.5rem;
+  &:hover {
+    box-shadow: 0px 2px 10px 0 black;
+    transform: scale(1.1);
+  }
+}
+#btn3 {
+  background-color: #fa000083;
+  border-radius: 8px;
+  border: 0;
+  transition: transform 0.5rem;
+  &:hover {
+    box-shadow: 0px 2px 10px 0 black;
+    transform: rotateX(15deg);
+  }
+}
