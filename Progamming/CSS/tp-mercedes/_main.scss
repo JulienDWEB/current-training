@@ -80,10 +80,12 @@ width: 100%;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 10px;
+    margin: 10px;
     .img-container {
         width: 100%;
         height: 100%;
         position: relative;
+        
 
         img {
             width: 100%;
@@ -91,14 +93,26 @@ width: 100%;
             object-fit: cover; // remplissage propre sans déformation
             background-position: center;
             display: block; // évite les petits espaces blancs sous l'image
+            border-radius: 8px;
+            box-shadow: 0px 5px 31px 5px rgba(0,0,0,0.53);
+            
         }
     }
-    .flou-img {
+    .flou-img1 {
         width: 100%;
         height: 100%; 
         object-fit: cover; 
         background-position: center;
         display: block;
+        transform: scale(0.8);
+        transition: transform 0.8s ease-out;
+        border-radius: 8px;
+        box-shadow: 0px 5px 31px 5px rgba(0,0,0,0.53);
+        &:hover {
+            transform: scale(1);
+        }
+        
+       
     }
     .flou-img1 {
         filter: blur(2px);
@@ -158,4 +172,26 @@ footer {
         }
         
     }
+}
+#onglet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    grid-column: -3 / -2;
+    width: 100%;
+    height: 100px;
+    gap: 20px;
+    .select-onglet {
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 15px;
+    transition: all 0.5s ;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.53);
+    &:hover {
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.625);
+
+    }
+}
 }
