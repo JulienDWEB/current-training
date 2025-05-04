@@ -1,0 +1,192 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "PT Sans";
+  src: url("/CSS/position-basic/exo-pb-1/asset/font/PTSans-Bold.ttf") format("truetype");
+  src: url("/CSS/position-basic/exo-pb-1/asset/font/PTSans-BoldItalic.ttf") format("truetype");
+  src: url("/CSS/position-basic/exo-pb-1/asset/font/PTSans-Italic.ttf") format("truetype");
+  src: url("/CSS/position-basic/exo-pb-1/asset/font/PTSans-Regular.ttf") format("truetype");
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav {
+  background-color: rgba(0, 0, 0, 0.494);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+nav #nav-logo img {
+  max-height: 100px;
+  max-width: 100px;
+}
+nav #nav-right ul {
+  display: flex;
+  justify-items: center;
+  padding: 0px;
+  margin: 20px;
+}
+nav #nav-right ul li {
+  list-style-type: none;
+  padding: 10px;
+  color: white;
+  transition: all 0.5s;
+}
+nav #nav-right ul li:hover {
+  cursor: pointer;
+  background-color: black;
+  border-radius: 8px;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  position: relative;
+}
+header nav {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+}
+
+.video-merco {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+}
+.video-merco video {
+  position: relative;
+  width: 100%;
+  height: auto; /* pour garder le bon ratio largeur/hauteur */
+  max-height: 50vh; /* ajustable : ici 30% de la hauteur de la fenêtre */
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.merco-evo2 {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+}
+.merco-evo2 img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-position: center;
+  width: 100%;
+  max-height: 50vh;
+  height: auto;
+  filter: blur(4px);
+}
+
+.info-img {
+  z-index: 1;
+  position: absolute;
+  color: white;
+  display: grid;
+  justify-items: start;
+}
+.info-img a {
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.527);
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid black;
+  color: white;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.377) 50%, rgba(0, 0, 0, 0.442) 50%);
+  background-size: 100% 200%;
+  background-position: top;
+  transition: background-position 0.5s ease-in-out;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+}
+.info-img a:hover {
+  background-position: bottom;
+  color: white;
+}
+.info-img p {
+  margin-bottom: 25px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+}
+.gallery .img-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.gallery .img-container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-position: center;
+  display: block;
+}
+.gallery .flou-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-position: center;
+  display: block;
+}
+.gallery .flou-img1 {
+  filter: blur(2px);
+}
+.gallery .info-gallery {
+  position: absolute;
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.377) 50%, rgba(0, 0, 0, 0.442) 50%);
+  background-size: 100% 200%;
+  background-position: top;
+  transition: background-position 0.5s ease-in-out;
+  cursor: pointer;
+}
+.gallery .info-gallery:hover {
+  background-position: bottom;
+  color: white;
+}
+
+footer {
+  margin-top: 10px;
+  background-color: rgb(0, 0, 0);
+  height: 30vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+footer #trait {
+  border: 1px solid white;
+  width: 80%;
+  position: absolute;
+  left: 10%;
+  bottom: 80%;
+}
+footer #footer-logo img {
+  height: 200px;
+  width: 200px;
+}/*# sourceMappingURL=index.css.map */
