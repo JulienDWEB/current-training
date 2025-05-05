@@ -1,16 +1,19 @@
 $color1: rgb(57, 119, 255);
 $color2: rgb(0, 90, 150);
-$white: rgb(241, 241, 241);  
-$black: rgb(0, 0, 0);  
+$white: rgb(241, 241, 241);
+$black: rgb(0, 0, 0);
 
 @mixin centerChild {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 nav {
   i {
     color: $white;
   }
+}
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }

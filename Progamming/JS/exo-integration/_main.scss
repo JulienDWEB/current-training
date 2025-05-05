@@ -1,0 +1,12 @@
+main {
+  display: grid;
+  width: 70%;
+  margin: 0 auto;
+  background-color: white;
+}
+.info-main {
+  text-align: center;
+  img {
+    object-fit: cover;
+  }
+}

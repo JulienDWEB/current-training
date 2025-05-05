@@ -28,6 +28,7 @@ nav #nav-logo img:hover {
 nav #nav-right ul {
   display: flex;
   justify-items: center;
+  align-items: center;
   flex-direction: row-reverse;
   padding: 0px;
   margin: 20px;
@@ -260,6 +261,10 @@ footer .footer-li ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   opacity: 1;
+}
+
+#page2 {
+  background-color: rgb(99, 211, 255);
 }
 
 .img-container img {

@@ -3,6 +3,10 @@ nav i {
 }
 
 body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+body {
   background-image: url(/JS/exo-integration/images/bg.jpg);
   background-position: center;
   background-repeat: repeat-y;
@@ -27,8 +31,6 @@ body #circle {
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
 body #circle i {
   color: white;
@@ -42,15 +44,50 @@ body #circle:hover {
 body nav {
   display: flex;
   justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.062);
+  width: 70%;
+  margin: 0 auto;
+  padding: 10px;
+  align-items: center;
+  justify-items: center;
 }
 body nav #ul-left {
+  margin: 0;
+  padding: 0;
   display: flex;
   list-style-type: none;
   gap: 10px;
   justify-content: space-between;
+  height: 100%;
+}
+body nav #ul-left li {
+  padding: 15px;
+  transition: background-color 0.4s ease;
+  color: white;
+}
+body nav #ul-left li:hover {
+  background-color: white;
+  color: black;
 }
 body nav #ul-right {
   display: flex;
   list-style-type: none;
   gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: grid;
+  width: 70%;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.info-main {
+  text-align: center;
+}
+.info-main img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=index.css.map */
