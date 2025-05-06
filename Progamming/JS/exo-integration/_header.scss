@@ -8,7 +8,7 @@ body {
     justify-content: center;
     text-align: center;
     width: 50%;
-    margin: 0 auto;
+    margin: 20px auto;
     color: $white;
     p {
       font-size: 0.8rem;
@@ -23,6 +23,8 @@ body {
     left: 50%;
     transform: translateX(-50%);
     display: flex;
+    align-items: center;
+    justify-content: center;
 
     i {
       color: white;
@@ -37,10 +39,9 @@ body {
   nav {
     display: flex;
     justify-content: space-between;
-    background-color: rgba(0, 0, 0, 0.062);
+    background-color: rgba(0, 0, 0, 0.205);
     width: 70%;
     margin: 0 auto;
-    padding: 10px;
     align-items: center;
     justify-items: center;
 
@@ -59,6 +60,7 @@ body {
         transition: background-color 0.4s ease;
         color: white;
         &:hover {
+          cursor: pointer;
           background-color: white;
           color: black;
         }

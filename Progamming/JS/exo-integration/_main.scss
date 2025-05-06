@@ -3,10 +3,37 @@ main {
   width: 70%;
   margin: 0 auto;
   background-color: white;
+  justify-items: center;
 }
 .info-main {
   text-align: center;
-  img {
-    object-fit: cover;
+  width: 80%;
+  margin: 10px;
+}
+
+.cont-div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 10px;
+  border-top: rgba(128, 128, 128, 0.315) 1px solid;
+}
+
+.cont-1 {
+  display: grid;
+  justify-items: center;
+  border-right: rgba(128, 128, 128, 0.315) 1px solid;
+  p {
+    text-align: center;
+    width: 80%;
+  }
+}
+.cont-2 {
+  display: grid;
+  justify-items: center;
+
+  p {
+    text-align: center;
+    width: 80%;
   }
 }

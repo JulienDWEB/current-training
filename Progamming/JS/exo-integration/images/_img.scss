@@ -1,0 +1,9 @@
+.cont-img {
+  display: grid;
+  justify-items: center;
+  img {
+    object-fit: cover;
+    width: 90%;
+    height: 100%;
+  }
+}
