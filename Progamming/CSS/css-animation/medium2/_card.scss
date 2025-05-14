@@ -1,0 +1,34 @@
+main {
+  h1 {
+    text-align: center;
+  }
+  .container-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    .content-card {
+      display: grid;
+      justify-content: center;
+      justify-items: center;
+      align-items: center;
+    }
+    .card {
+      display: grid;
+      border-radius: 8px;
+      box-shadow: -5px 4px 3px #0000003d;
+      .img {
+        background-image: url(./asset/img/img1.webp);
+        background-size: cover;
+        background-position: center;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    .title-card {
+      color: red;
+      margin: 10px;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+button {
+  border: 1px solid black;
+  border-radius: 6px;
+  padding: 10px;
+  background: linear-gradient(to bottom, rgb(255, 255, 255) 50%, rgb(255, 0, 0) 50%);
+  background-size: 100% 200%;
+  background-position: top;
+  transition: background-position 0.5s ease-in-out;
+  cursor: pointer;
+  color: rgb(179, 5, 5);
+}
+button:hover {
+  background-position: bottom;
+  color: white;
+}
+
+main h1 {
+  text-align: center;
+}
+main .container-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+main .container-card .content-card {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+}
+main .container-card .card {
+  display: grid;
+  border-radius: 8px;
+  box-shadow: -5px 4px 3px rgba(0, 0, 0, 0.2392156863);
+}
+main .container-card .card .img {
+  background-image: url(./asset/img/img1.webp);
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .container-card .title-card {
+  color: red;
+  margin: 10px;
+}/*# sourceMappingURL=index.css.map */
