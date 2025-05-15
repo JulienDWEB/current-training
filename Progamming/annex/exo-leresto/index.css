@@ -150,10 +150,12 @@ nav .cont-nav ul {
   justify-content: space-around;
   gap: 30px;
 }
-nav img {
+nav .img-header img {
+  filter: blur(2px);
   width: 100%;
   height: 100%;
-  filter: blur(2px);
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 nav h1 {
   font-family: "Allura";
@@ -253,6 +255,8 @@ main .onglet-main ul {
   display: flex;
   gap: 20px;
   margin: 10px;
+  width: 800px;
+  justify-content: space-around;
 }
 main .onglet-main ul li {
   cursor: pointer;
@@ -271,5 +275,21 @@ main #bg-main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  justify-items: center;
+  width: 80%;
+}
+main #bg-main div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+main #bg-main div .price-menu-main {
+  padding: 10px;
+}
+main #bg-main div .price-menu-main:hover {
+  background-color: rgba(0, 0, 0, 0.233);
+  border-radius: 8px;
+}
+main .cont-main1 {
+  display: flex;
+  justify-content: center;
 }/*# sourceMappingURL=index.css.map */

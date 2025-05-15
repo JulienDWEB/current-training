@@ -15,6 +15,8 @@ main {
       display: flex;
       gap: 20px;
       margin: 10px;
+      width: 800px;
+      justify-content: space-around;
       li {
         cursor: pointer;
         font-size: 1.1rem;
@@ -34,6 +36,23 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    justify-items: center;
+    width: 80%;
+
+    div {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      .price-menu-main {
+        padding: 10px;
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.233);
+          border-radius: 8px;
+        }
+      }
+    }
+  }
+  .cont-main1 {
+    display: flex;
+    justify-content: center;
   }
 }
