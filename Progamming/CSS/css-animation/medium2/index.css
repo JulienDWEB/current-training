@@ -21,19 +21,51 @@ main .container-card {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
+  gap: 10px;
+  animation: TranslateRight ease 1s;
+  transition: transform 0.8s ease;
 }
-main .container-card .content-card {
+@keyframes TranslateRight {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+main .content-card {
   display: grid;
   justify-content: center;
-  justify-items: center;
+  justify-items: start;
   align-items: center;
+  margin: 10px;
 }
-main .container-card .card {
+main .card {
   display: grid;
   border-radius: 8px;
   box-shadow: -5px 4px 3px rgba(0, 0, 0, 0.2392156863);
+  opacity: 0;
+  animation: TranslateRight 0.8s ease-out forwards;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform: scale(1);
+  cursor: pointer;
 }
-main .container-card .card .img {
+main .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+main .card .card:nth-child(1) {
+  animation-delay: 0.4s;
+}
+main .card .card:nth-child(2) {
+  animation-delay: 0.8s;
+}
+main .card .card:nth-child(3) {
+  animation-delay: 1.2s;
+}
+main .card .img {
   background-image: url(./asset/img/img1.webp);
   background-size: cover;
   background-position: center;
@@ -41,8 +73,39 @@ main .container-card .card .img {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
 }
-main .container-card .title-card {
+main .card .img:hover {
+  opacity: 1;
+}
+main .card .img:hover + .content-card .title-card::after {
+  width: 100%;
+}
+main .card:hover::after {
+  width: 100%;
+}
+
+.title-card {
+  position: relative;
   color: red;
-  margin: 10px;
+  cursor: pointer;
+}
+.title-card::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: #db3434;
+  transition: width 0.3s ease;
+}
+
+@media (max-width: 750px) {
+  .container-card {
+    display: flex;
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=index.css.map */
