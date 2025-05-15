@@ -1,24 +1,56 @@
-#circle-loading {
-  display: grid;
+main {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  justify-items: center;
-  height: 100vh;
-}
+  gap: 10px;
 
-.loader {
-  width: 50px;
-  height: 50px;
-  border: 5px solid blue;
-  border-top: 5px solid white;
-  border-radius: 50%;
-  animation: rotation 1.5s linear infinite;
-  @keyframes rotation {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
+  .loader {
+    width: 50px;
+    height: 50px;
+    border: 5px solid blue;
+    border-top: 5px solid white;
+    border-radius: 50%;
+    animation: rotation 1.5s linear infinite;
+    @keyframes rotation {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
     }
   }
+}
+#content-loading {
+  background-color: rgb(37, 73, 119);
+  width: 70%;
+  height: 100px;
+  border-radius: 32px;
+  position: relative;
+  overflow: hidden;
+}
+.bar-load {
+  width: 0%;
+  height: 100px;
+  border-radius: 32px;
+  background-color: rgb(84, 172, 255);
+  animation: SlideWidth 5s linear infinite;
+}
+@keyframes SlideWidth {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
+}
+.progress-load {
+  position: absolute;
+  top: 45%;
+  right: 10px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: white;
 }

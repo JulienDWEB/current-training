@@ -7,8 +7,35 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <section id="circle-loading">
-      <div class="loader"></div>
-    </section>
+    <main>
+      <section id="circle-loading">
+        <div class="loader"></div>
+      </section>
+      <div id="content-loading">
+        <div class="bar-load" id="bar"></div>
+        <span class="progress-load" id="percent">25%</span>
+      </div>
+    </main>
+    <script>
+      const bar = document.getElementById("bar");
+      const percentText = document.getElementById("percent");
+      let percentage = 0;
+
+      function startLoading() {
+        percentage = 0;
+        const interval = setInterval(() => {
+          if (percentage >= 100) {
+            clearInterval(interval);
+            setTimeout(startLoading, 1000); // attend 1 seconde avant de recommencer
+          } else {
+            percentage++;
+            bar.style.width = percentage + "%";
+            percentText.textContent = percentage + "%";
+          }
+        }, 50); // plus rapide : 5 secondes pour aller à 100%
+      }
+
+      startLoading();
+    </script>
   </body>
 </html>
