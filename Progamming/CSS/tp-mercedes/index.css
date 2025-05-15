@@ -17,14 +17,6 @@ nav {
   align-items: center;
   padding: 10px;
 }
-nav #nav-logo img {
-  max-height: 100px;
-  max-width: 100px;
-}
-nav #nav-logo img:hover {
-  cursor: pointer;
-  filter: drop-shadow(0 0 0.75rem rgb(133, 133, 133));
-}
 nav #nav-right ul {
   display: flex;
   justify-items: center;
@@ -374,4 +366,14 @@ input.toggle-menu {
 
 #check-menu {
   width: 81px;
+}
+
+#nav-logo img {
+  height: 100px;
+  width: 100px;
+  min-height: 100px;
+}
+#nav-logo img:hover {
+  cursor: pointer;
+  filter: drop-shadow(0 0 0.75rem rgb(133, 133, 133));
 }/*# sourceMappingURL=index.css.map */
