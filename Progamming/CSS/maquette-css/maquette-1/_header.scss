@@ -1,3 +1,47 @@
 header {
   @include bg-image("asset/img/bg_header.jpg", cover);
+  min-height: 500px;
+  position: relative;
+  .header-nav {
+    ul {
+      @include center-flex;
+      .logo-container {
+        background-color: $color-primary1;
+        padding: 20px;
+        cursor: pointer;
+        &:hover {
+          background-color: $color-primary2;
+          border-radius: 8px;
+        }
+        h2 {
+          letter-spacing: 5px;
+          color: $white;
+          font-weight: 300;
+          font-size: 1.1rem;
+        }
+      }
+      li {
+        padding: 20px;
+        list-style-type: none;
+
+        a {
+          text-decoration: none;
+          color: $white;
+        }
+      }
+    }
+  }
+  .header-content {
+    display: grid;
+    justify-items: end;
+
+    @include absolute-right(16rem);
+    width: 400px;
+    @include absolute-right-resp;
+    .content {
+      padding: 10px;
+      color: $white;
+      text-align: right;
+    }
+  }
 }

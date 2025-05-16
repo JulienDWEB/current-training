@@ -1,0 +1,14 @@
+.btn-light {
+  padding: 10px;
+  button {
+    @include btn-light;
+    cursor: pointer;
+  }
+}
+.btn-dark {
+  padding: 10px;
+  button {
+    @include btn-dark;
+    cursor: pointer;
+  }
+}

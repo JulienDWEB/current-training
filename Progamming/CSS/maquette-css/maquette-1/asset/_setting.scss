@@ -4,6 +4,14 @@
   padding: 0;
 }
 
+$color-main1: #272727;
+$color-main: #606060;
+$color-primary1: #1616167a;
+$color-primary2: #cca57c;
+$white: #ffffff;
+$black: black;
+$btn-dark: #272727;
+
 @mixin bg-image(
   $url,
   $size: contain,
@@ -15,9 +23,90 @@
   background-repeat: $repeat;
   background-position: $position;
 }
-@mixin color {
-  $color-primary1: #606060;
-  $color-primary2: #cca57c;
-  $white: #ffffff;
-  $black: black;
+
+@mixin center-flex($direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+}
+
+// TXT dépasse de son conteneur
+@mixin text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@mixin absolute-right($offset: 2rem) {
+  position: absolute;
+  top: 50%;
+  right: $offset;
+  transform: translateY(-50%);
+}
+@mixin absolute-right-resp {
+  @media (max-width: 768px) {
+    position: static;
+    transform: none;
+    margin: 0 auto;
+    justify-items: center;
+    p {
+      text-align: left;
+    }
+    h1 {
+      text-align: center;
+    }
+  }
+}
+@mixin absolute-bottom-center($bottom: 1rem) {
+  position: absolute;
+  bottom: $bottom;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@mixin container($max-width: 1200px) {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+@mixin grid-fluid($min: 200px, $gap: 1rem) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($min, 1fr));
+  gap: $gap;
+}
+@mixin grid($columns: 12, $gap: 1rem, $rows: 1) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  grid-template-rows: repeat($rows, 1fr);
+  gap: $gap;
+}
+@mixin btn-light {
+  width: 102px;
+  height: 23px;
+  border: 0;
+  border-radius: 8px;
+  color: $white;
+  background-color: $color-primary2;
+  &:hover {
+    background-color: $color-primary1;
+  }
+}
+@mixin btn-dark {
+  width: 102px;
+  height: 23px;
+  border: 0;
+  border-radius: 8px;
+  color: $white;
+  background-color: $btn-dark;
+  &:hover {
+    background-color: $color-primary2;
+  }
 }

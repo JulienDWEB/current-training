@@ -9,4 +9,155 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  min-height: 500px;
+  position: relative;
+}
+header .header-nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+header .header-nav ul .logo-container {
+  background-color: rgba(22, 22, 22, 0.4784313725);
+  padding: 20px;
+  cursor: pointer;
+}
+header .header-nav ul .logo-container:hover {
+  background-color: #cca57c;
+  border-radius: 8px;
+}
+header .header-nav ul .logo-container h2 {
+  letter-spacing: 5px;
+  color: #ffffff;
+  font-weight: 300;
+  font-size: 1.1rem;
+}
+header .header-nav ul li {
+  padding: 20px;
+  list-style-type: none;
+}
+header .header-nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+}
+header .header-content {
+  display: grid;
+  justify-items: end;
+  position: absolute;
+  top: 50%;
+  right: 16rem;
+  transform: translateY(-50%);
+  width: 400px;
+}
+@media (max-width: 768px) {
+  header .header-content {
+    position: static;
+    transform: none;
+    margin: 0 auto;
+    justify-items: center;
+  }
+  header .header-content p {
+    text-align: left;
+  }
+  header .header-content h1 {
+    text-align: center;
+  }
+}
+header .header-content .content {
+  padding: 10px;
+  color: #ffffff;
+  text-align: right;
+}
+
+body {
+  background-color: #606060;
+}
+body main {
+  width: 80%;
+  background-color: rgba(22, 22, 22, 0.4784313725);
+  margin: 0 auto;
+}
+body main .title-content {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  padding: 20px;
+}
+body main .title-content span {
+  color: #cca57c;
+  font-size: 1.3rem;
+}
+body main .content-para {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 1rem;
+  align-items: center;
+  justify-items: center;
+  padding: 20px;
+}
+body main .content-para .para span {
+  color: #ffffff;
+  font-weight: 500;
+}
+body main .content-para .para .p-light {
+  color: #cca57c;
+  border-left: 1px solid #cca57c;
+  padding-left: 20px;
+}
+body main .content1-img {
+  background-image: url(asset/img/london_hall.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 200px;
+  height: 200px;
+  justify-items: center;
+  position: relative;
+}
+body main .content1-img .btn-light {
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+body main .container-content {
+  background-color: #272727;
+}
+
+.btn-light {
+  padding: 10px;
+}
+.btn-light button {
+  width: 102px;
+  height: 23px;
+  border: 0;
+  border-radius: 8px;
+  color: #ffffff;
+  background-color: #cca57c;
+  cursor: pointer;
+}
+.btn-light button:hover {
+  background-color: rgba(22, 22, 22, 0.4784313725);
+}
+
+.btn-dark {
+  padding: 10px;
+}
+.btn-dark button {
+  width: 102px;
+  height: 23px;
+  border: 0;
+  border-radius: 8px;
+  color: #ffffff;
+  background-color: #272727;
+  cursor: pointer;
+}
+.btn-dark button:hover {
+  background-color: #cca57c;
 }/*# sourceMappingURL=index.css.map */
