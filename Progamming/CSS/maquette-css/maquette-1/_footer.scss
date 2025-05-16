@@ -20,6 +20,12 @@ footer {
       input {
         list-style-type: none;
         background-color: $color-primary1;
+        border: 0;
+      }
+      textarea {
+        background-color: $color-primary1;
+        border: 0;
+        height: 100px;
       }
     }
   }

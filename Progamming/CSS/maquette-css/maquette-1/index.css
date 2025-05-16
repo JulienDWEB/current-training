@@ -254,6 +254,12 @@ footer .container-footer .card-dark {
 footer .container-footer .card-dark input {
   list-style-type: none;
   background-color: rgba(22, 22, 22, 0.4784313725);
+  border: 0;
+}
+footer .container-footer .card-dark textarea {
+  background-color: rgba(22, 22, 22, 0.4784313725);
+  border: 0;
+  height: 100px;
 }
 
 .btn-light1 button {
