@@ -1,0 +1,26 @@
+footer {
+  @include bg-image("asset/img/bg_footer.jpg", cover);
+
+  .container-footer {
+    width: 80%;
+    margin: 0 auto;
+    @include grid-fluid;
+    gap: 0;
+    .card-gold {
+      background-color: $color-secondary1;
+      color: $white;
+      padding: 10px;
+    }
+    .card-dark {
+      background-color: $color-primary;
+      color: $white;
+      padding: 10px;
+      display: grid;
+      gap: 10px;
+      input {
+        list-style-type: none;
+        background-color: $color-primary1;
+      }
+    }
+  }
+}

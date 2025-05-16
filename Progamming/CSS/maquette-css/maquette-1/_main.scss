@@ -2,7 +2,7 @@ body {
   background-color: $color-main;
   main {
     width: 80%;
-    background-color: $color-primary1;
+    background-color: $color-primary;
     margin: 0 auto;
     .title-content {
       display: flex;
@@ -12,10 +12,11 @@ body {
       font-size: 1rem;
       padding: 20px;
       span {
-        color: $color-primary2;
+        color: $color-secondary;
         font-size: 1.3rem;
       }
     }
+
     .content-para {
       @include grid(2);
       align-items: center;
@@ -27,8 +28,8 @@ body {
           font-weight: 500;
         }
         .p-light {
-          color: $color-primary2;
-          border-left: 1px solid $color-primary2;
+          color: $color-secondary;
+          border-left: 1px solid $color-secondary;
           padding-left: 20px;
         }
       }
@@ -36,7 +37,7 @@ body {
     .content1-img {
       @include bg-image("asset/img/london_hall.jpg", cover);
       width: 200px;
-      height: 200px;
+      height: 300px;
       justify-items: center;
       position: relative;
       .btn-light {
@@ -45,6 +46,85 @@ body {
     }
     .container-content {
       background-color: $color-main1;
+    }
+    .container-content1 {
+      background-color: $color-secondary;
+
+      .projet {
+        color: white;
+        font-weight: 400;
+      }
+      .c-card {
+        padding: 20px;
+        @include grid-fluid;
+        justify-items: center;
+        .container-img {
+          @include bg-image("asset/img/london_hall.jpg", cover);
+          width: 200px;
+          display: grid;
+          align-content: space-between;
+        }
+        .container-img1 {
+          @include bg-image("asset/img/london.jpg", cover);
+          width: 200px;
+          display: grid;
+          align-content: space-between;
+        }
+        .title-img {
+          padding: 10px;
+          span {
+            color: $color-secondary;
+          }
+        }
+        .content-text {
+          display: grid;
+          width: 200px;
+          align-content: center;
+          .logo-12 {
+            @include bg-image("asset/img/logo12.png", cover);
+            height: 60px;
+            width: 60px;
+          }
+          .title-para {
+            color: $white;
+            span {
+              color: $color-main1;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+    .container-content2 {
+      .contenaire-service {
+        @include grid-fluid;
+        .para-service {
+          display: grid;
+          gap: 10px;
+          padding: 10px;
+          .logo-service {
+            @include bg-image("asset/img/polygon.png", cover);
+            height: 50px;
+            width: 50px;
+          }
+          h3 {
+            color: $white;
+          }
+          p {
+            color: $color-main;
+          }
+        }
+      }
+      .content-img-service {
+        padding: 10px;
+        .img-service {
+          @include bg-image("asset/img/map.png", cover);
+          height: 159px;
+          width: 100%;
+          border-top: 1px solid $color-secondary;
+          border-bottom: 1px solid $color-secondary;
+        }
+      }
     }
   }
 }

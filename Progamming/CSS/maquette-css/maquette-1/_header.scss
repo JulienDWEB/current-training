@@ -6,11 +6,11 @@ header {
     ul {
       @include center-flex;
       .logo-container {
-        background-color: $color-primary1;
+        background-color: $color-primary;
         padding: 20px;
         cursor: pointer;
         &:hover {
-          background-color: $color-primary2;
+          background-color: $color-secondary;
           border-radius: 8px;
         }
         h2 {

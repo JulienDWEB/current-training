@@ -114,7 +114,7 @@ body main .content1-img {
   background-repeat: no-repeat;
   background-position: center center;
   width: 200px;
-  height: 200px;
+  height: 300px;
   justify-items: center;
   position: relative;
 }
@@ -128,6 +128,144 @@ body main .content1-img .btn-light {
 }
 body main .container-content {
   background-color: #272727;
+}
+body main .container-content1 {
+  background-color: #cca57c;
+}
+body main .container-content1 .projet {
+  color: white;
+  font-weight: 400;
+}
+body main .container-content1 .c-card {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  justify-items: center;
+}
+body main .container-content1 .c-card .container-img {
+  background-image: url(asset/img/london_hall.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 200px;
+  display: grid;
+  align-content: space-between;
+}
+body main .container-content1 .c-card .container-img1 {
+  background-image: url(asset/img/london.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 200px;
+  display: grid;
+  align-content: space-between;
+}
+body main .container-content1 .c-card .title-img {
+  padding: 10px;
+}
+body main .container-content1 .c-card .title-img span {
+  color: #cca57c;
+}
+body main .container-content1 .c-card .content-text {
+  display: grid;
+  width: 200px;
+  align-content: center;
+}
+body main .container-content1 .c-card .content-text .logo-12 {
+  background-image: url(asset/img/logo12.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 60px;
+  width: 60px;
+}
+body main .container-content1 .c-card .content-text .title-para {
+  color: #ffffff;
+}
+body main .container-content1 .c-card .content-text .title-para span {
+  color: #272727;
+  font-weight: bold;
+}
+body main .container-content2 .contenaire-service {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+body main .container-content2 .contenaire-service .para-service {
+  display: grid;
+  gap: 10px;
+  padding: 10px;
+}
+body main .container-content2 .contenaire-service .para-service .logo-service {
+  background-image: url(asset/img/polygon.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 50px;
+  width: 50px;
+}
+body main .container-content2 .contenaire-service .para-service h3 {
+  color: #ffffff;
+}
+body main .container-content2 .contenaire-service .para-service p {
+  color: #606060;
+}
+body main .container-content2 .content-img-service {
+  padding: 10px;
+}
+body main .container-content2 .content-img-service .img-service {
+  background-image: url(asset/img/map.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 159px;
+  width: 100%;
+  border-top: 1px solid #cca57c;
+  border-bottom: 1px solid #cca57c;
+}
+
+footer {
+  background-image: url(asset/img/bg_footer.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+footer .container-footer {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  gap: 0;
+}
+footer .container-footer .card-gold {
+  background-color: rgba(204, 165, 124, 0.6156862745);
+  color: #ffffff;
+  padding: 10px;
+}
+footer .container-footer .card-dark {
+  background-color: rgba(22, 22, 22, 0.4784313725);
+  color: #ffffff;
+  padding: 10px;
+  display: grid;
+  gap: 10px;
+}
+footer .container-footer .card-dark input {
+  list-style-type: none;
+  background-color: rgba(22, 22, 22, 0.4784313725);
+}
+
+.btn-light1 button {
+  width: 102px;
+  height: 23px;
+  border: 0;
+  color: #ffffff;
+  background-color: #cca57c;
+  cursor: pointer;
+}
+.btn-light1 button:hover {
+  background-color: rgba(22, 22, 22, 0.4784313725);
 }
 
 .btn-light {
@@ -159,5 +297,17 @@ body main .container-content {
   cursor: pointer;
 }
 .btn-dark button:hover {
+  background-color: #cca57c;
+}
+
+.btn-dark1 button {
+  width: 102px;
+  height: 23px;
+  border: 0;
+  color: #ffffff;
+  background-color: #272727;
+  cursor: pointer;
+}
+.btn-dark1 button:hover {
   background-color: #cca57c;
 }/*# sourceMappingURL=index.css.map */

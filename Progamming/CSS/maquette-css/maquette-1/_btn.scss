@@ -1,3 +1,9 @@
+.btn-light1 {
+  button {
+    @include btn-light1;
+    cursor: pointer;
+  }
+}
 .btn-light {
   padding: 10px;
   button {
@@ -9,6 +15,12 @@
   padding: 10px;
   button {
     @include btn-dark;
+    cursor: pointer;
+  }
+}
+.btn-dark1 {
+  button {
+    @include btn-dark1;
     cursor: pointer;
   }
 }
