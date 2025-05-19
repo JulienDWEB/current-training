@@ -1,6 +1,7 @@
 body {
   background-color: $color-main;
   main {
+    box-shadow: 0 0 8px 0 black;
     width: 80%;
     background-color: $color-primary;
     margin: 0 auto;
@@ -15,10 +16,32 @@ body {
         color: $color-secondary;
         font-size: 1.3rem;
       }
+      h2 {
+        position: relative;
+        @include slidebar;
+      }
+    }
+    .title-content1 {
+      display: flex;
+      gap: 5px;
+      justify-content: center;
+      align-items: center;
+      font-size: 1rem;
+      padding: 20px;
+      span {
+        color: $color-secondary;
+        font-size: 1.3rem;
+      }
+      h2 {
+        position: relative;
+        @include slidebar1;
+      }
     }
 
     .content-para {
       @include grid(2);
+      grid-template-columns: 7fr 3fr;
+
       align-items: center;
       justify-items: center;
       padding: 20px;
@@ -44,11 +67,12 @@ body {
         @include absolute-bottom-center;
       }
     }
-    .container-content {
+    #container-content {
       background-color: $color-main1;
     }
-    .container-content1 {
+    #container-content1 {
       background-color: $color-secondary;
+      padding: 20px;
 
       .projet {
         color: white;
@@ -80,6 +104,7 @@ body {
           display: grid;
           width: 200px;
           align-content: center;
+          gap: 10px;
           .logo-12 {
             @include bg-image("asset/img/logo12.png", cover);
             height: 60px;
@@ -95,36 +120,48 @@ body {
         }
       }
     }
-    .container-content2 {
+    #container-content2 {
       .contenaire-service {
         @include grid-fluid;
+        padding: 20px;
         .para-service {
           display: grid;
           gap: 10px;
           padding: 10px;
           .logo-service {
             @include bg-image("asset/img/polygon.png", cover);
-            height: 50px;
+            height: 40px;
             width: 50px;
-          }
-          h3 {
-            color: $white;
-          }
-          p {
-            color: $color-main;
+            padding: 10px;
+            animation: none;
+            @include rotatey;
           }
         }
       }
-      .content-img-service {
+      .logo-service1 {
+        @include bg-image("asset/img/3d-logo.png", cover);
+        height: 40px;
+        width: 40px;
         padding: 10px;
-        .img-service {
-          @include bg-image("asset/img/map.png", cover);
-          height: 159px;
-          width: 100%;
-          border-top: 1px solid $color-secondary;
-          border-bottom: 1px solid $color-secondary;
-        }
+        @include rotatey;
       }
+      h3 {
+        color: $white;
+      }
+      p {
+        color: $color-main;
+      }
+    }
+  }
+  .content-img-service {
+    padding: 10px;
+    .img-service {
+      @include bg-image("asset/img/map.png", cover);
+      height: 159px;
+      width: 100%;
+      border-top: 1px solid $color-secondary;
+      border-bottom: 1px solid $color-secondary;
+      margin-bottom: 10px;
     }
   }
 }

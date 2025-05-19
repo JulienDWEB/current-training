@@ -40,6 +40,25 @@ header .header-nav ul li {
 header .header-nav ul li a {
   text-decoration: none;
   color: #ffffff;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+}
+header .header-nav ul li a::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  transition: width 0.5s ease-in-out;
+  background-color: #cca57c;
+  left: 0;
+  width: 0;
+  bottom: -3px;
+}
+header .header-nav ul li a:hover::after {
+  width: 100%;
+}
+header .header-nav ul li a:hover {
+  color: #cca57c;
 }
 header .header-content {
   display: grid;
@@ -69,11 +88,47 @@ header .header-content .content {
   color: #ffffff;
   text-align: right;
 }
+header .active-menu {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+header .active-menu .icon-menu {
+  background-image: url(asset/img/menu.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 15px;
+  width: 15px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+header .active-menu .dropdown-menu {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  display: none;
+  background-color: rgba(255, 255, 255, 0.288);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  list-style: none;
+  z-index: 999;
+}
+header .active-menu .dropdown-menu li {
+  padding: 5px;
+  white-space: nowrap;
+}
+header .active-menu.open .dropdown-menu {
+  display: block;
+}
 
 body {
   background-color: #606060;
 }
 body main {
+  box-shadow: 0 0 8px 0 black;
   width: 80%;
   background-color: rgba(22, 22, 22, 0.4784313725);
   margin: 0 auto;
@@ -90,11 +145,56 @@ body main .title-content span {
   color: #cca57c;
   font-size: 1.3rem;
 }
+body main .title-content h2 {
+  position: relative;
+}
+body main .title-content h2::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  transition: width 0.5s ease-in-out;
+  background-color: #cca57c;
+  left: 0;
+  width: 0;
+  bottom: -3px;
+}
+body main .title-content h2:hover::after {
+  width: 100%;
+}
+body main .title-content1 {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  padding: 20px;
+}
+body main .title-content1 span {
+  color: #cca57c;
+  font-size: 1.3rem;
+}
+body main .title-content1 h2 {
+  position: relative;
+}
+body main .title-content1 h2::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  transition: width 0.5s ease-in-out;
+  background-color: rgba(22, 22, 22, 0.4784313725);
+  left: 0;
+  width: 0;
+  bottom: -3px;
+}
+body main .title-content1 h2:hover::after {
+  width: 100%;
+}
 body main .content-para {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(1, 1fr);
   gap: 1rem;
+  grid-template-columns: 7fr 3fr;
   align-items: center;
   justify-items: center;
   padding: 20px;
@@ -126,24 +226,25 @@ body main .content1-img .btn-light {
   margin: 0 auto;
   text-align: center;
 }
-body main .container-content {
+body main #container-content {
   background-color: #272727;
 }
-body main .container-content1 {
+body main #container-content1 {
   background-color: #cca57c;
+  padding: 20px;
 }
-body main .container-content1 .projet {
+body main #container-content1 .projet {
   color: white;
   font-weight: 400;
 }
-body main .container-content1 .c-card {
+body main #container-content1 .c-card {
   padding: 20px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
   justify-items: center;
 }
-body main .container-content1 .c-card .container-img {
+body main #container-content1 .c-card .container-img {
   background-image: url(asset/img/london_hall.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -152,7 +253,7 @@ body main .container-content1 .c-card .container-img {
   display: grid;
   align-content: space-between;
 }
-body main .container-content1 .c-card .container-img1 {
+body main #container-content1 .c-card .container-img1 {
   background-image: url(asset/img/london.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -161,18 +262,19 @@ body main .container-content1 .c-card .container-img1 {
   display: grid;
   align-content: space-between;
 }
-body main .container-content1 .c-card .title-img {
+body main #container-content1 .c-card .title-img {
   padding: 10px;
 }
-body main .container-content1 .c-card .title-img span {
+body main #container-content1 .c-card .title-img span {
   color: #cca57c;
 }
-body main .container-content1 .c-card .content-text {
+body main #container-content1 .c-card .content-text {
   display: grid;
   width: 200px;
   align-content: center;
+  gap: 10px;
 }
-body main .container-content1 .c-card .content-text .logo-12 {
+body main #container-content1 .c-card .content-text .logo-12 {
   background-image: url(asset/img/logo12.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -180,41 +282,75 @@ body main .container-content1 .c-card .content-text .logo-12 {
   height: 60px;
   width: 60px;
 }
-body main .container-content1 .c-card .content-text .title-para {
+body main #container-content1 .c-card .content-text .title-para {
   color: #ffffff;
 }
-body main .container-content1 .c-card .content-text .title-para span {
+body main #container-content1 .c-card .content-text .title-para span {
   color: #272727;
   font-weight: bold;
 }
-body main .container-content2 .contenaire-service {
+body main #container-content2 .contenaire-service {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
+  padding: 20px;
 }
-body main .container-content2 .contenaire-service .para-service {
+body main #container-content2 .contenaire-service .para-service {
   display: grid;
   gap: 10px;
   padding: 10px;
 }
-body main .container-content2 .contenaire-service .para-service .logo-service {
+body main #container-content2 .contenaire-service .para-service .logo-service {
   background-image: url(asset/img/polygon.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  height: 50px;
+  height: 40px;
   width: 50px;
+  padding: 10px;
+  animation: none;
 }
-body main .container-content2 .contenaire-service .para-service h3 {
-  color: #ffffff;
+body main #container-content2 .contenaire-service .para-service .logo-service:hover {
+  animation: rotate 1s linear infinite;
 }
-body main .container-content2 .contenaire-service .para-service p {
-  color: #606060;
+@keyframes rotate {
+  from {
+    transform: rotateY(0);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
 }
-body main .container-content2 .content-img-service {
+body main #container-content2 .logo-service1 {
+  background-image: url(asset/img/3d-logo.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 40px;
+  width: 40px;
   padding: 10px;
 }
-body main .container-content2 .content-img-service .img-service {
+body main #container-content2 .logo-service1:hover {
+  animation: rotate 1s linear infinite;
+}
+@keyframes rotate {
+  from {
+    transform: rotateY(0);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+body main #container-content2 h3 {
+  color: #ffffff;
+}
+body main #container-content2 p {
+  color: #606060;
+}
+body .content-img-service {
+  padding: 10px;
+}
+body .content-img-service .img-service {
   background-image: url(asset/img/map.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -223,16 +359,19 @@ body main .container-content2 .content-img-service .img-service {
   width: 100%;
   border-top: 1px solid #cca57c;
   border-bottom: 1px solid #cca57c;
+  margin-bottom: 10px;
 }
 
 footer {
+  padding: 20px;
+  border-top: 1px solid #cca57c;
   background-image: url(asset/img/bg_footer.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 }
 footer .container-footer {
-  width: 80%;
+  width: 50%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -304,6 +443,7 @@ footer .container-footer .card-dark textarea {
 }
 .btn-dark button:hover {
   background-color: #cca57c;
+  color: black;
 }
 
 .btn-dark1 button {
@@ -316,4 +456,5 @@ footer .container-footer .card-dark textarea {
 }
 .btn-dark1 button:hover {
   background-color: #cca57c;
+  color: black;
 }/*# sourceMappingURL=index.css.map */

@@ -41,6 +41,9 @@ $btn-dark: #272727;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+// Absolute
+
 @mixin absolute-center {
   position: absolute;
   top: 50%;
@@ -99,6 +102,8 @@ $btn-dark: #272727;
   gap: $gap;
 }
 
+// Bouton Hover
+
 @mixin btn-light1 {
   width: 102px;
   height: 23px;
@@ -129,6 +134,7 @@ $btn-dark: #272727;
   background-color: $btn-dark;
   &:hover {
     background-color: $color-secondary;
+    color: $black;
   }
 }
 @mixin btn-dark1 {
@@ -139,5 +145,53 @@ $btn-dark: #272727;
   background-color: $btn-dark;
   &:hover {
     background-color: $color-secondary;
+    color: $black;
+  }
+}
+
+// Bar de translation
+
+@mixin slidebar {
+  &::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    transition: width 0.5s ease-in-out;
+    background-color: $color-secondary;
+    left: 0;
+    width: 0;
+    bottom: -3px;
+  }
+  &:hover::after {
+    width: 100%;
+  }
+}
+@mixin slidebar1 {
+  &::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    transition: width 0.5s ease-in-out;
+    background-color: $color-primary;
+    left: 0;
+    width: 0;
+    bottom: -3px;
+  }
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+@mixin rotatey {
+  &:hover {
+    animation: rotate 1s linear infinite;
+  }
+  @keyframes rotate {
+    from {
+      transform: rotateY(0);
+    }
+    to {
+      transform: rotateY(360deg);
+    }
   }
 }

@@ -12,7 +12,15 @@
         <ul>
           <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
+            <li class="active-menu">
+              <div class="icon-menu"></div>
+              <a href="">About</a>
+              <ul class="dropdown-menu">
+                <li><a href="#container-content">ABOUT > GO.HALL</a></li>
+                <li><a href="#container-content1">ABOUT > PROJETS</a></li>
+                <li><a href="#container-content2">ABOUT > SERVICES</a></li>
+              </ul>
+            </li>
           </ul>
           <div class="logo-container"><h2>THE HALL</h2></div>
           <ul>
@@ -35,7 +43,7 @@
       </section>
     </header>
     <main>
-      <section class="container-content">
+      <section id="container-content">
         <div class="title-content">
           <h2 class="about">ABOUT</h2>
           <span>GO.HALL</span>
@@ -70,8 +78,8 @@
           </div>
         </div>
       </section>
-      <section class="container-content1">
-        <div class="title-content">
+      <section id="container-content1">
+        <div class="title-content1">
           <h2 class="about">ABOUT</h2>
           <h2 class="projet">PROJETS</h2>
         </div>
@@ -98,7 +106,7 @@
           </div>
         </div>
       </section>
-      <section class="container-content2">
+      <section id="container-content2">
         <div class="title-content">
           <h2 class="about">ABOUT</h2>
           <span>SERVICES</span>
@@ -117,7 +125,7 @@
           </div>
 
           <div class="para-service">
-            <div class="logo-service"></div>
+            <div class="logo-service1"></div>
             <h3>DEVELOPMENT</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. In
@@ -149,5 +157,20 @@
         </div>
       </section>
     </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const iconMenu = document.querySelector(".icon-menu");
+        const activeMenu = document.querySelector(".active-menu");
+
+        iconMenu.addEventListener("click", (e) => {
+          e.stopPropagation(); // Évite fermeture immédiate
+          activeMenu.classList.toggle("open");
+        });
+
+        document.addEventListener("click", () => {
+          activeMenu.classList.remove("open");
+        });
+      });
+    </script>
   </body>
 </html>

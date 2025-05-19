@@ -27,6 +27,13 @@ header {
         a {
           text-decoration: none;
           color: $white;
+          cursor: pointer;
+          position: relative;
+          display: inline-block;
+          @include slidebar;
+          &:hover {
+            color: $color-secondary;
+          }
         }
       }
     }
@@ -34,7 +41,6 @@ header {
   .header-content {
     display: grid;
     justify-items: end;
-
     @include absolute-right(16rem);
     width: 400px;
     @include absolute-right-resp;
@@ -42,6 +48,44 @@ header {
       padding: 10px;
       color: $white;
       text-align: right;
+    }
+  }
+  .active-menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+
+    .icon-menu {
+      @include bg-image("asset/img/menu.png");
+      height: 15px;
+      width: 15px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: 50px;
+      left: 0;
+      display: none;
+      background-color: rgba(255, 255, 255, 0.288);
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 10px;
+      list-style: none;
+      z-index: 999;
+
+      li {
+        padding: 5px;
+        white-space: nowrap;
+      }
+    }
+
+    &.open {
+      .dropdown-menu {
+        display: block;
+      }
     }
   }
 }
