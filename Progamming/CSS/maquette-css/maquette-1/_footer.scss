@@ -3,7 +3,7 @@ footer {
   border-top: 1px solid $color-secondary;
   @include bg-image("asset/img/bg_footer.jpg", cover);
 
-  .container-footer {
+  #container-footer {
     @include responsive-gap-from-map;
     width: 50%;
     margin: 0 auto;

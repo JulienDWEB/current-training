@@ -1,7 +1,15 @@
 * {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
   margin: 0;
   padding: 0;
+  h1,
+  h2,
+  h3,
+  span {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+  }
 }
 
 $color-main2: #b8b8b8d7;
@@ -197,6 +205,10 @@ $breakpoints: (
   grid-template-columns: 1fr;
   gap: $gap;
 }
+@mixin grid-sb {
+  display: grid;
+  align-content: space-between;
+}
 
 // Bouton Hover
 
@@ -256,6 +268,7 @@ $breakpoints: (
 // Bar de translation
 
 @mixin slidebar {
+  cursor: pointer;
   &::after {
     content: "";
     position: absolute;
@@ -271,6 +284,7 @@ $breakpoints: (
   }
 }
 @mixin slidebar1 {
+  cursor: pointer;
   &::after {
     content: "";
     position: absolute;
@@ -312,6 +326,7 @@ $breakpoints: (
     }
   }
 }
+
 @mixin min-height-whidth {
   min-width: 200px;
   min-height: 300px;
@@ -319,4 +334,11 @@ $breakpoints: (
 @mixin max-height-whidth {
   max-width: 200px;
   max-height: 300px;
+}
+@mixin shadow-margin {
+  cursor: pointer;
+  margin: 4px;
+  box-shadow: -1px 4px 12px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -1px 4px 12px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 4px 12px 0px rgba(0, 0, 0, 0.75);
 }

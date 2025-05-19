@@ -1,5 +1,6 @@
 body {
   background-color: $color-main;
+  @include responsive-font-size-from-map;
   main {
     box-shadow: 0 0 8px 0 black;
     width: 80%;
@@ -60,6 +61,9 @@ body {
     .content1-img {
       @include bg-image("asset/img/london_hall.jpg", cover);
       @include min-height-whidth;
+      &:hover {
+        @include shadow-margin;
+      }
 
       justify-items: center;
       position: relative;
@@ -72,10 +76,12 @@ body {
     #container-content {
       background-color: $color-main1;
       @include padding(p-ssm);
+      @include responsive-font-size-from-map;
     }
     #container-content1 {
       background-color: $color-secondary;
       @include padding(p-sm);
+      @include responsive-font-size-from-map;
 
       .projet {
         color: white;
@@ -84,20 +90,26 @@ body {
       .c-card {
         @include resp-flex;
         @include responsive-gap-from-map;
+
         margin: 0 auto;
         .container-img {
           @include bg-image("asset/img/london_hall.jpg", cover);
           @include max-height-whidth;
-          display: grid;
-          align-content: space-between;
+          @include grid-sb;
           @include scaleimg;
+          &:hover {
+            @include shadow-margin;
+          }
         }
         .container-img1 {
           @include bg-image("asset/img/london.jpg", cover);
           @include max-height-whidth;
-          display: grid;
-          align-content: space-between;
+          @include grid-sb;
           @include scaleimg;
+
+          &:hover {
+            @include shadow-margin;
+          }
         }
         .title-img {
           @include padding(p-xs);

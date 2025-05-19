@@ -92,4 +92,23 @@ header {
       }
     }
   }
+  .logo-header {
+    background-color: $color-primary;
+    position: absolute;
+    bottom: 0;
+    border-radius: 1px 0px 1px 0px;
+    @include padding(p-xxs);
+    div {
+      border-radius: 4px;
+      align-items: center;
+      width: 20px;
+      height: 20px;
+      @include padding(p-xxs);
+      @include margin(p-xxs);
+      border: 1px solid $color-main;
+      &:hover {
+        background-color: $color-secondary;
+      }
+    }
+  }
 }
