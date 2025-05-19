@@ -342,6 +342,9 @@ body main .content1-img {
   background-position: center center;
   min-width: 200px;
   min-height: 300px;
+  max-width: 200px;
+  max-height: 300px;
+  align-items: center;
   justify-items: center;
   position: relative;
   animation: scale 1s linear forwards;

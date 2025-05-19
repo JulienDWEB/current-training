@@ -61,6 +61,8 @@ body {
     .content1-img {
       @include bg-image("asset/img/london_hall.jpg", cover);
       @include min-height-whidth;
+      @include max-height-whidth;
+      align-items: center;
       &:hover {
         @include shadow-margin;
       }
