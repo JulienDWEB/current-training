@@ -72,6 +72,11 @@ header .header-nav ul .logo-container {
 header .header-nav ul .logo-container:hover {
   background-color: #cca57c;
   border-radius: 8px;
+  cursor: pointer;
+  margin: 4px;
+  box-shadow: -1px 4px 12px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -1px 4px 12px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 4px 12px 0px rgba(0, 0, 0, 0.75);
 }
 header .header-nav ul .logo-container h2 {
   letter-spacing: 5px;
@@ -487,6 +492,7 @@ body main #container-content1 .c-card .container-img {
   align-content: space-between;
   animation: scale 1s linear forwards;
   animation-delay: 0.8s;
+  border-radius: 8px;
 }
 @keyframes scale {
   from {
@@ -514,6 +520,7 @@ body main #container-content1 .c-card .container-img1 {
   align-content: space-between;
   animation: scale 1s linear forwards;
   animation-delay: 0.8s;
+  border-radius: 8px;
 }
 @keyframes scale {
   from {

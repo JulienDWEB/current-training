@@ -16,6 +16,7 @@ header {
         &:hover {
           background-color: $color-secondary;
           border-radius: 8px;
+          @include shadow-margin;
         }
         h2 {
           letter-spacing: 5px;
