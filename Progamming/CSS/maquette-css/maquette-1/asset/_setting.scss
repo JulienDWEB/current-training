@@ -312,3 +312,11 @@ $breakpoints: (
     }
   }
 }
+@mixin min-height-whidth {
+  min-width: 200px;
+  min-height: 300px;
+}
+@mixin max-height-whidth {
+  max-width: 200px;
+  max-height: 300px;
+}

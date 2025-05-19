@@ -2,14 +2,13 @@ header {
   @include bg-image("asset/img/bg_header.jpg", cover);
   min-height: 500px;
   position: relative;
+  width: 100%;
+  margin: 0 auto;
   .header-nav {
-    @include respond(md) {
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
-    }
     ul {
+      @include resp-flex;
       @include center-flex;
-
+      @include responsive-gap-from-map;
       .logo-container {
         background-color: $color-primary;
         @include padding(p-s);

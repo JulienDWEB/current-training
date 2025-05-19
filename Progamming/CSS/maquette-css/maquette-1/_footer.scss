@@ -4,17 +4,20 @@ footer {
   @include bg-image("asset/img/bg_footer.jpg", cover);
 
   .container-footer {
+    @include responsive-gap-from-map;
     width: 50%;
     margin: 0 auto;
     @include grid-fluid;
     gap: 10px;
     .card-gold {
+      @include scaleimg;
       background-color: $color-secondary1;
       color: $white;
       @include padding(p-xs);
       border-radius: 8px;
     }
     .card-dark {
+      @include scaleimg;
       background-color: $color-primary;
       color: $white;
       @include padding(p-xs);

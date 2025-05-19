@@ -39,16 +39,12 @@ body {
     }
 
     .content-para {
-      @include grid(2);
-      grid-template-columns: 7fr 3fr;
-
-      align-items: center;
-      justify-items: center;
+      @include resp-flex;
+      max-width: 70%;
+      margin: 0 auto;
+      @include responsive-gap-from-map;
       @include padding(p-xs);
-      @include respond(md) {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-      }
+
       .para {
         span {
           color: $white;
@@ -63,8 +59,8 @@ body {
     }
     .content1-img {
       @include bg-image("asset/img/london_hall.jpg", cover);
-      width: 200px;
-      height: 300px;
+      @include min-height-whidth;
+
       justify-items: center;
       position: relative;
       @include scaleimg;
@@ -72,36 +68,33 @@ body {
         @include absolute-bottom-center;
       }
     }
+
     #container-content {
       background-color: $color-main1;
       @include padding(p-ssm);
     }
     #container-content1 {
       background-color: $color-secondary;
-      @include padding(p-ssm);
+      @include padding(p-sm);
 
       .projet {
         color: white;
         font-weight: 400;
       }
       .c-card {
-        @include padding(p-s);
-        @include grid(3);
-        @include respond(md) {
-          grid-template-columns: 1fr;
-          grid-template-rows: 1fr 1fr 1fr;
-        }
-        justify-items: center;
+        @include resp-flex;
+        @include responsive-gap-from-map;
+        margin: 0 auto;
         .container-img {
           @include bg-image("asset/img/london_hall.jpg", cover);
-          width: 200px;
+          @include max-height-whidth;
           display: grid;
           align-content: space-between;
           @include scaleimg;
         }
         .container-img1 {
           @include bg-image("asset/img/london.jpg", cover);
-          width: 200px;
+          @include max-height-whidth;
           display: grid;
           align-content: space-between;
           @include scaleimg;
@@ -135,7 +128,8 @@ body {
     #container-content2 {
       @include padding(p-s);
       .contenaire-service {
-        @include grid-fluid;
+        @include resp-flex;
+        @include responsive-gap-from-map;
         @include padding(p-xs);
         .para-service {
           display: grid;
@@ -170,6 +164,7 @@ body {
     @include padding(p-xxs);
     .img-service {
       @include bg-image("asset/img/map.png", cover);
+      @include scaleimg;
       height: 159px;
       width: 100%;
       border-top: 1px solid $color-secondary;

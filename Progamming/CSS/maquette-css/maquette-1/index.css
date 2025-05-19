@@ -11,18 +11,52 @@ header {
   background-position: center center;
   min-height: 500px;
   position: relative;
-}
-@media (max-width: 768px) {
-  header .header-nav {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-  }
+  width: 100%;
+  margin: 0 auto;
 }
 header .header-nav ul {
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  gap: 10px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+@media (max-width: 750px) {
+  header .header-nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    gap: 10px;
+  }
+}
+@media (min-width: 480px) {
+  header .header-nav ul {
+    gap: 0.5rem;
+  }
+}
+@media (min-width: 600px) {
+  header .header-nav ul {
+    gap: 1.25rem;
+  }
+}
+@media (min-width: 768px) {
+  header .header-nav ul {
+    gap: 1.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  header .header-nav ul {
+    gap: 2rem;
+  }
+}
+@media (min-width: 1280px) {
+  header .header-nav ul {
+    gap: 3rem;
+  }
 }
 header .header-nav ul .logo-container {
   background-color: rgba(22, 22, 22, 0.4784313725);
@@ -196,19 +230,46 @@ body main .title-content1 h2:hover::after {
   width: 100%;
 }
 body main .content-para {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(1, 1fr);
-  gap: 1rem;
-  grid-template-columns: 7fr 3fr;
-  align-items: center;
+  display: flex;
   justify-items: center;
+  justify-content: center;
+  gap: 10px;
+  max-width: 70%;
+  margin: 0 auto;
   padding: 1rem;
 }
-@media (max-width: 768px) {
+@media (max-width: 750px) {
   body main .content-para {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    gap: 10px;
+  }
+}
+@media (min-width: 480px) {
+  body main .content-para {
+    gap: 0.5rem;
+  }
+}
+@media (min-width: 600px) {
+  body main .content-para {
+    gap: 1.25rem;
+  }
+}
+@media (min-width: 768px) {
+  body main .content-para {
+    gap: 1.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  body main .content-para {
+    gap: 2rem;
+  }
+}
+@media (min-width: 1280px) {
+  body main .content-para {
+    gap: 3rem;
   }
 }
 body main .content-para .para span {
@@ -226,8 +287,8 @@ body main .content1-img {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  width: 200px;
-  height: 300px;
+  min-width: 200px;
+  min-height: 300px;
   justify-items: center;
   position: relative;
   animation: scale 1s linear forwards;
@@ -255,24 +316,51 @@ body main #container-content {
 }
 body main #container-content1 {
   background-color: #cca57c;
-  padding: 2rem;
+  padding: 2.5rem;
 }
 body main #container-content1 .projet {
   color: white;
   font-weight: 400;
 }
 body main #container-content1 .c-card {
-  padding: 1.5rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(1, 1fr);
-  gap: 1rem;
+  display: flex;
   justify-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 auto;
 }
-@media (max-width: 768px) {
+@media (max-width: 750px) {
   body main #container-content1 .c-card {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    gap: 10px;
+  }
+}
+@media (min-width: 480px) {
+  body main #container-content1 .c-card {
+    gap: 0.5rem;
+  }
+}
+@media (min-width: 600px) {
+  body main #container-content1 .c-card {
+    gap: 1.25rem;
+  }
+}
+@media (min-width: 768px) {
+  body main #container-content1 .c-card {
+    gap: 1.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  body main #container-content1 .c-card {
+    gap: 2rem;
+  }
+}
+@media (min-width: 1280px) {
+  body main #container-content1 .c-card {
+    gap: 3rem;
   }
 }
 body main #container-content1 .c-card .container-img {
@@ -280,7 +368,8 @@ body main #container-content1 .c-card .container-img {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  width: 200px;
+  max-width: 200px;
+  max-height: 300px;
   display: grid;
   align-content: space-between;
   animation: scale 1s linear forwards;
@@ -299,7 +388,8 @@ body main #container-content1 .c-card .container-img1 {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  width: 200px;
+  max-width: 200px;
+  max-height: 300px;
   display: grid;
   align-content: space-between;
   animation: scale 1s linear forwards;
@@ -344,10 +434,45 @@ body main #container-content2 {
   padding: 1.5rem;
 }
 body main #container-content2 .contenaire-service {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  gap: 10px;
   padding: 1rem;
+}
+@media (max-width: 750px) {
+  body main #container-content2 .contenaire-service {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    gap: 10px;
+  }
+}
+@media (min-width: 480px) {
+  body main #container-content2 .contenaire-service {
+    gap: 0.5rem;
+  }
+}
+@media (min-width: 600px) {
+  body main #container-content2 .contenaire-service {
+    gap: 1.25rem;
+  }
+}
+@media (min-width: 768px) {
+  body main #container-content2 .contenaire-service {
+    gap: 1.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  body main #container-content2 .contenaire-service {
+    gap: 2rem;
+  }
+}
+@media (min-width: 1280px) {
+  body main #container-content2 .contenaire-service {
+    gap: 3rem;
+  }
 }
 body main #container-content2 .contenaire-service .para-service {
   display: grid;
@@ -409,12 +534,22 @@ body .content-img-service .img-service {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  animation: scale 1s linear forwards;
+  animation-delay: 0.8s;
   height: 159px;
   width: 100%;
   border-top: 1px solid #cca57c;
   border-bottom: 1px solid #cca57c;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+}
+@keyframes scale {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 footer {
@@ -433,19 +568,64 @@ footer .container-footer {
   gap: 1rem;
   gap: 10px;
 }
+@media (min-width: 480px) {
+  footer .container-footer {
+    gap: 0.5rem;
+  }
+}
+@media (min-width: 600px) {
+  footer .container-footer {
+    gap: 1.25rem;
+  }
+}
+@media (min-width: 768px) {
+  footer .container-footer {
+    gap: 1.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  footer .container-footer {
+    gap: 2rem;
+  }
+}
+@media (min-width: 1280px) {
+  footer .container-footer {
+    gap: 3rem;
+  }
+}
 footer .container-footer .card-gold {
+  animation: scale 1s linear forwards;
+  animation-delay: 0.8s;
   background-color: rgba(204, 165, 124, 0.6156862745);
   color: #ffffff;
   padding: 1rem;
   border-radius: 8px;
 }
+@keyframes scale {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
 footer .container-footer .card-dark {
+  animation: scale 1s linear forwards;
+  animation-delay: 0.8s;
   background-color: rgba(22, 22, 22, 0.4784313725);
   color: #ffffff;
   padding: 1rem;
   display: grid;
   gap: 10px;
   border-radius: 8px;
+}
+@keyframes scale {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 footer .container-footer .card-dark input {
   list-style-type: none;
