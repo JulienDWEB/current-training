@@ -3,11 +3,16 @@ header {
   min-height: 500px;
   position: relative;
   .header-nav {
+    @include respond(md) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+    }
     ul {
       @include center-flex;
+
       .logo-container {
         background-color: $color-primary;
-        padding: 20px;
+        @include padding(p-s);
         cursor: pointer;
         &:hover {
           background-color: $color-secondary;
@@ -21,7 +26,7 @@ header {
         }
       }
       li {
-        padding: 20px;
+        @include padding(p-s);
         list-style-type: none;
 
         a {
@@ -45,7 +50,7 @@ header {
     width: 400px;
     @include absolute-right-resp;
     .content {
-      padding: 10px;
+      @include padding(p-xs);
       color: $white;
       text-align: right;
     }
@@ -72,12 +77,12 @@ header {
       background-color: rgba(255, 255, 255, 0.288);
       border: 1px solid #ccc;
       border-radius: 8px;
-      padding: 10px;
+      @include padding(p-xs);
       list-style: none;
       z-index: 999;
 
       li {
-        padding: 5px;
+        @include padding(p-xxs);
         white-space: nowrap;
       }
     }

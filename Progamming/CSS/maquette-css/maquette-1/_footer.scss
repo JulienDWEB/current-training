@@ -1,5 +1,5 @@
 footer {
-  padding: 20px;
+  @include padding(p-xs);
   border-top: 1px solid $color-secondary;
   @include bg-image("asset/img/bg_footer.jpg", cover);
 
@@ -7,18 +7,20 @@ footer {
     width: 50%;
     margin: 0 auto;
     @include grid-fluid;
-    gap: 0;
+    gap: 10px;
     .card-gold {
       background-color: $color-secondary1;
       color: $white;
-      padding: 10px;
+      @include padding(p-xs);
+      border-radius: 8px;
     }
     .card-dark {
       background-color: $color-primary;
       color: $white;
-      padding: 10px;
+      @include padding(p-xs);
       display: grid;
       gap: 10px;
+      border-radius: 8px;
       input {
         list-style-type: none;
         background-color: $color-primary1;

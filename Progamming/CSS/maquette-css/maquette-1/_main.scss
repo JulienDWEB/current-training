@@ -11,7 +11,7 @@ body {
       justify-content: center;
       align-items: center;
       font-size: 1rem;
-      padding: 20px;
+      @include padding(p-xs);
       span {
         color: $color-secondary;
         font-size: 1.3rem;
@@ -27,7 +27,7 @@ body {
       justify-content: center;
       align-items: center;
       font-size: 1rem;
-      padding: 20px;
+      @include padding(p-xs);
       span {
         color: $color-secondary;
         font-size: 1.3rem;
@@ -44,7 +44,11 @@ body {
 
       align-items: center;
       justify-items: center;
-      padding: 20px;
+      @include padding(p-xs);
+      @include respond(md) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+      }
       .para {
         span {
           color: $white;
@@ -53,7 +57,7 @@ body {
         .p-light {
           color: $color-secondary;
           border-left: 1px solid $color-secondary;
-          padding-left: 20px;
+          @include padding-x(p-xs);
         }
       }
     }
@@ -63,39 +67,47 @@ body {
       height: 300px;
       justify-items: center;
       position: relative;
+      @include scaleimg;
       .btn-light {
         @include absolute-bottom-center;
       }
     }
     #container-content {
       background-color: $color-main1;
+      @include padding(p-ssm);
     }
     #container-content1 {
       background-color: $color-secondary;
-      padding: 20px;
+      @include padding(p-ssm);
 
       .projet {
         color: white;
         font-weight: 400;
       }
       .c-card {
-        padding: 20px;
-        @include grid-fluid;
+        @include padding(p-s);
+        @include grid(3);
+        @include respond(md) {
+          grid-template-columns: 1fr;
+          grid-template-rows: 1fr 1fr 1fr;
+        }
         justify-items: center;
         .container-img {
           @include bg-image("asset/img/london_hall.jpg", cover);
           width: 200px;
           display: grid;
           align-content: space-between;
+          @include scaleimg;
         }
         .container-img1 {
           @include bg-image("asset/img/london.jpg", cover);
           width: 200px;
           display: grid;
           align-content: space-between;
+          @include scaleimg;
         }
         .title-img {
-          padding: 10px;
+          @include padding(p-xs);
           span {
             color: $color-secondary;
           }
@@ -121,9 +133,10 @@ body {
       }
     }
     #container-content2 {
+      @include padding(p-s);
       .contenaire-service {
         @include grid-fluid;
-        padding: 20px;
+        @include padding(p-xs);
         .para-service {
           display: grid;
           gap: 10px;
@@ -132,7 +145,7 @@ body {
             @include bg-image("asset/img/polygon.png", cover);
             height: 40px;
             width: 50px;
-            padding: 10px;
+            @include padding(p-xxs);
             animation: none;
             @include rotatey;
           }
@@ -142,7 +155,7 @@ body {
         @include bg-image("asset/img/3d-logo.png", cover);
         height: 40px;
         width: 40px;
-        padding: 10px;
+        @include padding(p-xxs);
         @include rotatey;
       }
       h3 {
@@ -154,14 +167,14 @@ body {
     }
   }
   .content-img-service {
-    padding: 10px;
+    @include padding(p-xxs);
     .img-service {
       @include bg-image("asset/img/map.png", cover);
       height: 159px;
       width: 100%;
       border-top: 1px solid $color-secondary;
       border-bottom: 1px solid $color-secondary;
-      margin-bottom: 10px;
+      @include margin-y(p-xxs);
     }
   }
 }

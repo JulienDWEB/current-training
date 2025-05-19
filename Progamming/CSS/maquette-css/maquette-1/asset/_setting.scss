@@ -15,6 +15,102 @@ $white: #ffffff;
 $white70: #ffffffb7;
 $black: black;
 $btn-dark: #272727;
+//  MARGE & PADDING
+$spacing-scale: (
+  p-xxs: 0.25rem,
+  //4px
+  p-xs: 0.5rem,
+  //8px
+  p-s: 0.75rem,
+  // 12px
+  p-ssm: 1rem,
+  // 16px
+  p-sm: 1.25rem,
+  // 20px
+  p-md: 1.5rem,
+  // 24px
+  p-ml: 1.75rem,
+  // 28px
+  p-lg: 2rem,
+  // 32px
+  p-xl: 3rem,
+  // 36px
+  p-xxl: 4rem,
+  // 40px
+);
+
+// Padding all
+@mixin padding($size) {
+  $val: map-get($spacing-scale, $size);
+  @if $val {
+    padding: $val * 2;
+  } @else {
+    @warn "⚠️ `#{$size}` n'est pas une taille valide dans $spacing-scale.";
+  }
+}
+
+// Padding X
+@mixin padding-x($size) {
+  $val: map-get($spacing-scale, $size);
+  @if $val {
+    padding-left: $val * 2;
+    padding-right: $val * 2;
+  }
+}
+
+// Padding Y
+@mixin padding-y($size) {
+  $val: map-get($spacing-scale, $size);
+  @if $val {
+    padding-top: $val * 2;
+    padding-bottom: $val * 2;
+  }
+}
+
+// Margin
+@mixin margin($size) {
+  $val: map-get($spacing-scale, $size);
+  @if $val {
+    margin: $val * 2;
+  }
+}
+@mixin margin-x($size) {
+  $val: map-get($spacing-scale, $size);
+  @if $val {
+    margin-left: $val * 2;
+    margin-right: $val * 2;
+  }
+}
+@mixin margin-y($size) {
+  $val: map-get($spacing-scale, $size);
+  @if $val {
+    margin-top: $val * 2;
+    margin-bottom: $val * 2;
+  }
+}
+
+// RESPONSIVE
+
+$breakpoints: (
+  xs: 480px,
+  sm: 600px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px,
+  xxl: 1440px,
+);
+
+@mixin respond($size) {
+  $breakpoint: map-get($breakpoints, $size);
+
+  @if $breakpoint {
+    @media (max-width: $breakpoint) {
+      @content;
+    }
+  } @else {
+    @warn "❌ Le breakpoint `#{$size}` n'existe pas dans la map $breakpoints.";
+  }
+}
 
 @mixin bg-image(
   $url,
@@ -110,8 +206,10 @@ $btn-dark: #272727;
   border: 0;
   color: $white;
   background-color: $color-secondary;
+  transition: transform 0.3s ease;
   &:hover {
     background-color: $color-primary;
+    transform: scale(1.1);
   }
 }
 @mixin btn-light {
@@ -121,8 +219,10 @@ $btn-dark: #272727;
   border-radius: 8px;
   color: $white;
   background-color: $color-secondary;
+  transition: transform 0.3s ease;
   &:hover {
     background-color: $color-primary;
+    transform: scale(1.1);
   }
 }
 @mixin btn-dark {
@@ -132,7 +232,9 @@ $btn-dark: #272727;
   border-radius: 8px;
   color: $white;
   background-color: $btn-dark;
+  transition: transform 0.3s ease;
   &:hover {
+    transform: scale(1.1);
     background-color: $color-secondary;
     color: $black;
   }
@@ -143,7 +245,9 @@ $btn-dark: #272727;
   border: 0;
   color: $white;
   background-color: $btn-dark;
+  transition: transform 0.3s ease;
   &:hover {
+    transform: scale(1.1);
     background-color: $color-secondary;
     color: $black;
   }
@@ -192,6 +296,19 @@ $btn-dark: #272727;
     }
     to {
       transform: rotateY(360deg);
+    }
+  }
+}
+@mixin scaleimg {
+  animation: scale 1s linear forwards;
+  animation-delay: 0.8s;
+
+  @keyframes scale {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
     }
   }
 }

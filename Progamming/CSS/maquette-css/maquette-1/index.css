@@ -12,6 +12,12 @@ header {
   min-height: 500px;
   position: relative;
 }
+@media (max-width: 768px) {
+  header .header-nav {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+}
 header .header-nav ul {
   display: flex;
   flex-direction: row;
@@ -20,7 +26,7 @@ header .header-nav ul {
 }
 header .header-nav ul .logo-container {
   background-color: rgba(22, 22, 22, 0.4784313725);
-  padding: 20px;
+  padding: 1.5rem;
   cursor: pointer;
 }
 header .header-nav ul .logo-container:hover {
@@ -34,7 +40,7 @@ header .header-nav ul .logo-container h2 {
   font-size: 1.1rem;
 }
 header .header-nav ul li {
-  padding: 20px;
+  padding: 1.5rem;
   list-style-type: none;
 }
 header .header-nav ul li a {
@@ -84,7 +90,7 @@ header .header-content {
   }
 }
 header .header-content .content {
-  padding: 10px;
+  padding: 1rem;
   color: #ffffff;
   text-align: right;
 }
@@ -112,12 +118,12 @@ header .active-menu .dropdown-menu {
   background-color: rgba(255, 255, 255, 0.288);
   border: 1px solid #ccc;
   border-radius: 8px;
-  padding: 10px;
+  padding: 1rem;
   list-style: none;
   z-index: 999;
 }
 header .active-menu .dropdown-menu li {
-  padding: 5px;
+  padding: 0.5rem;
   white-space: nowrap;
 }
 header .active-menu.open .dropdown-menu {
@@ -139,7 +145,7 @@ body main .title-content {
   justify-content: center;
   align-items: center;
   font-size: 1rem;
-  padding: 20px;
+  padding: 1rem;
 }
 body main .title-content span {
   color: #cca57c;
@@ -167,7 +173,7 @@ body main .title-content1 {
   justify-content: center;
   align-items: center;
   font-size: 1rem;
-  padding: 20px;
+  padding: 1rem;
 }
 body main .title-content1 span {
   color: #cca57c;
@@ -197,7 +203,13 @@ body main .content-para {
   grid-template-columns: 7fr 3fr;
   align-items: center;
   justify-items: center;
-  padding: 20px;
+  padding: 1rem;
+}
+@media (max-width: 768px) {
+  body main .content-para {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
 }
 body main .content-para .para span {
   color: #ffffff;
@@ -206,7 +218,8 @@ body main .content-para .para span {
 body main .content-para .para .p-light {
   color: #cca57c;
   border-left: 1px solid #cca57c;
-  padding-left: 20px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 body main .content1-img {
   background-image: url(asset/img/london_hall.jpg);
@@ -217,6 +230,16 @@ body main .content1-img {
   height: 300px;
   justify-items: center;
   position: relative;
+  animation: scale 1s linear forwards;
+  animation-delay: 0.8s;
+}
+@keyframes scale {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 body main .content1-img .btn-light {
   position: absolute;
@@ -228,21 +251,29 @@ body main .content1-img .btn-light {
 }
 body main #container-content {
   background-color: #272727;
+  padding: 2rem;
 }
 body main #container-content1 {
   background-color: #cca57c;
-  padding: 20px;
+  padding: 2rem;
 }
 body main #container-content1 .projet {
   color: white;
   font-weight: 400;
 }
 body main #container-content1 .c-card {
-  padding: 20px;
+  padding: 1.5rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
   gap: 1rem;
   justify-items: center;
+}
+@media (max-width: 768px) {
+  body main #container-content1 .c-card {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
 }
 body main #container-content1 .c-card .container-img {
   background-image: url(asset/img/london_hall.jpg);
@@ -252,6 +283,16 @@ body main #container-content1 .c-card .container-img {
   width: 200px;
   display: grid;
   align-content: space-between;
+  animation: scale 1s linear forwards;
+  animation-delay: 0.8s;
+}
+@keyframes scale {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 body main #container-content1 .c-card .container-img1 {
   background-image: url(asset/img/london.jpg);
@@ -261,9 +302,19 @@ body main #container-content1 .c-card .container-img1 {
   width: 200px;
   display: grid;
   align-content: space-between;
+  animation: scale 1s linear forwards;
+  animation-delay: 0.8s;
+}
+@keyframes scale {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 body main #container-content1 .c-card .title-img {
-  padding: 10px;
+  padding: 1rem;
 }
 body main #container-content1 .c-card .title-img span {
   color: #cca57c;
@@ -289,11 +340,14 @@ body main #container-content1 .c-card .content-text .title-para span {
   color: #272727;
   font-weight: bold;
 }
+body main #container-content2 {
+  padding: 1.5rem;
+}
 body main #container-content2 .contenaire-service {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
-  padding: 20px;
+  padding: 1rem;
 }
 body main #container-content2 .contenaire-service .para-service {
   display: grid;
@@ -307,7 +361,7 @@ body main #container-content2 .contenaire-service .para-service .logo-service {
   background-position: center center;
   height: 40px;
   width: 50px;
-  padding: 10px;
+  padding: 0.5rem;
   animation: none;
 }
 body main #container-content2 .contenaire-service .para-service .logo-service:hover {
@@ -328,7 +382,7 @@ body main #container-content2 .logo-service1 {
   background-position: center center;
   height: 40px;
   width: 40px;
-  padding: 10px;
+  padding: 0.5rem;
 }
 body main #container-content2 .logo-service1:hover {
   animation: rotate 1s linear infinite;
@@ -348,7 +402,7 @@ body main #container-content2 p {
   color: #606060;
 }
 body .content-img-service {
-  padding: 10px;
+  padding: 0.5rem;
 }
 body .content-img-service .img-service {
   background-image: url(asset/img/map.png);
@@ -359,11 +413,12 @@ body .content-img-service .img-service {
   width: 100%;
   border-top: 1px solid #cca57c;
   border-bottom: 1px solid #cca57c;
-  margin-bottom: 10px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 footer {
-  padding: 20px;
+  padding: 1rem;
   border-top: 1px solid #cca57c;
   background-image: url(asset/img/bg_footer.jpg);
   background-size: cover;
@@ -376,19 +431,21 @@ footer .container-footer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
-  gap: 0;
+  gap: 10px;
 }
 footer .container-footer .card-gold {
   background-color: rgba(204, 165, 124, 0.6156862745);
   color: #ffffff;
-  padding: 10px;
+  padding: 1rem;
+  border-radius: 8px;
 }
 footer .container-footer .card-dark {
   background-color: rgba(22, 22, 22, 0.4784313725);
   color: #ffffff;
-  padding: 10px;
+  padding: 1rem;
   display: grid;
   gap: 10px;
+  border-radius: 8px;
 }
 footer .container-footer .card-dark input {
   list-style-type: none;
@@ -407,10 +464,12 @@ footer .container-footer .card-dark textarea {
   border: 0;
   color: #ffffff;
   background-color: #cca57c;
+  transition: transform 0.3s ease;
   cursor: pointer;
 }
 .btn-light1 button:hover {
   background-color: rgba(22, 22, 22, 0.4784313725);
+  transform: scale(1.1);
 }
 
 .btn-light {
@@ -423,10 +482,12 @@ footer .container-footer .card-dark textarea {
   border-radius: 8px;
   color: #ffffff;
   background-color: #cca57c;
+  transition: transform 0.3s ease;
   cursor: pointer;
 }
 .btn-light button:hover {
   background-color: rgba(22, 22, 22, 0.4784313725);
+  transform: scale(1.1);
 }
 
 .btn-dark {
@@ -439,9 +500,11 @@ footer .container-footer .card-dark textarea {
   border-radius: 8px;
   color: #ffffff;
   background-color: #272727;
+  transition: transform 0.3s ease;
   cursor: pointer;
 }
 .btn-dark button:hover {
+  transform: scale(1.1);
   background-color: #cca57c;
   color: black;
 }
@@ -452,9 +515,11 @@ footer .container-footer .card-dark textarea {
   border: 0;
   color: #ffffff;
   background-color: #272727;
+  transition: transform 0.3s ease;
   cursor: pointer;
 }
 .btn-dark1 button:hover {
+  transform: scale(1.1);
   background-color: #cca57c;
   color: black;
 }/*# sourceMappingURL=index.css.map */
