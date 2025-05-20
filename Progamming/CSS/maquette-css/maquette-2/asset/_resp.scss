@@ -1,0 +1,175 @@
+$spacing-scale: (
+  p-xxs: 0.25rem,
+  p-xs: 0.5rem,
+  p-s: 0.75rem,
+  p-ssm: 1rem,
+  p-sm: 1.25rem,
+  p-md: 1.5rem,
+  p-ml: 1.75rem,
+  p-lg: 2rem,
+  p-xl: 3rem,
+  p-xxl: 4rem,
+);
+
+$breakpoints: (
+  xs: 480px,
+  sm: 600px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px,
+);
+
+// Map de correspondance entre breakpoint et clé de padding
+$responsive-padding: (
+  xs: p-xs,
+  sm: p-sm,
+  md: p-md,
+  lg: p-lg,
+  xl: p-xl,
+);
+// PADDING RESPONSIVE
+@mixin responsive-padding-from-map {
+  @each $break, $padding-key in $responsive-padding {
+    $bp: map-get($breakpoints, $break);
+    $val: map-get($spacing-scale, $padding-key);
+
+    @if $bp and $val {
+      @media (min-width: $bp) {
+        padding: $val;
+      }
+    } @else {
+      @warn "❌ Erreur : `#{$break}` ou `#{$padding-key}` est invalide.";
+    }
+  }
+}
+@mixin responsive-padding-x-from-map {
+  @each $break, $padding-key in $responsive-padding {
+    $bp: map-get($breakpoints, $break);
+    $val: map-get($spacing-scale, $padding-key);
+
+    @if $bp and $val {
+      @media (min-width: $bp) {
+        padding-left: $val;
+        padding-right: $val;
+      }
+    } @else {
+      @warn "❌ Erreur : `#{$break}` ou `#{$padding-key}` est invalide.";
+    }
+  }
+}
+@mixin responsive-padding-y-from-map {
+  @each $break, $padding-key in $responsive-padding {
+    $bp: map-get($breakpoints, $break);
+    $val: map-get($spacing-scale, $padding-key);
+
+    @if $bp and $val {
+      @media (min-width: $bp) {
+        padding-top: $val;
+        padding-bottom: $val;
+      }
+    } @else {
+      @warn "❌ Erreur : `#{$break}` ou `#{$padding-key}` est invalide.";
+    }
+  }
+}
+@mixin responsive-margin-from-map {
+  @each $break, $padding-key in $responsive-padding {
+    $bp: map-get($breakpoints, $break);
+    $val: map-get($spacing-scale, $padding-key);
+
+    @if $bp and $val {
+      @media (min-width: $bp) {
+        margin: $val;
+      }
+    } @else {
+      @warn "❌ Erreur : `#{$break}` ou `#{$padding-key}` est invalide.";
+    }
+  }
+}
+@mixin responsive-margin-x-from-map {
+  @each $break, $padding-key in $responsive-padding {
+    $bp: map-get($breakpoints, $break);
+    $val: map-get($spacing-scale, $padding-key);
+
+    @if $bp and $val {
+      @media (min-width: $bp) {
+        margin-left: $val;
+        margin-right: $val;
+      }
+    } @else {
+      @warn "❌ Erreur : `#{$break}` ou `#{$padding-key}` est invalide.";
+    }
+  }
+}
+@mixin responsive-margin-y-from-map {
+  @each $break, $padding-key in $responsive-padding {
+    $bp: map-get($breakpoints, $break);
+    $val: map-get($spacing-scale, $padding-key);
+
+    @if $bp and $val {
+      @media (min-width: $bp) {
+        margin-top: $val;
+        margin-bottom: $val;
+      }
+    } @else {
+      @warn "❌ Erreur : `#{$break}` ou `#{$padding-key}` est invalide.";
+    }
+  }
+}
+@mixin responsive-gap-from-map {
+  @each $break, $padding-key in $responsive-padding {
+    $bp: map-get($breakpoints, $break);
+    $val: map-get($spacing-scale, $padding-key);
+
+    @if $bp and $val {
+      @media (min-width: $bp) {
+        gap: $val;
+      }
+    } @else {
+      @warn "❌ Erreur : `#{$break}` ou `#{$padding-key}` est invalide.";
+    }
+  }
+}
+// FONT SIZE
+$font-size-scale: (
+  fs-xs: 0.5rem,
+  fs-sm: 0.75rem,
+  fs-md: 0.9rem,
+  fs-lg: 1.5rem,
+  fs-xl: 1.1rem,
+);
+
+$responsive-font-size: (
+  xs: fs-sm,
+  sm: fs-md,
+  md: fs-lg,
+  lg: fs-xl,
+  xl: fs-xl,
+);
+@mixin responsive-font-size-from-map {
+  @each $break, $size-key in $responsive-font-size {
+    $bp: map-get($breakpoints, $break);
+    $val: map-get($font-size-scale, $size-key);
+
+    @if $bp and $val {
+      @media (min-width: $bp) {
+        font-size: $val;
+      }
+    } @else {
+      @warn "❌ Erreur : `#{$break}` ou `#{$size-key}` est invalide.";
+    }
+  }
+}
+@mixin resp-flex {
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  gap: 10px;
+  @media (max-width: 750px) {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    gap: 10px;
+  }
+}

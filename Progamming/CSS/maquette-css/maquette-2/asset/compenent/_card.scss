@@ -1,0 +1,14 @@
+main {
+  .container-card {
+    @include max-height-whidth(300px, 200px);
+    @include grid(3, 1fr);
+    .card-1,
+    .card-2,
+    .card-3 {
+      @include min-height-whidth(300px, 200px);
+    }
+    .card-1 {
+      @include bg-image('./asset/img/galleries/soupe.jpg');
+    }
+  }
+}
