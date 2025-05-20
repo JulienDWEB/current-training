@@ -116,6 +116,20 @@ header nav .bar-search input::placeholder {
   color: #c44e4e;
 }
 
+.container-main {
+  max-width: 80%;
+  margin: 0 auto;
+}
+.container-main .title-main {
+  max-width: 70%;
+  text-align: center;
+  color: #cca57c;
+  border-top: 1px solid #c44e4e;
+  border-bottom: 1px solid #c44e4e;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
 main .container-card {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
