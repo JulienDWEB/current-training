@@ -1,11 +1,14 @@
-.container-main {
-  max-width: 80%;
-  margin: 0 auto;
-  .title-main {
-    max-width: 70%;
-    text-align: center;
-    color: $color-primary;
-    @include border-y($color-secondary);
-    @include padding-y(p-xxs);
+main {
+  background-color: $color-main1;
+  .container-main {
+    max-width: 80%;
+    margin: 0 auto;
+    .title-main {
+      max-width: 100%;
+      text-align: center;
+      color: $color-primary;
+      @include border-y($color-secondary);
+      @include padding-y(p-xxs);
+    }
   }
 }

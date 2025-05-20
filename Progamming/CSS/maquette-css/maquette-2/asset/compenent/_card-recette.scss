@@ -1,0 +1,134 @@
+// CARD RECETTE MAIN MIDDLE
+
+.card-recette {
+  width: 687px;
+}
+
+.recette-1 {
+  @include padding-y(p-xs);
+
+  .img-top {
+    @include bg-image('./asset/img/galleries/tacos.jpg');
+    min-width: 100%;
+    height: 278px;
+    position: relative;
+  }
+  .logo-card {
+    @include bg-image('./asset/img/bg-container/toque.png');
+    width: 40px;
+    height: 40px;
+    @include absolute-center;
+    top: 100%;
+  }
+  .txt-card {
+    display: grid;
+    justify-items: center;
+    background-color: $color-main;
+    @include padding(p-s);
+    @include gap(p-s);
+
+    p {
+      text-align: center;
+      letter-spacing: 2px;
+    }
+  }
+}
+.recette-2 {
+  @include padding-y(p-xs);
+  display: grid;
+  justify-items: center;
+
+  .img-top {
+    @include bg-image('./asset/img/galleries/cote_de_boeuf.jpg');
+    min-width: 100%;
+    height: 205px;
+    position: relative;
+  }
+  .logo-card {
+    @include bg-image('./asset/img/bg-container/toque.png');
+    min-width: 100%;
+    height: 40px;
+    @include absolute-center;
+    top: 100%;
+  }
+  .txt-card {
+    display: grid;
+    justify-items: center;
+    background-color: $color-main;
+    @include padding(p-s);
+    @include gap(p-s);
+
+    p {
+      text-align: center;
+      letter-spacing: 2px;
+    }
+  }
+}
+.recette-3 {
+  @include padding-y(p-xs);
+  display: grid;
+  justify-items: center;
+  .img-top {
+    @include bg-image('./asset/img/galleries/carrot.jpg');
+    min-width: 100%;
+    height: 205px;
+    position: relative;
+  }
+  .logo-card {
+    @include bg-image('./asset/img/bg-container/toque.png');
+    width: 40px;
+    height: 40px;
+    @include absolute-center;
+    top: 100%;
+  }
+  .txt-card {
+    display: grid;
+    justify-items: center;
+    background-color: $color-main;
+    @include padding(p-s);
+    @include gap(p-s);
+
+    p {
+      text-align: center;
+      letter-spacing: 2px;
+    }
+  }
+}
+.title-recette {
+  color: $color-secondary;
+}
+.recette-4 {
+  @include padding-y(p-xs);
+  display: grid;
+  justify-items: center;
+
+  .img-top {
+    @include bg-image('./asset/img/galleries/cookies.jpg');
+    min-width: 100%;
+    height: 278px;
+    position: relative;
+  }
+  .logo-card {
+    @include bg-image('./asset/img/bg-container/toque.png');
+    width: 40px;
+    height: 40px;
+    @include absolute-center;
+    top: 100%;
+  }
+  .txt-card {
+    display: grid;
+    justify-items: center;
+    background-color: $color-main;
+    @include padding(p-s);
+    @include gap(p-s);
+
+    p {
+      text-align: center;
+      letter-spacing: 2px;
+    }
+  }
+}
+.cont-recette-flex {
+  display: flex;
+  @include gap(p-s);
+}

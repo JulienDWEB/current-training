@@ -13,8 +13,8 @@
 }
 
 $color-main2: #b8b8b8d7;
-$color-main1: #272727;
-$color-main: #606060;
+$color-main1: #272727c9;
+$color-main: #a3d651c5;
 $color-primary: #cca57c;
 $color-primary1: #1616167a;
 $color-secondary: #c44e4e;
@@ -99,6 +99,17 @@ $spacing-scale: (
 @mixin border-y($color) {
   border-top: 1px solid $color;
   border-bottom: 1px solid $color;
+}
+
+//  GAP //
+
+@mixin gap($size) {
+  $val: map-get($spacing-scale, $size);
+  @if $val {
+    gap: $val;
+  } @else {
+    @warn "⚠️ `#{$size}` n'est pas une taille valide dans \$spacing-scale.";
+  }
 }
 
 // RESPONSIVE
@@ -215,59 +226,6 @@ $breakpoints: (
 }
 
 // Bouton Hover
-
-@mixin btn-light1 {
-  width: 102px;
-  height: 23px;
-  border: 0;
-  color: $white;
-  background-color: $color-secondary;
-  transition: transform 0.3s ease;
-  &:hover {
-    background-color: $color-primary;
-    transform: scale(1.1);
-  }
-}
-@mixin btn-light {
-  width: 102px;
-  height: 23px;
-  border: 0;
-  border-radius: 8px;
-  color: $white;
-  background-color: $color-secondary;
-  transition: transform 0.3s ease;
-  &:hover {
-    background-color: $color-primary;
-    transform: scale(1.1);
-  }
-}
-@mixin btn-dark {
-  width: 102px;
-  height: 23px;
-  border: 0;
-  border-radius: 8px;
-  color: $white;
-  background-color: $btn-dark;
-  transition: transform 0.3s ease;
-  &:hover {
-    transform: scale(1.1);
-    background-color: $color-secondary;
-    color: $black;
-  }
-}
-@mixin btn-dark1 {
-  width: 102px;
-  height: 23px;
-  border: 0;
-  color: $white;
-  background-color: $btn-dark;
-  transition: transform 0.3s ease;
-  &:hover {
-    transform: scale(1.1);
-    background-color: $color-secondary;
-    color: $black;
-  }
-}
 
 // Bar de translation
 

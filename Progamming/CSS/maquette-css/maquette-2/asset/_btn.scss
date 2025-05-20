@@ -1,0 +1,54 @@
+@mixin btn-light1 {
+  width: 102px;
+  height: 23px;
+  border: 0;
+  color: $white;
+  background-color: $color-secondary;
+  transition: transform 0.3s ease;
+  &:hover {
+    background-color: $color-primary;
+    transform: scale(1.1);
+  }
+}
+@mixin btn-light {
+  width: 102px;
+  height: 23px;
+  border: 0;
+  color: $white;
+  background-color: $color-secondary;
+  transition: transform 0.3s ease;
+  &:hover {
+    background-color: $color-main;
+    transform: scale(1.1);
+  }
+}
+@mixin btn-dark {
+  width: 102px;
+  height: 23px;
+  border: 0;
+  border-radius: 8px;
+  color: $white;
+  background-color: $btn-dark;
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: scale(1.1);
+    background-color: $color-secondary;
+    color: $black;
+  }
+}
+@mixin btn-dark1 {
+  width: 102px;
+  height: 23px;
+  border: 0;
+  color: $white;
+  background-color: $btn-dark;
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: scale(1.1);
+    background-color: $color-secondary;
+    color: $black;
+  }
+}
+button {
+  @include btn-light;
+}

@@ -1,15 +1,19 @@
+// Card MAIN TOP
+
 main {
   .container-card {
     @include grid(3, 1fr);
-    @include padding(p-xs);
+    @include padding-y(p-xs);
+    @include gap(p-s);
     max-width: 80%;
-
     margin: 0 auto;
+
     .card-1,
     .card-2,
     .card-3 {
-      @include min-height-whidth(230px, 200px);
+      @include min-height-whidth(200px, 250px);
       @include center-flex;
+      @include padding(p-xs);
       h2 {
         @include padding(p-xs);
         @include border-y($color-primary);
