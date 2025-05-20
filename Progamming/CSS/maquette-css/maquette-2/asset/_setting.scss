@@ -96,6 +96,10 @@ $spacing-scale: (
     margin-bottom: $val * 2;
   }
 }
+@mixin border-y($color) {
+  border-top: 1px solid $color;
+  border-bottom: 1px solid $color;
+}
 
 // RESPONSIVE
 
@@ -131,7 +135,7 @@ $breakpoints: (
   background-repeat: $repeat;
   background-position: $position;
 }
-  
+
 @mixin center-flex($direction: row) {
   display: flex;
   flex-direction: $direction;
