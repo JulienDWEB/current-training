@@ -1,8 +1,5 @@
 aside {
-  width: 30%;
-  .card-aside {
-    @include bg-img('./asset/img/galleries/bieres.jpg');
-  }
+  @include grid(1, 4fr);
   .card-perso {
     @include bg-image('./asset/img/galleries/me.jpg');
     @include center-flex;
@@ -41,6 +38,42 @@ aside {
           color: $white;
         }
       }
+    }
+  }
+  .card-aside {
+    @include bg-image('./asset/img/galleries/bieres.jpg');
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .border-card {
+      border: 1px solid black;
+      justify-items: center;
+      width: 65%;
+      height: 280px;
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      @include gap(p-md);
+      color: $color-primary;
+    }
+  }
+  .card-aside-1 {
+    @include bg-image('./asset/img/galleries/cafe.jpg');
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .border-card {
+      border: 1px solid black;
+      justify-items: center;
+      width: 65%;
+      height: 280px;
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      @include gap(p-md);
+      color: $color-primary;
     }
   }
 }

@@ -135,6 +135,10 @@ main {
 main .container-main {
   max-width: 80%;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 1fr;
 }
 main .container-main .title-main {
   max-width: 100%;
@@ -147,7 +151,10 @@ main .container-main .title-main {
 }
 
 aside {
-  width: 30%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 4fr;
 }
 aside .card-perso {
   background-image: url(./asset/img/galleries/me.jpg);
@@ -206,6 +213,48 @@ aside .c-categorie ul li {
 }
 aside .c-categorie ul li i {
   color: #ffffff;
+}
+aside .card-aside {
+  background-image: url(./asset/img/galleries/bieres.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+aside .card-aside .border-card {
+  border: 1px solid black;
+  justify-items: center;
+  width: 65%;
+  height: 280px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  color: #cca57c;
+}
+aside .card-aside-1 {
+  background-image: url(./asset/img/galleries/cafe.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+aside .card-aside-1 .border-card {
+  border: 1px solid black;
+  justify-items: center;
+  width: 65%;
+  height: 280px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  color: #cca57c;
 }
 
 main .container-card {
