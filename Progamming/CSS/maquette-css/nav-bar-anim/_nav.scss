@@ -1,0 +1,45 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  nav {
+    ul {
+      padding: 20px;
+      border-radius: 8px;
+      position: relative;
+      z-index: 1;
+      a {
+        padding: 20px;
+        text-decoration: none;
+        list-style-type: none;
+        color: azure;
+        transition: left 0.5s ease;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+      a:nth-child(1):hover ~ span {
+        left: 0;
+      }
+      a:nth-child(2):hover ~ span {
+        left: 100px;
+      }
+      a:nth-child(3):hover ~ span {
+        left: 220px;
+      }
+      a:nth-child(4):hover ~ span {
+        left: 340px;
+      }
+      background-color: rgba(0, 0, 0, 0.418);
+      span {
+        z-index: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 95px;
+        height: 100%;
+        background: linear-gradient(45deg, rgb(211, 97, 97), rgb(173, 41, 41));
+      }
+    }
+  }
+}
