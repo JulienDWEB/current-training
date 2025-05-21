@@ -49,11 +49,10 @@ header nav {
   position: absolute;
   bottom: 0;
   z-index: 1;
-  color: white;
   background-color: #cca57c;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 @media (min-width: 480px) {
@@ -151,24 +150,29 @@ main .container-main .title-main {
 }
 
 footer {
-  background-image: url(./asset/img/bg-container/bg_footer.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  filter: brightness(0.4);
-  width: 100%;
-  height: 25vh;
-}
-footer .bg-calque {
   background-image: url(./asset/img/bg-container/Calque.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   width: 100%;
-  height: 100%;
-}
-footer .bg-calque .container-footer {
+  height: 25vh;
   position: relative;
+  z-index: 1;
+}
+footer::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.712);
+  z-index: 0;
+}
+footer .container-footer {
+  position: relative;
+  color: #ffffff;
   height: 100%;
   width: 80%;
   display: grid;
@@ -178,7 +182,7 @@ footer .bg-calque .container-footer {
   justify-items: end;
   color: #ffffff;
 }
-footer .bg-calque .container-footer .logo-footer {
+footer .container-footer .logo-footer {
   background-image: url(./asset/img/bg-container/logo_footer.png);
   background-size: contain;
   background-repeat: no-repeat;
@@ -190,15 +194,15 @@ footer .bg-calque .container-footer .logo-footer {
   width: 100px;
   height: 100px;
 }
-footer .bg-calque .container-footer ul {
+footer .container-footer ul {
   display: flex;
   padding: 0.5rem;
   list-style-type: none;
 }
-footer .bg-calque .container-footer ul li {
+footer .container-footer ul li {
   padding: 1rem;
 }
-footer .bg-calque .container-footer p {
+footer .container-footer p {
   padding: 0.5rem;
 }
 
@@ -564,43 +568,43 @@ main .container-card .card-3 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
-.container-galerie .container-card-img div {
-  width: 300px;
-  height: 210px;
+.container-galerie .container-card-img .card {
+  width: 100%;
+  height: 300px;
 }
 .container-galerie .container-card-img .card-img-1 {
   background-image: url(./asset/img/galleries/hamburger_small.jpg);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 }
 .container-galerie .container-card-img .card-img-2 {
   background-image: url(./asset/img/galleries/wrap_small.jpg);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 }
 .container-galerie .container-card-img .card-img-3 {
   background-image: url(./asset/img/galleries/gateau_small.jpg);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 }
 .container-galerie .container-card-img .card-img-4 {
   background-image: url(./asset/img/galleries/pancake_small.jpg);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 }
 .container-galerie .container-card-img .card-img-5 {
   background-image: url(./asset/img/galleries/oeufs_small.jpg);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 }
 .container-galerie .container-card-img .card-img-6 {
   background-image: url(./asset/img/galleries/poisson_small.jpg);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 }

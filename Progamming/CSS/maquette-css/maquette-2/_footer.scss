@@ -1,37 +1,36 @@
 footer {
-  @include bg-image-cover('./asset/img/bg-container/bg_footer.jpg');
-  filter: brightness(0.4);
+  @include bg-image-cover('./asset/img/bg-container/Calque.png');
   width: 100%;
   height: 25vh;
-  .bg-calque {
-    @include bg-image-cover('./asset/img/bg-container/Calque.png');
-    width: 100%;
+  position: relative;
+  z-index: 1;
+  &::before {
+    @include absolute-overlay;
+  }
+  .container-footer {
+    position: relative;
+    color: $white;
+    .logo-footer {
+      @include bg-image('./asset/img/bg-container/logo_footer.png');
+      @include absolute-left;
+      width: 100px;
+      height: 100px;
+    }
     height: 100%;
-
-    .container-footer {
-      position: relative;
-      .logo-footer {
-        @include bg-image('./asset/img/bg-container/logo_footer.png');
-        @include absolute-left;
-        width: 100px;
-        height: 100px;
+    width: 80%;
+    @include grid(1, 1fr);
+    justify-items: end;
+    color: $white;
+    ul {
+      display: flex;
+      @include padding(p-xxs);
+      list-style-type: none;
+      li {
+        @include padding(p-xs);
       }
-      height: 100%;
-      width: 80%;
-      @include grid(1, 1fr);
-      justify-items: end;
-      color: $white;
-      ul {
-        display: flex;
-        @include padding(p-xxs);
-        list-style-type: none;
-        li {
-          @include padding(p-xs);
-        }
-      }
-      p {
-        @include padding(p-xxs);
-      }
+    }
+    p {
+      @include padding(p-xxs);
     }
   }
 }

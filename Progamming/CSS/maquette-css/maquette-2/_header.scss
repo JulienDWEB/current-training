@@ -1,6 +1,7 @@
 header {
   position: relative;
   @include center-flex;
+
   @include bg-image(
     './asset/img/bg-container/bg_header.jpg',
     cover,
@@ -24,9 +25,9 @@ header {
     position: absolute;
     bottom: 0; // Changé de top: 0% à bottom: 0
     z-index: 1;
-    color: white;
+
     background-color: $color-primary;
-    @include center-flex;
+    @include center-flex-around;
     @include responsive-gap-from-map;
     .container-nav {
       @include center-flex;
