@@ -3,95 +3,35 @@
 .card-recette {
   width: 687px;
 }
-
+.logo-card {
+  @include bg-image('./asset/img/bg-container/toque.png');
+  @include card-size(100%, 40px, 100%, 40px);
+  @include absolute-center;
+  top: 100%;
+}
 .recette-1 {
   @include padding-y(p-xs);
-
   .img-top {
     @include bg-image('./asset/img/galleries/tacos.jpg');
-    min-width: 100%;
-    height: 278px;
-    position: relative;
-  }
-  .logo-card {
-    @include bg-image('./asset/img/bg-container/toque.png');
-    width: 40px;
-    height: 40px;
-    @include absolute-center;
-    top: 100%;
-  }
-  .txt-card {
-    display: grid;
-    justify-items: center;
-    background-color: $color-main;
-    @include padding(p-s);
-    @include gap(p-s);
+    @include card-size(100%, 278px, 100%, 278px);
 
-    p {
-      text-align: center;
-      letter-spacing: 2px;
-    }
+    position: relative;
   }
 }
 .recette-2 {
   @include padding-y(p-xs);
-  display: grid;
-  justify-items: center;
-
   .img-top {
     @include bg-image('./asset/img/galleries/cote_de_boeuf.jpg');
-    min-width: 100%;
-    height: 205px;
+    @include card-size(100%, 205px, 100%, 205px);
     position: relative;
-  }
-  .logo-card {
-    @include bg-image('./asset/img/bg-container/toque.png');
-    min-width: 100%;
-    height: 40px;
-    @include absolute-center;
-    top: 100%;
-  }
-  .txt-card {
-    display: grid;
-    justify-items: center;
-    background-color: $color-main;
-    @include padding(p-s);
-    @include gap(p-s);
-
-    p {
-      text-align: center;
-      letter-spacing: 2px;
-    }
   }
 }
 .recette-3 {
   @include padding-y(p-xs);
-  display: grid;
-  justify-items: center;
   .img-top {
     @include bg-image('./asset/img/galleries/carrot.jpg');
-    min-width: 100%;
-    height: 205px;
+    @include card-size(100%, 205px, 100%, 205px);
     position: relative;
-  }
-  .logo-card {
-    @include bg-image('./asset/img/bg-container/toque.png');
-    width: 40px;
-    height: 40px;
-    @include absolute-center;
-    top: 100%;
-  }
-  .txt-card {
-    display: grid;
-    justify-items: center;
-    background-color: $color-main;
-    @include padding(p-s);
-    @include gap(p-s);
-
-    p {
-      text-align: center;
-      letter-spacing: 2px;
-    }
   }
 }
 .title-recette {
@@ -99,33 +39,22 @@
 }
 .recette-4 {
   @include padding-y(p-xs);
-  display: grid;
-  justify-items: center;
-
   .img-top {
     @include bg-image('./asset/img/galleries/cookies.jpg');
-    min-width: 100%;
-    height: 278px;
+    @include card-size(100%, 278px, 100%, 278px);
     position: relative;
   }
-  .logo-card {
-    @include bg-image('./asset/img/bg-container/toque.png');
-    width: 40px;
-    height: 40px;
-    @include absolute-center;
-    top: 100%;
-  }
-  .txt-card {
-    display: grid;
-    justify-items: center;
-    background-color: $color-main;
-    @include padding(p-s);
-    @include gap(p-s);
+}
+.txt-card {
+  display: grid;
+  justify-items: center;
+  background-color: $color-main;
+  @include padding(p-s);
+  @include gap(p-s);
 
-    p {
-      text-align: center;
-      letter-spacing: 2px;
-    }
+  p {
+    text-align: center;
+    letter-spacing: 2px;
   }
 }
 .cont-recette-flex {

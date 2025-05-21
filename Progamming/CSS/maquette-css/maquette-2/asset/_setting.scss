@@ -166,6 +166,12 @@ $breakpoints: (
   align-items: center;
 }
 
+@mixin center-flex-between($content: space-between) {
+  display: flex;
+  flex-direction: row;
+  justify-content: $content;
+  align-items: center;
+}
 @mixin center-flex-around($content: space-around) {
   display: flex;
   flex-direction: row;
@@ -206,6 +212,7 @@ $breakpoints: (
   right: $offset;
   transform: translateY(-50%);
 }
+
 @mixin absolute-overlay($color: rgba(0, 0, 0, 0.712)) {
   position: absolute;
   content: '';
@@ -267,13 +274,20 @@ $breakpoints: (
   display: grid;
   align-content: space-between;
 }
+@mixin center-grid {
+  display: grid;
+  justify-content: center;
+  align-items: center;
 
+  @content;
+}
 // Bouton Hover
 
 // Bar de translation
 
 @mixin slidebar {
   cursor: pointer;
+
   &::after {
     content: '';
     position: absolute;
@@ -283,9 +297,9 @@ $breakpoints: (
     left: 0;
     width: 0;
     bottom: -3px;
-  }
-  &:hover::after {
-    width: 100%;
+    &:hover::after {
+      width: 100%;
+    }
   }
 }
 @mixin slidebar1 {
@@ -346,4 +360,27 @@ $breakpoints: (
   box-shadow: -1px 4px 12px 0px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: -1px 4px 12px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: -1px 4px 12px 0px rgba(0, 0, 0, 0.75);
+}
+// LARGEUR HAUTEUR
+
+@mixin card-size(
+  $width: 100px,
+  $height: 100px,
+  $max-width: 100%,
+  $max-height: 100%
+) {
+  width: $width;
+  height: $height;
+  max-width: $max-width;
+  max-height: $max-height;
+
+  @include respond(md) {
+    width: min($width, 90%);
+    height: auto;
+    min-height: $height;
+  }
+
+  @include respond(sm) {
+    width: min($width, 80%);
+  }
 }

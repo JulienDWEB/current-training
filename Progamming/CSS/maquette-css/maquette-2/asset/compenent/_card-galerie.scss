@@ -3,14 +3,11 @@
   @include wrap-flex;
   .container-card-img {
     @include grid(3, 2fr);
-    justify-content: center;
-    justify-items: center;
     width: 100%;
     @include gap(p-s);
     @include padding-y(p-s);
     .card {
-      width: 100%;
-      height: 300px;
+      @include card-size(100%, 300px, 100%, 300px);
     }
     .card-img-1 {
       @include bg-image-cover('./asset/img/galleries/hamburger_small.jpg');

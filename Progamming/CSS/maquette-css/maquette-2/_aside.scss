@@ -4,23 +4,21 @@ aside {
   @include gap(p-md);
   .container-card-perso {
     @include center-flex;
-    height: 100%;
-    width: 100%;
+    @include card-size(100%, 100%, 100%, 100%);
   }
   .card-perso {
     @include bg-image('./asset/img/galleries/me.jpg');
     @include center-flex;
-    height: 284px;
-    width: 309px;
+    @include card-size(284px, 309px, 284px, 309px);
     flex-direction: column;
     justify-content: flex-end;
     color: $color-main1;
     @include padding(p-xxs);
-    gap: 10px;
+    @include gap(p-xs);
     ul {
       @include center-flex;
       list-style-type: none;
-      gap: 10px;
+      @include gap(p-xs);
     }
     span {
       @include center-flex;
@@ -28,7 +26,7 @@ aside {
     p {
       @include center-flex;
       text-align: center;
-      width: 230px;
+      max-width: 230px;
     }
   }
   .c-categorie {
@@ -36,16 +34,14 @@ aside {
     align-items: center;
     justify-items: center;
     .title-main {
-      width: 239px;
+      min-width: 239px;
     }
     ul {
-      width: 239px;
+      min-width: 239px;
       list-style-type: none;
       li {
         @include padding(p-xxs);
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        @include center-flex-between;
         @include gap(p-xl);
         i {
           color: $white;
@@ -56,17 +52,13 @@ aside {
   .card-aside {
     @include bg-image('./asset/img/galleries/bieres.jpg');
     min-height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include center-flex;
     .border-card {
-      border: 1px solid black;
-      justify-items: center;
-      width: 65%;
-      height: 280px;
-      display: grid;
-      justify-content: center;
-      align-items: center;
+      border: 1px solid $black;
+      @include card-size(65%, 280px, 65%, 280px);
+      @include center-grid {
+        justify-items: center;
+      }
       @include gap(p-md);
       color: $color-primary;
     }
@@ -74,17 +66,13 @@ aside {
   .card-aside-1 {
     @include bg-image('./asset/img/galleries/cafe.jpg');
     min-height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include center-flex;
     .border-card {
       border: 1px solid black;
-      justify-items: center;
-      width: 65%;
-      height: 280px;
-      display: grid;
-      justify-content: center;
-      align-items: center;
+      @include card-size(65%, 280px, 65%, 280px);
+      @include center-grid {
+        justify-items: center;
+      }
       @include gap(p-md);
       color: $color-primary;
     }

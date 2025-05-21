@@ -1,53 +1,45 @@
-@mixin btn-light1 {
-  width: 102px;
-  height: 23px;
-  border: 0;
+@mixin btn-style-light {
   color: $white;
   background-color: $color-secondary;
+}
+@mixin btn-style-dark {
+  color: $white;
+  background-color: $btn-dark;
+}
+// BTN SCALE
+@mixin scale-btn($color) {
   transition: transform 0.3s ease;
   &:hover {
-    background-color: $color-primary;
     transform: scale(1.1);
+    background-color: $color;
+    color: $black;
   }
+}
+
+@mixin btn-light1 {
+  @include card-size(102px, 23px, 102px, 23px);
+  border: 0;
+  @include btn-style-light;
+  @include scale-btn($color-main);
 }
 @mixin btn-light {
-  width: 102px;
-  height: 23px;
+  @include card-size(102px, 23px, 102px, 23px);
   border: 0;
-  color: $white;
-  background-color: $color-secondary;
-  transition: transform 0.3s ease;
-  &:hover {
-    background-color: $color-main;
-    transform: scale(1.1);
-  }
+  @include btn-style-light;
+  @include scale-btn($color-main);
 }
 @mixin btn-dark {
-  width: 102px;
-  height: 23px;
+  @include card-size(102px, 23px, 102px, 23px);
   border: 0;
   border-radius: 8px;
-  color: $white;
-  background-color: $btn-dark;
-  transition: transform 0.3s ease;
-  &:hover {
-    transform: scale(1.1);
-    background-color: $color-secondary;
-    color: $black;
-  }
+  @include btn-style-dark;
+  @include scale-btn($color-secondary);
 }
 @mixin btn-dark1 {
-  width: 102px;
-  height: 23px;
+  @include card-size(102px, 23px, 102px, 23px);
   border: 0;
-  color: $white;
-  background-color: $btn-dark;
-  transition: transform 0.3s ease;
-  &:hover {
-    transform: scale(1.1);
-    background-color: $color-secondary;
-    color: $black;
-  }
+  @include btn-style-light;
+  @include scale-btn($color-secondary);
 }
 button {
   @include btn-light;
