@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cannabis World</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Vérification d'âge -->
+    <div class="age-verification">
+        <div class="verification-content">
+            <div class="verification-icon">
+                <i class="fas fa-cannabis"></i>
+            </div>
+            <h2>Vérification de l'âge</h2>
+            <p>Ce site contient des informations sur le cannabis et est réservé aux personnes majeures.</p>
+            <p>Êtes-vous âgé(e) de 18 ans ou plus ?</p>
+            <div class="buttons">
+                <button class="confirm confirm-age">
+                    <i class="fas fa-check"></i>
+                    Oui, j'ai plus de 18 ans
+                </button>
+                <button class="deny deny-age">
+                    <i class="fas fa-times"></i>
+                    Non, j'ai moins de 18 ans
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <button class="sidebar-toggle">
+        <i class="fas fa-bars"></i>
+        <span>Menu</span>
+    </button>
+
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2>Catégories</h2>
+            <button class="close-sidebar">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="categories">
+            <!-- Les catégories seront ajoutées dynamiquement via JavaScript -->
+        </div>
+    </div>
+
+    <div class="sidebar-overlay"></div>
+
+    <header>
+        <nav class="main-nav">
+            <div class="logo">
+                <img src="asset/img/logo.jpg" alt="Cannabis World Logo">
+                <h1>Cannabis World</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Accueil</a></li>
+                <li><a href="gallery.html">Galerie</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html" class="cart-link"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <div class="nav-right">
+                <button class="theme-toggle">
+                    <i class="theme-icon fas fa-moon"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Bienvenue sur Cannabis World</h2>
+                <p>Découvrez notre sélection de produits de qualité</p>
+                <a href="gallery.html" class="cta-button">Voir la collection</a>
+            </div>
+        </section>
+
+        <section class="featured-products">
+            <h2>Produits en vedette</h2>
+            <div class="products-grid">
+                <!-- Les produits seront ajoutés dynamiquement via JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Cannabis World. Tous droits réservés.</p>
+    </footer>
+
+    <div class="cart-notification">
+        <p>Produit ajouté au panier !</p>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 

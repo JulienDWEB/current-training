@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panier - Cannabis World</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="logo">
+                <img src="asset/img/logo.jpg" alt="Cannabis World Logo">
+                <h1>Cannabis World</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="gallery.html">Galerie</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html" class="cart-link active"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="cart-section">
+            <h1>Votre Panier</h1>
+            <div class="cart-container">
+                <div class="cart-items">
+                    <!-- Les articles du panier seront ajoutés ici dynamiquement -->
+                </div>
+                <div class="cart-summary">
+                    <h2>Récapitulatif de la commande</h2>
+                    <div class="summary-item">
+                        <span>Sous-total</span>
+                        <span id="subtotal">0.00 €</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Frais de livraison</span>
+                        <span id="shipping">5.00 €</span>
+                    </div>
+                    <div class="summary-item total">
+                        <span>Total</span>
+                        <span id="total">0.00 €</span>
+                    </div>
+                    <button class="checkout-btn" id="checkout-btn">
+                        Procéder au paiement
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal de paiement -->
+        <div class="payment-modal" id="payment-modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Paiement</h2>
+                <form id="payment-form">
+                    <div class="form-group">
+                        <label for="card-name">Nom sur la carte</label>
+                        <input type="text" id="card-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="card-number">Numéro de carte</label>
+                        <input type="text" id="card-number" maxlength="16" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="expiry">Date d'expiration</label>
+                            <input type="text" id="expiry" placeholder="MM/AA" maxlength="5" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">CVV</label>
+                            <input type="text" id="cvv" maxlength="3" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="pay-btn">
+                        Payer <span id="payment-amount">0.00 €</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Cannabis World. Tous droits réservés.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

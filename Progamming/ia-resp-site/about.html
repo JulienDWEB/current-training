@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos - Green Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Vérification d'âge -->
+    <div class="age-verification">
+        <div class="verification-content">
+            <i class="fas fa-cannabis verification-icon"></i>
+            <h2>Vérification d'âge</h2>
+            <p>Ce site contient du contenu réservé aux adultes.</p>
+            <p>Êtes-vous âgé de 18 ans ou plus ?</p>
+            <div class="verification-buttons">
+                <button class="confirm-age">Oui, j'ai 18 ans</button>
+                <button class="deny-age">Non, je n'ai pas 18 ans</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav class="main-nav">
+            <div class="logo">
+                <img src="asset/img/logo.png" alt="Green Shop Logo">
+                <h1>Green Shop</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html" class="active">À propos</a></li>
+                <li><a href="gallery.html">Produits</a></li>
+                <li><a href="cart.html" class="cart-link">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Section À propos -->
+    <section class="about-section">
+        <div class="about-container">
+            <h1>Notre Histoire</h1>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Bienvenue chez Green Shop, votre destination de confiance pour des produits de qualité supérieure. Fondée en 2020, notre boutique s'est engagée à fournir les meilleurs produits tout en respectant les normes les plus strictes.</p>
+                    <p>Notre mission est de vous offrir une expérience d'achat exceptionnelle, avec un service personnalisé et des produits soigneusement sélectionnés.</p>
+                </div>
+                <div class="about-image">
+                    <img src="asset/img/shop-front.jpg" alt="Notre boutique">
+                </div>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Produits Naturels</h3>
+                    <p>100% bio et cultivés localement</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-certificate"></i>
+                    <h3>Qualité Garantie</h3>
+                    <p>Testés et certifiés</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-truck"></i>
+                    <h3>Livraison Rapide</h3>
+                    <p>Partout en France</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-headset"></i>
+                    <h3>Support 24/7</h3>
+                    <p>À votre écoute</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Localisation -->
+    <section class="location-section">
+        <div class="location-container">
+            <h2>Notre Localisation</h2>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9916256937595!2d2.292292615509614!3d48.85837007928757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sTour%20Eiffel!5e0!3m2!1sfr!2sfr!4v1647874587234!5m2!1sfr!2sfr" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+            <div class="location-info">
+                <div class="info-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Adresse</h3>
+                    <p>123 Rue du Cannabis<br>75000 Paris, France</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Horaires</h3>
+                    <p>Lundi - Vendredi: 9h - 20h<br>Samedi: 10h - 19h<br>Dimanche: Fermé</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-phone"></i>
+                    <h3>Contact</h3>
+                    <p>Tél: +33 1 23 45 67 89<br>Email: contact@greenshop.fr</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>À propos</h3>
+                <p>Green Shop - Votre boutique de confiance pour des produits de qualité.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Liens rapides</h3>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="about.html">À propos</a></li>
+                    <li><a href="gallery.html">Produits</a></li>
+                    <li><a href="cart.html">Panier</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: contact@greenshop.fr</p>
+                <p>Tél: +33 1 23 45 67 89</p>
+            </div>
+            <div class="footer-section">
+                <h3>Suivez-nous</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Green Shop. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 

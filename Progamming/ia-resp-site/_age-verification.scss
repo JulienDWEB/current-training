@@ -1,0 +1,102 @@
+.age-verification {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(30, 40, 30, 0.92);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s cubic-bezier(.4,1,.7,1);
+
+    &.active {
+        opacity: 1;
+        pointer-events: auto;
+        animation: fadeIn 0.5s cubic-bezier(.4,1,.7,1);
+    }
+
+    .verification-content {
+        background: var(--surface-color);
+        border-radius: var(--border-radius-lg);
+        box-shadow: var(--box-shadow-strong);
+        padding: 2.5rem 2rem;
+        max-width: 350px;
+        width: 90vw;
+        text-align: center;
+        color: var(--text-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.2rem;
+        animation: popIn 0.5s cubic-bezier(.4,1,.7,1);
+
+        .verification-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            animation: pulse 2s infinite;
+        }
+        h2 {
+            font-size: 1.5rem;
+            color: var(--primary-color-dark);
+            margin-bottom: 0.5rem;
+        }
+        p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+        .buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            width: 100%;
+            .confirm, .deny {
+                @include primary-button;
+                border-radius: var(--border-radius-md);
+                font-size: 1rem;
+                min-width: 120px;
+            }
+            .deny {
+                background: var(--accent-color);
+                color: var(--primary-color-dark);
+                border: 2px solid var(--primary-color-dark);
+                &:hover {
+                    background: var(--primary-color-dark);
+                    color: var(--accent-color);
+                }
+            }
+        }
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes popIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@media (max-width: 500px) {
+    .age-verification .verification-content {
+        padding: 1.2rem 0.5rem;
+        max-width: 95vw;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

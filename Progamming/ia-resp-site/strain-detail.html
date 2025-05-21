@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détail de la Variété - Cannabis World</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="logo">
+                <img src="asset/img/logo.jpg" alt="Cannabis World Logo">
+                <h1>Cannabis World</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="gallery.html">Galerie</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html" class="cart-link"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="strain-detail">
+            <div class="strain-container">
+                <div class="strain-images">
+                    <img src="" alt="" class="main-image" id="main-image">
+                    <div class="thumbnail-container">
+                        <img src="" alt="" class="thumbnail active">
+                        <img src="" alt="" class="thumbnail">
+                        <img src="" alt="" class="thumbnail">
+                    </div>
+                </div>
+                <div class="strain-info-detail">
+                    <h1 id="strain-name"></h1>
+                    <p class="strain-type" id="strain-type"></p>
+                    <div class="strain-stats">
+                        <div class="stat">
+                            <i class="fas fa-leaf"></i>
+                            <span>THC: <span id="thc-content"></span></span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-tint"></i>
+                            <span>CBD: <span id="cbd-content"></span></span>
+                        </div>
+                    </div>
+                    <p class="price" id="strain-price"></p>
+                    <div class="quantity-selector">
+                        <button class="quantity-btn minus">-</button>
+                        <input type="number" value="1" min="1" max="10" id="quantity">
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart-btn" id="add-to-cart">
+                        <i class="fas fa-cart-plus"></i> Ajouter au panier
+                    </button>
+                    <div class="strain-description">
+                        <h2>Description</h2>
+                        <p id="strain-description"></p>
+                    </div>
+                    <div class="strain-effects">
+                        <h2>Effets</h2>
+                        <ul id="strain-effects"></ul>
+                    </div>
+                    <div class="strain-aroma">
+                        <h2>Arômes</h2>
+                        <ul id="strain-aroma"></ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Cannabis World. Tous droits réservés.</p>
+    </footer>
+
+    <div class="cart-notification">
+        <p>Produit ajouté au panier !</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

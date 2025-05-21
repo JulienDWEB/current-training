@@ -1,0 +1,288 @@
+// Variables
+$transition-duration: 0.3s;
+$border-radius: 15px;
+$box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+$box-shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
+
+// Mixins
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin card-hover {
+    transition: transform $transition-duration ease, box-shadow $transition-duration ease;
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: $box-shadow-hover;
+    }
+}
+
+@mixin section-title {
+    color: var(--primary-color);
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    padding-bottom: 1rem;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 3px;
+        background-color: var(--primary-color);
+    }
+}
+
+// Styles pour la popup de vérification d'âge
+.age-verification {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    @include flex-center;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all $transition-duration ease;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+
+        .verification-content {
+            transform: scale(1);
+        }
+    }
+
+    .verification-content {
+        background: white;
+        padding: 3rem;
+        border-radius: $border-radius;
+        text-align: center;
+        max-width: 500px;
+        width: 90%;
+        transform: scale(0.9);
+        transition: transform $transition-duration ease;
+        box-shadow: $box-shadow;
+
+        .verification-icon {
+            font-size: 4rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            animation: pulse 2s infinite;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .verification-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+
+            button {
+                padding: 1rem 2rem;
+                border: none;
+                border-radius: 10px;
+                font-size: 1.1rem;
+                font-weight: bold;
+                cursor: pointer;
+                transition: all $transition-duration ease;
+                min-width: 200px;
+
+                &.confirm-age {
+                    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+                    color: white;
+
+                    &:hover {
+                        transform: translateY(-3px);
+                        box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+                    }
+                }
+
+                &.deny-age {
+                    background-color: #f8f9fa;
+                    color: #dc3545;
+                    border: 2px solid #dc3545;
+
+                    &:hover {
+                        background-color: #dc3545;
+                        color: white;
+                        transform: translateY(-3px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Styles pour la page À propos
+.about-section {
+    padding: 4rem 1rem;
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('../asset/img/about-bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+
+    .about-container {
+        max-width: 1200px;
+        margin: 0 auto;
+
+        h1 {
+            @include section-title;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 4rem;
+
+            @media (max-width: 768px) {
+                grid-template-columns: 1fr;
+            }
+
+            .about-text {
+                p {
+                    font-size: 1.1rem;
+                    line-height: 1.8;
+                    color: #555;
+                    margin-bottom: 1.5rem;
+                }
+            }
+
+            .about-image {
+                img {
+                    width: 100%;
+                    height: 400px;
+                    object-fit: cover;
+                    border-radius: $border-radius;
+                    box-shadow: $box-shadow;
+                    transition: transform $transition-duration ease;
+
+                    &:hover {
+                        transform: scale(1.02);
+                    }
+                }
+            }
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+
+            .feature-card {
+                background: white;
+                padding: 2rem;
+                border-radius: $border-radius;
+                text-align: center;
+                box-shadow: $box-shadow;
+                @include card-hover;
+
+                i {
+                    font-size: 2.5rem;
+                    color: var(--primary-color);
+                    margin-bottom: 1rem;
+                }
+
+                h3 {
+                    color: var(--text-color);
+                    font-size: 1.3rem;
+                    margin-bottom: 0.5rem;
+                }
+
+                p {
+                    color: #666;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+// Styles pour la section localisation
+.location-section {
+    padding: 4rem 1rem;
+    background-color: #f8f9fa;
+
+    .location-container {
+        max-width: 1200px;
+        margin: 0 auto;
+
+        h2 {
+            @include section-title;
+        }
+
+        .map-container {
+            margin-bottom: 3rem;
+            border-radius: $border-radius;
+            overflow: hidden;
+            box-shadow: $box-shadow;
+        }
+
+        .location-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+
+            .info-card {
+                background: white;
+                padding: 2rem;
+                border-radius: $border-radius;
+                text-align: center;
+                box-shadow: $box-shadow;
+                @include card-hover;
+
+                i {
+                    font-size: 2rem;
+                    color: var(--primary-color);
+                    margin-bottom: 1rem;
+                }
+
+                h3 {
+                    color: var(--text-color);
+                    font-size: 1.3rem;
+                    margin-bottom: 1rem;
+                }
+
+                p {
+                    color: #666;
+                    line-height: 1.6;
+                }
+            }
+        }
+    }
+}
+
+// Animation pour l'icône de vérification
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+} 
