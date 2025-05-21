@@ -1,10 +1,17 @@
 aside {
+  max-height: 1100px;
   @include grid(1, 4fr);
+  @include gap(p-md);
+  .container-card-perso {
+    @include center-flex;
+    height: 100%;
+    width: 100%;
+  }
   .card-perso {
     @include bg-image('./asset/img/galleries/me.jpg');
     @include center-flex;
-    height: 300px;
-    width: 300px;
+    height: 284px;
+    width: 309px;
     flex-direction: column;
     justify-content: flex-end;
     color: $color-main1;
@@ -26,14 +33,20 @@ aside {
   }
   .c-categorie {
     @include grid(1, 2fr);
+    align-items: center;
+    justify-items: center;
+    .title-main {
+      width: 239px;
+    }
     ul {
+      width: 239px;
       list-style-type: none;
       li {
         @include padding(p-xxs);
         display: flex;
         align-items: center;
         justify-content: space-between;
-        @include gap(p-xs);
+        @include gap(p-xl);
         i {
           color: $white;
         }

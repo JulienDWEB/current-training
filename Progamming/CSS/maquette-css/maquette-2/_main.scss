@@ -3,7 +3,7 @@ main {
   .container-main {
     max-width: 80%;
     margin: 0 auto;
-    @include grid(2, 1fr);
+    @include wrap-flex;
     .title-main {
       max-width: 100%;
       text-align: center;

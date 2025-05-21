@@ -20,7 +20,7 @@ $color-primary1: #1616167a;
 $color-secondary: #c44e4e;
 $color-secondary1: #cca57c9d;
 $white: #ffffff;
-$white70: #ffffffb7;
+$white70: #ffffff;
 $black: black;
 $btn-dark: #272727;
 //  MARGE & PADDING
@@ -147,11 +147,29 @@ $breakpoints: (
   background-position: $position;
 }
 
+@mixin bg-image-cover(
+  $url,
+  $size: cover,
+  $repeat: no-repeat,
+  $position: center center
+) {
+  background-image: url(#{$url});
+  background-size: $size;
+  background-repeat: $repeat;
+  background-position: $position;
+}
+
 @mixin center-flex($direction: row) {
   display: flex;
   flex-direction: $direction;
   justify-content: center;
   align-items: center;
+}
+@mixin wrap-flex($direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 // TXT dépasse de son conteneur
@@ -169,12 +187,19 @@ $breakpoints: (
   left: 50%;
   transform: translate(-50%, -50%);
 }
+@mixin absolute-left {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+}
 @mixin absolute-right($offset: 2rem) {
   position: absolute;
   top: 50%;
   right: $offset;
   transform: translateY(-50%);
 }
+
 @mixin absolute-right-resp {
   @media (max-width: 768px) {
     position: static;

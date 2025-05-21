@@ -135,10 +135,10 @@ main {
 main .container-main {
   max-width: 80%;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(1, 1fr);
-  gap: 1fr;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 main .container-main .title-main {
   max-width: 100%;
@@ -150,11 +150,73 @@ main .container-main .title-main {
   padding-bottom: 0.5rem;
 }
 
+footer {
+  background-image: url(./asset/img/bg-container/bg_footer.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  filter: brightness(0.4);
+  width: 100%;
+  height: 25vh;
+}
+footer .bg-calque {
+  background-image: url(./asset/img/bg-container/Calque.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+}
+footer .bg-calque .container-footer {
+  position: relative;
+  height: 100%;
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 1fr;
+  justify-items: end;
+  color: #ffffff;
+}
+footer .bg-calque .container-footer .logo-footer {
+  background-image: url(./asset/img/bg-container/logo_footer.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+}
+footer .bg-calque .container-footer ul {
+  display: flex;
+  padding: 0.5rem;
+  list-style-type: none;
+}
+footer .bg-calque .container-footer ul li {
+  padding: 1rem;
+}
+footer .bg-calque .container-footer p {
+  padding: 0.5rem;
+}
+
 aside {
+  max-height: 1100px;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(1, 1fr);
   gap: 4fr;
+  gap: 1.5rem;
+}
+aside .container-card-perso {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
 }
 aside .card-perso {
   background-image: url(./asset/img/galleries/me.jpg);
@@ -165,8 +227,8 @@ aside .card-perso {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 300px;
-  width: 300px;
+  height: 284px;
+  width: 309px;
   flex-direction: column;
   justify-content: flex-end;
   color: rgba(39, 39, 39, 0.7882352941);
@@ -200,8 +262,14 @@ aside .c-categorie {
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(1, 1fr);
   gap: 2fr;
+  align-items: center;
+  justify-items: center;
+}
+aside .c-categorie .title-main {
+  width: 239px;
 }
 aside .c-categorie ul {
+  width: 239px;
   list-style-type: none;
 }
 aside .c-categorie ul li {
@@ -209,7 +277,7 @@ aside .c-categorie ul li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 0.5rem;
+  gap: 3rem;
 }
 aside .c-categorie ul li i {
   color: #ffffff;
@@ -475,4 +543,67 @@ main .container-card .card-3 {
 .cont-recette-flex {
   display: flex;
   gap: 0.75rem;
+}
+
+.container-galerie {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.container-galerie .container-card-img {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 2fr;
+  justify-content: center;
+  justify-items: center;
+  width: 100%;
+  gap: 0.75rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.container-galerie .container-card-img div {
+  width: 300px;
+  height: 210px;
+}
+.container-galerie .container-card-img .card-img-1 {
+  background-image: url(./asset/img/galleries/hamburger_small.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.container-galerie .container-card-img .card-img-2 {
+  background-image: url(./asset/img/galleries/wrap_small.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.container-galerie .container-card-img .card-img-3 {
+  background-image: url(./asset/img/galleries/gateau_small.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.container-galerie .container-card-img .card-img-4 {
+  background-image: url(./asset/img/galleries/pancake_small.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.container-galerie .container-card-img .card-img-5 {
+  background-image: url(./asset/img/galleries/oeufs_small.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.container-galerie .container-card-img .card-img-6 {
+  background-image: url(./asset/img/galleries/poisson_small.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.container-galerie .title-main {
+  width: 100%;
 }/*# sourceMappingURL=index.css.map */

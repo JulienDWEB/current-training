@@ -1,0 +1,37 @@
+.container-galerie {
+  width: 100%;
+  @include wrap-flex;
+  .container-card-img {
+    @include grid(3, 2fr);
+    justify-content: center;
+    justify-items: center;
+    width: 100%;
+    @include gap(p-s);
+    @include padding-y(p-s);
+    div {
+      width: 300px;
+      height: 210px;
+    }
+    .card-img-1 {
+      @include bg-image('./asset/img/galleries/hamburger_small.jpg');
+    }
+    .card-img-2 {
+      @include bg-image('./asset/img/galleries/wrap_small.jpg');
+    }
+    .card-img-3 {
+      @include bg-image('./asset/img/galleries/gateau_small.jpg');
+    }
+    .card-img-4 {
+      @include bg-image('./asset/img/galleries/pancake_small.jpg');
+    }
+    .card-img-5 {
+      @include bg-image('./asset/img/galleries/oeufs_small.jpg');
+    }
+    .card-img-6 {
+      @include bg-image('./asset/img/galleries/poisson_small.jpg');
+    }
+  }
+  .title-main {
+    width: 100%;
+  }
+}
