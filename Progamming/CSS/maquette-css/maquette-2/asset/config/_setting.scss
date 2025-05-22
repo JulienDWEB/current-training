@@ -371,7 +371,6 @@ $breakpoints: (
 ) {
   width: $width;
   height: $height;
-  max-width: $max-width;
   max-height: $max-height;
 
   @include respond(md) {

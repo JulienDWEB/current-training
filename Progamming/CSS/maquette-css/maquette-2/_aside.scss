@@ -4,12 +4,12 @@ aside {
   @include gap(p-md);
   .container-card-perso {
     @include center-flex;
-    @include card-size(100%, 100%, 100%, 100%);
+    @include card-size1(100%, 100%, ());
   }
   .card-perso {
     @include bg-image('./asset/img/galleries/me.jpg');
     @include center-flex;
-    @include card-size(284px, 309px, 284px, 309px);
+    @include card-size1(284px, 309px, ());
     flex-direction: column;
     justify-content: flex-end;
     color: $color-main1;
@@ -55,7 +55,7 @@ aside {
     @include center-flex;
     .border-card {
       border: 1px solid $black;
-      @include card-size(65%, 280px, 65%, 280px);
+      @include card-size1(65%, 280px, ());
       @include center-grid {
         justify-items: center;
       }
@@ -69,7 +69,7 @@ aside {
     @include center-flex;
     .border-card {
       border: 1px solid black;
-      @include card-size(65%, 280px, 65%, 280px);
+      @include card-size1(65%, 280px, ());
       @include center-grid {
         justify-items: center;
       }

@@ -1,6 +1,23 @@
 footer {
   @include bg-image-cover('./asset/img/bg-container/Calque.png');
-  @include card-size(100%, 30vh, 100%, 30vh);
+  @include card-size1(
+    100%,
+    30vh,
+    (
+      xs: (
+        100%,
+        25vh,
+      ),
+      sm: (
+        100%,
+        28vh,
+      ),
+      md: (
+        100%,
+        30vh,
+      ),
+    )
+  );
   position: relative;
   &::before {
     @include absolute-overlay;
@@ -11,9 +28,43 @@ footer {
     .logo-footer {
       @include bg-image('./asset/img/bg-container/logo_footer.png');
       @include absolute-left;
-      @include card-size(100px, 100px, 100px, 100px);
+      @include card-size1(
+        100px,
+        100px,
+        (
+          xs: (
+            80px,
+            80px,
+          ),
+          sm: (
+            90px,
+            90px,
+          ),
+          md: (
+            100px,
+            100px,
+          ),
+        )
+      );
     }
-    @include card-size(80%, 85%, 80%, 85%);
+    @include card-size1(
+      80%,
+      85%,
+      (
+        xs: (
+          90%,
+          80%,
+        ),
+        sm: (
+          85%,
+          82%,
+        ),
+        md: (
+          80%,
+          85%,
+        ),
+      )
+    );
     @include grid(1, 1fr);
     justify-items: end;
     color: $white;
@@ -21,12 +72,20 @@ footer {
       display: flex;
       @include padding(p-xxs);
       list-style-type: none;
+      @media (max-width: map-get($breakpoints, sm)) {
+        flex-direction: column;
+        align-items: center;
+      }
       li {
         @include padding(p-xs);
       }
     }
     p {
       @include padding(p-xxs);
+      text-align: center;
+      @media (min-width: map-get($breakpoints, sm)) {
+        text-align: right;
+      }
     }
   }
 }

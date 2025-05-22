@@ -5,7 +5,7 @@
 }
 .logo-card {
   @include bg-image('./asset/img/bg-container/toque.png');
-  @include card-size(100%, 40px, 100%, 40px);
+  @include card-size1(100%, 40px, ());
   @include absolute-center;
   top: 100%;
 }
@@ -13,7 +13,7 @@
   @include padding-y(p-xs);
   .img-top {
     @include bg-image('./asset/img/galleries/tacos.jpg');
-    @include card-size(100%, 278px, 100%, 278px);
+    @include card-size1(100%, 278px, ());
 
     position: relative;
   }
@@ -22,7 +22,7 @@
   @include padding-y(p-xs);
   .img-top {
     @include bg-image('./asset/img/galleries/cote_de_boeuf.jpg');
-    @include card-size(100%, 205px, 100%, 205px);
+    @include card-size1(100%, 205px, ());
     position: relative;
   }
 }
@@ -30,7 +30,7 @@
   @include padding-y(p-xs);
   .img-top {
     @include bg-image('./asset/img/galleries/carrot.jpg');
-    @include card-size(100%, 205px, 100%, 205px);
+    @include card-size1(100%, 205px, ());
     position: relative;
   }
 }
@@ -41,7 +41,7 @@
   @include padding-y(p-xs);
   .img-top {
     @include bg-image('./asset/img/galleries/cookies.jpg');
-    @include card-size(100%, 278px, 100%, 278px);
+    @include card-size1(100%, 278px, ());
     position: relative;
   }
 }

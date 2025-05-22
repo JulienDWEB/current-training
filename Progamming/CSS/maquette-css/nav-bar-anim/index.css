@@ -1,157 +1,52 @@
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: linear-gradient(45deg, #2c3e50, #1a252f) no-repeat;
-  height: 100vh;
+  align-items: center;
+  justify-content: center;
 }
-
-body nav {
-  background-color: rgba(44, 62, 80, 0.9);
-  padding: 20px;
-  border-radius: 12px;
-  border: 1px solid rgba(236, 240, 241, 0.4);
-  -webkit-box-shadow: 0 0 10px 0 rgba(44, 62, 80, 0.4);
-          box-shadow: 0 0 10px 0 rgba(44, 62, 80, 0.4);
-}
-
 body nav ul {
   padding: 20px;
-  border-radius: 12px;
+  border-radius: 8px;
   position: relative;
-  background-color: rgba(39, 76, 131, 0.8);
+  background-color: rgba(0, 0, 0, 0.418);
   z-index: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   list-style-type: none;
-  width: 400px;
-  overflow: hidden;
 }
-
-body nav ul .pulse-main,
-body nav ul .pulse-shadow {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 100px;
-  -webkit-transition: left 0.5s, width 0.5s;
-  transition: left 0.5s, width 0.5s;
-  border-radius: 12px;
-  pointer-events: none;
-}
-
-body nav ul .pulse-main {
-  z-index: 1;
-  left: 0;
-  background: linear-gradient(45deg, #3498db, #217dbb);
-  max-width: 100%;
-}
-
-body nav ul .pulse-shadow {
-  z-index: 0;
-  left: 0;
-  background: rgba(52, 152, 219, 0.4);
-  -webkit-filter: blur(4px);
-          filter: blur(4px);
-  -webkit-transform: translateX(-10px);
-          transform: translateX(-10px);
-  max-width: 100%;
-}
-
 body nav ul li {
   display: inline-block;
   position: relative;
   z-index: 3;
-  width: 100px;
-  text-align: center;
 }
-
 body nav ul li a {
-  padding: 20px 0;
+  padding: 20px;
   text-decoration: none;
   list-style-type: none;
-  color: #ecf0f1;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  color: azure;
+  transition: all 0.5s ease;
   border-radius: 8px;
   cursor: pointer;
   display: block;
-  position: relative;
-  -webkit-transition: -webkit-transform 0.5s ease-in-out;
-  transition: -webkit-transform 0.5s ease-in-out;
-  transition: transform 0.5s ease-in-out;
-  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
 }
-
-body nav ul li a::after {
-  content: '';
-  position: absolute;
+body nav ul li:nth-child(1):hover ~ span {
   left: 0;
-  bottom: 10px;
-  width: 0;
-  height: 2px;
-  background: #2c3e50;
-  -webkit-transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  opacity: 1;
 }
-
-body nav ul li a:hover {
-  color: #cfd9db;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  font-size: 1.05rem;
-  font-weight: 600;
-  text-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
-}
-
-body nav ul li a:hover::after {
-  width: 80px;
-}
-
-body nav ul li:nth-child(1):hover ~ .pulse-main,
-body nav ul li:nth-child(1):hover ~ .pulse-shadow {
-  left: 0;
-  width: 100px;
-}
-
-body nav ul li:nth-child(2):hover ~ .pulse-main,
-body nav ul li:nth-child(2):hover ~ .pulse-shadow {
+body nav ul li:nth-child(2):hover ~ span {
   left: 100px;
-  width: 120px;
 }
-
-body nav ul li:nth-child(3):hover ~ .pulse-main,
-body nav ul li:nth-child(3):hover ~ .pulse-shadow {
-  left: 200px;
-  width: 140px;
+body nav ul li:nth-child(3):hover ~ span {
+  left: 220px;
 }
-
-body nav ul li:nth-child(4):hover ~ .pulse-main,
-body nav ul li:nth-child(4):hover ~ .pulse-shadow {
-  left: 300px;
-  width: 160px;
+body nav ul li:nth-child(4):hover ~ span {
+  left: 340px;
 }
-/*# sourceMappingURL=index.css.map */
+body nav ul span {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 95px;
+  height: 100%;
+  background: linear-gradient(45deg, rgb(211, 97, 97), rgb(173, 41, 41));
+  transition: left 0.5s ease;
+}/*# sourceMappingURL=index.css.map */

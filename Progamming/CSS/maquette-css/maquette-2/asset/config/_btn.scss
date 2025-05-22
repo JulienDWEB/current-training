@@ -17,26 +17,26 @@
 }
 
 @mixin btn-light1 {
-  @include card-size(102px, 23px, 102px, 23px);
+  @include card-size(102px, 23px, ());
   border: 0;
   @include btn-style-light;
   @include scale-btn($color-main);
 }
 @mixin btn-light {
-  @include card-size(102px, 23px, 102px, 23px);
+  @include card-size(102px, 23px, ());
   border: 0;
   @include btn-style-light;
   @include scale-btn($color-main);
 }
 @mixin btn-dark {
-  @include card-size(102px, 23px, 102px, 23px);
+  @include card-size(102px, 23px, ());
   border: 0;
   border-radius: 8px;
   @include btn-style-dark;
   @include scale-btn($color-secondary);
 }
 @mixin btn-dark1 {
-  @include card-size(102px, 23px, 102px, 23px);
+  @include card-size(102px, 23px, ());
   border: 0;
   @include btn-style-light;
   @include scale-btn($color-secondary);

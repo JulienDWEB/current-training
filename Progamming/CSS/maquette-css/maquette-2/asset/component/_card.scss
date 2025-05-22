@@ -1,0 +1,53 @@
+// Card MAIN TOP
+
+main {
+  .card-main {
+    @include card-size(
+      240px,
+      240px,
+      (
+        sm: (
+          100px,
+          150px,
+        ),
+        md: (
+          150px,
+          200px,
+        ),
+        lg: (
+          200px,
+          250px,
+        ),
+      )
+    );
+  }
+  .container-card {
+    align-items: center;
+    margin: 0 auto;
+    width: 80%;
+    @include padding-y(p-xs);
+    @include grid(3);
+    @include resp-grid;
+    .card-1,
+    .card-2,
+    .card-3 {
+      @include min-height-whidth(200px, 250px);
+      @include center-flex;
+      @include padding(p-xs);
+      h2 {
+        @include padding(p-xs);
+        @include border-y($color-primary);
+        color: $color-primary;
+      }
+    }
+    .card-1 {
+      @include bg-image-cover('./asset/img/galleries/soupe.jpg');
+    }
+    .card-2 {
+      @include bg-image-cover('./asset/img/galleries/salade.jpg');
+    }
+    .card-3 {
+      @include bg-image-cover('./asset/img/galleries/dessert.jpg');
+    }
+  }
+}

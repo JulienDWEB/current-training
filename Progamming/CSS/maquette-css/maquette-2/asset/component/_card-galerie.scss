@@ -7,7 +7,7 @@
     @include gap(p-s);
     @include padding-y(p-s);
     .card {
-      @include card-size(100%, 300px, 100%, 300px);
+      @include card-size1(100%, 300px, ());
     }
     .card-img-1 {
       @include bg-image-cover('./asset/img/galleries/hamburger_small.jpg');

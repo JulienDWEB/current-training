@@ -1,13 +1,14 @@
 header {
   position: relative;
   @include center-flex;
-
+  width: 100%;
   @include bg-image-cover('./asset/img/bg-container/bg_header.jpg');
-  @include card-size(100%, 300px, 100%, auto);
+  @include min-height-whidth(100%, 500px);
+
   .icon-header {
     @include bg-image-cover('./asset/img/bg-container/logo_header.png');
     @include min-height-whidth(250px, 100px);
-    @include card-size(250px, 100px, 80%, auto);
+    @include card-size1(250px, 100px, (50%, 50%));
   }
   nav {
     min-width: 100%;

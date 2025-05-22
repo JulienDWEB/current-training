@@ -1,6 +1,6 @@
 $spacing-scale: (
-  p-xxs: 0.25rem,
-  p-xs: 0.5rem,
+  p-xxs: 0.5rem,
+  p-xs: 1rem,
   p-s: 0.75rem,
   p-ssm: 1rem,
   p-sm: 1.25rem,
@@ -160,16 +160,38 @@ $responsive-font-size: (
     }
   }
 }
-@mixin resp-flex {
-  display: flex;
-  justify-items: center;
+
+// Mixin responsive pour la taille de carte
+@mixin card-size1($width, $height, $responsive-sizes: ()) {
+  width: $width;
+  height: $height;
+
+  // Appliquer les tailles pour chaque breakpoint si fourni
+  @each $breakpoint, $size in $responsive-sizes {
+    @if map-has-key($breakpoints, $breakpoint) {
+      $media-width: map-get($breakpoints, $breakpoint);
+      @media (min-width: $media-width) {
+        width: nth($size, 1);
+        height: nth($size, 2);
+      }
+    }
+  }
+}
+
+@mixin resp-grid {
+  display: grid;
   justify-content: center;
-  gap: 10px;
+  @media (max-width: 750px) {
+    grid-template-columns: 1fr;
+  }
+}
+@mixin resp-flex {
   @media (max-width: 750px) {
     display: flex;
     flex-direction: column;
-    justify-items: center;
     align-items: center;
-    gap: 10px;
+    grid-template-columns: none;
+    grid-template-rows: none;
+    gap: 0;
   }
 }
