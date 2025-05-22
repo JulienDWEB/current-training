@@ -23,20 +23,37 @@ const DEFAULT_IMAGE = "asset/img/products/default-botanique.jpg";
 
 // Fonction utilitaire pour vérifier si une image existe
 function imageExists(src, callback) {
+  if (!src) {
+    callback(false);
+    return;
+  }
   const img = new window.Image();
   img.onload = () => callback(true);
-  img.onerror = () => callback(false);
+  img.onerror = () => {
+    console.warn(`Image non trouvée: ${src}`);
+    callback(false);
+  };
   img.src = src;
 }
 
 // Utilitaire pour obtenir la première image existante ou l'image par défaut
-function getValidImage(images) {
-  return new Promise((resolve) => {
-    if (!images || !images.length) return resolve(DEFAULT_IMAGE);
-    imageExists(images[0], (exists) => {
-      resolve(exists ? images[0] : DEFAULT_IMAGE);
-    });
-  });
+async function getValidImage(images) {
+  if (!images || !Array.isArray(images) || images.length === 0) {
+    console.warn('Aucune image fournie, utilisation de l\'image par défaut');
+    return DEFAULT_IMAGE;
+  }
+
+  for (const image of images) {
+    try {
+      const exists = await new Promise((resolve) => imageExists(image, resolve));
+      if (exists) return image;
+    } catch (error) {
+      console.warn(`Erreur lors de la vérification de l'image ${image}:`, error);
+    }
+  }
+  
+  console.warn('Aucune image valide trouvée, utilisation de l\'image par défaut');
+  return DEFAULT_IMAGE;
 }
 
 // Classe principale pour la gestion du site
@@ -88,18 +105,23 @@ class GreenShop {
     const confirmAgeBtn = document.querySelector(SELECTORS.CONFIRM_AGE);
     const denyAgeBtn = document.querySelector(SELECTORS.DENY_AGE);
 
+    if (!ageVerification || !confirmAgeBtn || !denyAgeBtn) {
+      console.warn('Éléments de vérification d\'âge non trouvés');
+      return;
+    }
+
     if (!localStorage.getItem("ageVerified")) {
       requestAnimationFrame(() => {
         ageVerification.classList.add("active");
       });
     }
 
-    confirmAgeBtn?.addEventListener("click", () => {
+    confirmAgeBtn.addEventListener("click", () => {
       localStorage.setItem("ageVerified", "true");
       ageVerification.classList.remove("active");
     });
 
-    denyAgeBtn?.addEventListener("click", () => {
+    denyAgeBtn.addEventListener("click", () => {
       window.location.href = "https://www.google.com";
     });
   }
@@ -193,33 +215,40 @@ class GreenShop {
   }
 
   async renderCartItems(container) {
+    if (!container) return;
+    
     container.innerHTML = "";
     if (this.cart.length === 0) {
-      container.innerHTML =
-        '<div class="empty-cart">Votre panier est vide.</div>';
+      container.innerHTML = '<div class="empty-cart">Votre panier est vide.</div>';
       return;
     }
+
     for (const item of this.cart) {
-      const product = CONFIG.products.find((p) => p.id === item.id);
-      const imgSrc = await getValidImage(
-        product ? product.images : [item.image]
-      );
-      container.innerHTML += `
-        <div class="cart-item" data-id="${item.id}">
-          <img src="${imgSrc}" alt="${item.name}" class="item-image">
-          <div class="item-details">
-            <h3>${item.name}</h3>
-            <div class="item-qty-price">
-              <span>Quantité : <strong>${item.quantity}</strong></span>
-              <span>Prix unitaire : ${item.price.toFixed(2)} €</span>
-              <span>Total : <strong>${(item.price * item.quantity).toFixed(
-                2
-              )} €</strong></span>
+      try {
+        const product = CONFIG.products.find((p) => p.id === item.id);
+        if (!product) {
+          console.warn(`Produit non trouvé: ${item.id}`);
+          continue;
+        }
+
+        const imgSrc = await getValidImage(product.images || [item.image]);
+        container.innerHTML += `
+          <div class="cart-item" data-id="${item.id}">
+            <img src="${imgSrc}" alt="${item.name}" class="item-image" onerror="this.src='${DEFAULT_IMAGE}'">
+            <div class="item-details">
+              <h3>${item.name}</h3>
+              <div class="item-qty-price">
+                <span>Quantité : <strong>${item.quantity}</strong></span>
+                <span>Prix unitaire : ${item.price.toFixed(2)} €</span>
+                <span>Total : <strong>${(item.price * item.quantity).toFixed(2)} €</strong></span>
+              </div>
             </div>
+            <button class="remove-item" title="Retirer du panier"><i class="fas fa-trash"></i></button>
           </div>
-          <button class="remove-item" title="Retirer du panier"><i class="fas fa-trash"></i></button>
-        </div>
-      `;
+        `;
+      } catch (error) {
+        console.error(`Erreur lors du rendu de l'élément du panier: ${error.message}`);
+      }
     }
   }
 
@@ -504,32 +533,41 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Génération des produits en vedette sur la page d'accueil
 async function renderFeaturedProducts() {
-  const grid = document.querySelector(".products-grid");
-  if (!grid) return;
-  grid.innerHTML = "";
-  for (const product of CONFIG.products) {
-    const card = document.createElement("div");
-    card.className = "strain-card card";
-    card.dataset.id = product.id;
-    const img = document.createElement("img");
-    img.className = "strain-image card-image";
-    img.alt = product.name;
-    img.src = await getValidImage(product.images);
-    card.appendChild(img);
-    // Ajout du contenu produit
-    const info = document.createElement("div");
-    info.className = "strain-info card-content";
-    info.innerHTML = `
-      <h3>${product.name}</h3>
-      <div class="strain-stats">
-        <span><i class="fas fa-leaf"></i> ${product.type}</span>
-        <span><i class="fas fa-percentage"></i> CBD: ${product.cbd}%</span>
-      </div>
-      <div class="strain-price">${product.price.toFixed(2)} €</div>
-      <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Ajouter au panier</button>
-    `;
-    card.appendChild(info);
-    grid.appendChild(card);
+  try {
+    const container = document.querySelector('.featured-products');
+    if (!container) {
+      console.warn('Conteneur des produits en vedette non trouvé');
+      return;
+    }
+
+    const featuredProducts = CONFIG.products.slice(0, 4);
+    for (const product of featuredProducts) {
+      try {
+        const imgSrc = await getValidImage(product.images);
+        container.innerHTML += `
+          <div class="strain-card" data-id="${product.id}">
+            <img src="${imgSrc}" alt="${product.name}" class="strain-image" onerror="this.src='${DEFAULT_IMAGE}'">
+            <div class="strain-info">
+              <h3>${product.name}</h3>
+              <p>${product.description}</p>
+              <div class="strain-details">
+                <span>Type: ${product.type}</span>
+                <span>THC: ${product.thc}%</span>
+                <span>CBD: ${product.cbd}%</span>
+              </div>
+              <div class="strain-price">
+                <span>${product.price.toFixed(2)} €</span>
+                <button class="add-to-cart">Ajouter au panier</button>
+              </div>
+            </div>
+          </div>
+        `;
+      } catch (error) {
+        console.error(`Erreur lors du rendu du produit ${product.id}:`, error);
+      }
+    }
+  } catch (error) {
+    console.error('Erreur lors du rendu des produits en vedette:', error);
   }
 }
 

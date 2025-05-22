@@ -12,27 +12,34 @@
 body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   background: #020024;
-  background: linear-gradient(90deg, rgb(24, 22, 75) 0%, rgb(132, 142, 240) 0%, rgb(89, 33, 126) 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#18164b), color-stop(0%, #848ef0), to(#59217e));
+  background: linear-gradient(90deg, #18164b 0%, #848ef0 0%, #59217e 100%);
 }
 
 .contenu {
   opacity: 0;
   visibility: hidden;
-  transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
   pointer-events: none;
+  -webkit-transition: opacity 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
   transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
 }
 
 .contenu.actif {
   opacity: 1;
-  transform: translateX(0);
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
   visibility: visible;
   pointer-events: auto;
 }
 
 .contenu.inactif {
   opacity: 0;
-  transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
   pointer-events: none;
 }
 
@@ -42,12 +49,16 @@ body {
   margin: 0 auto;
   padding: 30px;
   background-color: rgba(0, 0, 0, 0.212);
-  box-shadow: -3px 11px 20px 0px #000000;
+  -webkit-box-shadow: -3px 11px 20px 0px #000000;
+          box-shadow: -3px 11px 20px 0px #000000;
 }
 
 .cont-onglet {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .cont-input {
@@ -65,7 +76,7 @@ select {
   height: 40px;
   margin-top: 5px;
   border-radius: 8px;
-  border: 1px solid rgb(164, 252, 164);
+  border: 1px solid #a4fca4;
   margin-bottom: 20px;
 }
 
@@ -87,41 +98,46 @@ select {
 }
 
 .info-projet {
-  color: rgb(241, 241, 241);
+  color: #f1f1f1;
   text-shadow: 1px 1px 5px #000000;
 }
 
 #tab2 h2 {
   text-shadow: 1px 1px 5px #000000;
 }
+
 #tab2 h3 {
   text-shadow: 1px 1px 5px #000000;
 }
+
 #tab2 label {
-  color: rgb(241, 241, 241);
+  color: #f1f1f1;
   text-shadow: 1px 1px 5px #000000;
 }
 
 .cont-select {
-  color: rgb(241, 241, 241);
+  color: #f1f1f1;
   text-shadow: 1px 1px 5px #000000;
 }
 
 /* Style page 3 */
 .fonc-check {
+  display: -ms-grid;
   display: grid;
 }
 
 #tab3 h2 {
   text-shadow: 1px 1px 5px #000000;
 }
+
 #tab3 h3 {
   text-shadow: 1px 1px 5px #000000;
   font-size: 1.1rem;
   margin: 10px 0;
 }
+
 #tab3 label {
-  color: rgb(241, 241, 241);
+  color: #f1f1f1;
   text-shadow: 1px 1px 5px #000000;
 }
 
@@ -141,7 +157,7 @@ h3 {
 
 .contact-check span {
   font-weight: bold;
-  color: rgb(241, 241, 241);
+  color: #f1f1f1;
 }
 
 #tab4 h1 {
@@ -162,7 +178,9 @@ h3 {
 }
 
 .next {
-  box-shadow: inset 0px 0px 15px 3px #23395e;
+  -webkit-box-shadow: inset 0px 0px 15px 3px #23395e;
+          box-shadow: inset 0px 0px 15px 3px #23395e;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #2e466e), to(#415989));
   background: linear-gradient(to bottom, #2e466e 5%, #415989 100%);
   background-color: #2e466e;
   border-radius: 8px;
@@ -180,6 +198,7 @@ h3 {
 
 /* Button : Hover */
 .next:hover {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #415989), to(#2e466e));
   background: linear-gradient(to bottom, #415989 5%, #2e466e 100%);
   background-color: #415989;
 }
@@ -190,7 +209,9 @@ h3 {
 }
 
 .next2 {
-  box-shadow: inset 0px 0px 15px 3px #23395e;
+  -webkit-box-shadow: inset 0px 0px 15px 3px #23395e;
+          box-shadow: inset 0px 0px 15px 3px #23395e;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #2e466e), to(#415989));
   background: linear-gradient(to bottom, #2e466e 5%, #415989 100%);
   background-color: #2e466e;
   border-radius: 8px;
@@ -207,6 +228,7 @@ h3 {
 }
 
 .next2:hover {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #415989), to(#2e466e));
   background: linear-gradient(to bottom, #415989 5%, #2e466e 100%);
   background-color: #415989;
 }
@@ -218,7 +240,9 @@ h3 {
 
 /* Button précedent  */
 .precedent {
-  box-shadow: inset 0px 0px 15px 3px #737573;
+  -webkit-box-shadow: inset 0px 0px 15px 3px #737573;
+          box-shadow: inset 0px 0px 15px 3px #737573;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #333133), to(#9488db));
   background: linear-gradient(to bottom, #333133 5%, #9488db 100%);
   background-color: #333133;
   border-radius: 8px;
@@ -235,6 +259,7 @@ h3 {
 }
 
 .precedent:hover {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #9488db), to(#333133));
   background: linear-gradient(to bottom, #9488db 5%, #333133 100%);
   background-color: #9488db;
 }
@@ -246,8 +271,12 @@ h3 {
 
 /* Position button */
 .cont-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 /* taille checkbox */
@@ -276,12 +305,14 @@ input:focus,
 .next:focus,
 .precedent:focus {
   outline: 2px solid #4a90e2;
-  box-shadow: 0 0 5px rgba(74, 144, 226, 0.8);
+  -webkit-box-shadow: 0 0 5px rgba(74, 144, 226, 0.8);
+          box-shadow: 0 0 5px rgba(74, 144, 226, 0.8);
 }
 
 /* Onglet CHECKBOX */
-.onglet input[type=checkbox] {
-  display: none; /* cache la checkbox native */
+.onglet input[type="checkbox"] {
+  display: none;
+  /* cache la checkbox native */
 }
 
 .onglet {
@@ -295,8 +326,10 @@ input:focus,
   cursor: pointer;
   font-weight: bold;
   border: 1px solid #aaa;
+  -webkit-transition: background-color 0.4s ease;
   transition: background-color 0.4s ease;
-  box-shadow: 0px 0px 20px 0px #301541;
+  -webkit-box-shadow: 0px 0px 20px 0px #301541;
+          box-shadow: 0px 0px 20px 0px #301541;
 }
 
 .onglet {
@@ -312,14 +345,14 @@ input:focus,
 /* Texte */
 .contenu h1 {
   text-align: center;
-  color: rgb(255, 255, 255);
+  color: white;
   text-shadow: 3px 1px 0px rgba(41, 140, 138, 0.295);
   text-transform: uppercase;
   font-size: 1.5rem;
 }
 
 h2 {
-  color: rgb(255, 255, 255);
+  color: white;
   text-shadow: 3px 1px 0px rgba(3, 124, 122, 0.336);
 }
 
@@ -333,14 +366,15 @@ h2 {
 .trait-2,
 .trait-3 {
   position: absolute;
-  border: 2px rgb(0, 0, 0);
+  border: 2px black;
   height: 5px;
   width: 33%;
   top: 50%;
   background-color: white;
   border-radius: 3px;
   z-index: -1;
-  box-shadow: 2px 2px 10px 0px #b4b4b4;
+  -webkit-box-shadow: 2px 2px 10px 0px #b4b4b4;
+          box-shadow: 2px 2px 10px 0px #b4b4b4;
 }
 
 .trait-1 {
@@ -350,4 +384,5 @@ h2 {
 .trait-2,
 .trait-3 {
   width: 65%;
-}/*# sourceMappingURL=index1.css.map */
+}
+/*# sourceMappingURL=index1.css.map */

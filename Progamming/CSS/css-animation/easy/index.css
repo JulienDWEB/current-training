@@ -1,33 +1,59 @@
 main {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 10px;
 }
+
 main h1 {
   border-bottom: 1px solid rgba(0, 0, 0, 0.322);
   padding: 10px;
 }
+
 main .loader {
   width: 50px;
   height: 50px;
   border: 5px solid blue;
   border-top: 5px solid white;
   border-radius: 50%;
-  animation: rotation 1.5s linear infinite;
+  -webkit-animation: rotation 1.5s linear infinite;
+          animation: rotation 1.5s linear infinite;
 }
-@keyframes rotation {
+
+@-webkit-keyframes rotation {
   from {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
 #content-loading {
-  background-color: rgb(37, 73, 119);
+  background-color: #254977;
   width: 70%;
   height: 100px;
   border-radius: 32px;
@@ -39,18 +65,33 @@ main .loader {
   width: 0%;
   height: 100px;
   border-radius: 32px;
-  background-color: rgb(84, 172, 255);
-  animation: SlideWidth 5s linear infinite;
+  background-color: #54acff;
+  -webkit-animation: SlideWidth 5s linear infinite;
+          animation: SlideWidth 5s linear infinite;
+}
+
+@-webkit-keyframes SlideWidth {
+  from {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  to {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
 }
 
 @keyframes SlideWidth {
   from {
-    transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
   }
   to {
-    transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
   }
 }
+
 .progress-load {
   position: absolute;
   top: 45%;
@@ -58,4 +99,5 @@ main .loader {
   font-weight: bold;
   font-size: 1.2rem;
   color: white;
-}/*# sourceMappingURL=index.css.map */
+}
+/*# sourceMappingURL=index.css.map */

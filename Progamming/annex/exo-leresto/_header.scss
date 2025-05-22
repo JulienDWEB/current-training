@@ -1,33 +1,80 @@
 nav {
+  .img-header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: blur(2px);
+    }
+  }
+
   .cont-nav {
     position: absolute;
     display: flex;
     gap: 20px;
     justify-content: space-between;
-    top: 0%;
+    bottom: 0;
     z-index: 1;
     color: white;
     width: 100%;
     height: 10%;
     align-items: center;
     padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+
     ul {
       display: flex;
       justify-content: space-around;
       gap: 30px;
-    }
-  }
-  .img-header {
-    img {
-      filter: blur(2px);
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+      align-items: center;
+
+      li {
+        cursor: pointer;
+        position: relative;
+        width: 20px;
+        height: 20px;
+        display: block;
+
+        &::before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+
+        &.icon-search::before {
+          background-image: url('img/ic-slider-01.png');
+        }
+
+        &.icon-twitter::before {
+          background-image: url('img/google_white5.png');
+        }
+
+        &.icon-facebook::before {
+          background-image: url('img/ic-cricle.png');
+        }
+
+        &.icon-instagram::before {
+          background-image: url('img/ic-plate.png');
+        }
+
+        &:hover::before {
+          transform: scale(1.1);
+          transition: transform 0.3s ease;
+        }
+      }
     }
   }
 
   h1 {
-    font-family: "Allura";
+    font-family: 'Allura';
     font-size: 2.2rem;
   }
   #info-header {
@@ -78,11 +125,11 @@ nav {
         overflow: hidden;
       }
       h4 {
-        font-family: "Allura";
+        font-family: 'Allura';
         font-size: 1.8rem;
       }
       h3 {
-        font-family: "Roboto";
+        font-family: 'Roboto';
         font-size: 1.6rem;
         font-weight: bold;
       }

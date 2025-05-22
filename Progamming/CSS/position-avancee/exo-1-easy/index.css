@@ -1,7 +1,8 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /* 2. Remove default margin */
@@ -64,31 +65,58 @@ nav h1 {
 }
 
 main {
+  display: -ms-grid;
   display: grid;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   justify-items: center;
-  grid-template-columns: repeat(4, 250px);
-  grid-template-rows: repeat(4, 250px);
+  -ms-grid-columns: (250px)[4];
+      grid-template-columns: repeat(4, 250px);
+  -ms-grid-rows: (250px)[4];
+      grid-template-rows: repeat(4, 250px);
   gap: 10px;
 }
+
 main #i1 {
-  grid-column: 1/span 2;
-  grid-row: 1/span 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / span 2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / span 2;
 }
+
 main #i2 {
-  grid-column: 3/span 2;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-column: 3 / span 2;
 }
+
 main #i5 {
-  grid-row: 3/5;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  grid-row: 3 / 5;
 }
+
 main #i7 {
-  grid-column: 2/3;
-  grid-row: 4/5;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4 / 5;
 }
+
 main #i8 {
-  grid-column: 3/span 2;
-  grid-row: 3/span 2;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-column: 3 / span 2;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  grid-row: 3 / span 2;
 }
+
 main img {
   height: 100%;
   width: 100%;
@@ -99,12 +127,14 @@ main img {
 }
 
 @font-face {
-  font-family: "PT Sans";
+  font-family: 'PT Sans';
   src: url("/CSS/position-basic/exo-pb-1/asset/font/PTSans-Bold.ttf") format("truetype");
   src: url("/CSS/position-basic/exo-pb-1/asset/font/PTSans-BoldItalic.ttf") format("truetype");
   src: url("/CSS/position-basic/exo-pb-1/asset/font/PTSans-Italic.ttf") format("truetype");
   src: url("/CSS/position-basic/exo-pb-1/asset/font/PTSans-Regular.ttf") format("truetype");
 }
+
 body {
-  font-family: "PT Sans";
-}/*# sourceMappingURL=index.css.map */
+  font-family: 'PT Sans';
+}
+/*# sourceMappingURL=index.css.map */

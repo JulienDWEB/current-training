@@ -1,44 +1,121 @@
+@import './_mixins';
+@import './_variables';
+
+$nav-item-width: 100px;
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex(column, center, center);
+  background: $gradient-primary no-repeat;
+  height: 100vh;
   nav {
+    background-color: $bg-primary;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid $border-light;
+    box-shadow: 0 0 10px 0 $shadow-color;
     ul {
       padding: 20px;
-      border-radius: 8px;
+      border-radius: 12px;
       position: relative;
+      background-color: $bg-secondary;
       z-index: 1;
-      a {
-        padding: 20px;
-        text-decoration: none;
-        list-style-type: none;
-        color: azure;
-        transition: left 0.5s ease;
-        border-radius: 8px;
-        cursor: pointer;
-      }
-      a:nth-child(1):hover ~ span {
-        left: 0;
-      }
-      a:nth-child(2):hover ~ span {
-        left: 100px;
-      }
-      a:nth-child(3):hover ~ span {
-        left: 220px;
-      }
-      a:nth-child(4):hover ~ span {
-        left: 340px;
-      }
-      background-color: rgba(0, 0, 0, 0.418);
-      span {
-        z-index: 0;
+      @include flex(row, space-between, center);
+      list-style-type: none;
+      width: #{4 * $nav-item-width};
+      overflow: hidden;
+
+      .pulse-main,
+      .pulse-shadow {
         position: absolute;
         top: 0;
-        left: 0;
-        width: 95px;
         height: 100%;
-        background: linear-gradient(45deg, rgb(211, 97, 97), rgb(173, 41, 41));
+        width: $nav-item-width;
+        transition: left 0.5s, width 0.5s;
+        border-radius: 12px;
+        pointer-events: none;
+      }
+
+      .pulse-main {
+        z-index: 1;
+        left: 0;
+        background: $gradient-accent;
+        max-width: 100%;
+      }
+
+      .pulse-shadow {
+        z-index: 0;
+        left: 0;
+        background: rgba($accent-color, 0.4);
+        filter: blur(4px);
+        transform: translateX(-10px);
+        max-width: 100%;
+      }
+
+      li {
+        display: inline-block;
+        position: relative;
+        z-index: 3;
+        width: $nav-item-width;
+        text-align: center;
+
+        a {
+          padding: 20px 0;
+          text-decoration: none;
+          list-style-type: none;
+          color: $text-light;
+          transition: all 0.5s;
+          border-radius: 8px;
+          cursor: pointer;
+          display: block;
+          position: relative;
+          transition: transform 0.5s ease-in-out;
+
+          &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 10px;
+            width: 0;
+            height: 2px;
+            background: $primary-color;
+            transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 1;
+          }
+
+          &:hover {
+            color: darken($text-light, 10%);
+            transform: scale(1.1);
+            font-size: 1.05rem;
+            font-weight: 600;
+            text-shadow: 0 0 10px rgba($accent-color, 0.5);
+
+            &::after {
+              width: 80px;
+            }
+          }
+        }
+      }
+
+      li:nth-child(1):hover ~ .pulse-main,
+      li:nth-child(1):hover ~ .pulse-shadow {
+        left: 0;
+        width: $nav-item-width;
+      }
+      li:nth-child(2):hover ~ .pulse-main,
+      li:nth-child(2):hover ~ .pulse-shadow {
+        left: $nav-item-width;
+        width: 120px;
+      }
+      li:nth-child(3):hover ~ .pulse-main,
+      li:nth-child(3):hover ~ .pulse-shadow {
+        left: #{2 * $nav-item-width};
+        width: 140px;
+      }
+      li:nth-child(4):hover ~ .pulse-main,
+      li:nth-child(4):hover ~ .pulse-shadow {
+        left: #{3 * $nav-item-width};
+        width: 160px;
       }
     }
   }
