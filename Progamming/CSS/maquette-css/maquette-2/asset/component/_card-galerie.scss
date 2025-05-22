@@ -3,11 +3,36 @@
   @include wrap-flex;
   .container-card-img {
     @include grid(3, 2fr);
+    gap: 2rem;
+    @media (max-width: 1280px) {
+      gap: 1.5rem;
+    }
+    @media (max-width: 1024px) {
+      @include grid(2, 2fr);
+      gap: 1rem;
+    }
+    @media (max-width: 768px) {
+      @include grid(1, 1fr);
+      gap: 0.7rem;
+    }
+    @media (max-width: 600px) {
+      gap: 0.5rem;
+      padding: 0.2rem;
+    }
     width: 100%;
     @include gap(p-s);
     @include padding-y(p-s);
     .card {
-      @include card-size1(100%, 300px, ());
+      min-height: 20vh;
+      @media (max-width: 1024px) {
+        @include card-size1(100%, 220px, ());
+      }
+      @media (max-width: 768px) {
+        @include card-size1(100%, 180px, ());
+      }
+      @media (max-width: 600px) {
+        @include card-size1(100%, 120px, ());
+      }
     }
     .card-img-1 {
       @include bg-image-cover('./asset/img/galleries/hamburger_small.jpg');

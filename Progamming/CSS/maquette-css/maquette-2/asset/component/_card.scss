@@ -23,17 +23,36 @@ main {
   }
   .container-card {
     align-items: center;
+    justify-items: center;
     margin: 0 auto;
     width: 80%;
     @include padding-y(p-xs);
     @include grid(3);
-    @include resp-grid;
+    gap: 2rem;
+    @media (max-width: 1280px) {
+      gap: 1.5rem;
+    }
+    @media (max-width: 1024px) {
+      @include grid(2);
+      gap: 1rem;
+    }
+    @media (max-width: 768px) {
+      @include grid(1);
+      gap: 0.7rem;
+      width: 95%;
+    }
+    @media (max-width: 600px) {
+      gap: 0.5rem;
+      width: 98%;
+      padding: 0.2rem;
+    }
     .card-1,
     .card-2,
     .card-3 {
       @include min-height-whidth(200px, 250px);
       @include center-flex;
       @include padding(p-xs);
+
       h2 {
         @include padding(p-xs);
         @include border-y($color-primary);
@@ -49,5 +68,20 @@ main {
     .card-3 {
       @include bg-image-cover('./asset/img/galleries/dessert.jpg');
     }
+  }
+}
+
+.card-main {
+  @media (max-width: 1024px) {
+    @include card-size1(180px, 180px, ());
+  }
+  @media (max-width: 768px) {
+    @include card-size1(140px, 140px, ());
+  }
+  @media (max-width: 600px) {
+    @include card-size1(110px, 110px, ());
+  }
+  @media (max-width: 480px) {
+    @include card-size1(90px, 90px, ());
   }
 }

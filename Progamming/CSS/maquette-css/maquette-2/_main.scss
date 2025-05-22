@@ -4,6 +4,26 @@ main {
     max-width: 80%;
     margin: 0 auto;
     @include wrap-flex;
+    @include responsive-gap-from-map;
+    gap: 2rem;
+    @media (max-width: 1280px) {
+      max-width: 90%;
+      gap: 1.5rem;
+    }
+    @media (max-width: 1024px) {
+      max-width: 95%;
+      gap: 1rem;
+    }
+    @media (max-width: 768px) {
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      max-width: 98%;
+      padding: 0.5rem;
+    }
+    @media (max-width: 600px) {
+      gap: 0.5rem;
+      padding: 0.2rem;
+    }
     .title-main {
       max-width: 100%;
       text-align: center;

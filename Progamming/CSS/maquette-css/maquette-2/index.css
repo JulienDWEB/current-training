@@ -2,6 +2,7 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
+  border: 1px solid red;
 }
 * h1,
 * h2,
@@ -72,9 +73,18 @@ header nav {
   justify-content: space-around;
   align-items: center;
 }
+@media (max-width: 320px) {
+  header nav {
+    height: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
 @media (min-width: 480px) {
   header nav {
-    gap: 1rem;
+    gap: 0.5rem;
   }
 }
 @media (min-width: 600px) {
@@ -102,11 +112,17 @@ header nav .container-nav {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 100%;
+}
+@media (max-width: 320px) {
+  header nav .container-nav {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
 }
 header nav .container-nav li {
   list-style: none;
-  padding: 2rem;
+  padding: 0.6rem;
 }
 header nav .container-nav li a {
   list-style-type: none;
@@ -118,7 +134,7 @@ header nav .bar-search {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: 0.6rem;
 }
 header nav .bar-search .icon-search {
   background-image: url(./asset/img/logo/search.svg);
@@ -129,7 +145,7 @@ header nav .bar-search .icon-search {
   width: 20px;
   height: 20px;
   max-height: 80%;
-  padding: 1rem;
+  padding: 0.6rem;
   cursor: pointer;
 }
 @media (max-width: 768px) {
@@ -150,7 +166,7 @@ header nav .bar-search .icon-search:hover {
 header nav .bar-search input {
   min-width: 20px;
   min-height: 18px;
-  padding: 1rem;
+  padding: 0.6rem;
   border: 1px solid #c44e4e;
   text-decoration: none;
   background-color: #cca57c;
@@ -160,6 +176,73 @@ header nav .bar-search input::-moz-placeholder {
 }
 header nav .bar-search input::placeholder {
   color: #c44e4e;
+}
+@media (max-width: 1280px) {
+  header .icon-header {
+    width: 200px;
+    height: 80px;
+  }
+  header nav {
+    min-width: 100%;
+  }
+  header nav .container-nav li {
+    padding: 1rem;
+  }
+}
+@media (max-width: 1024px) {
+  header .icon-header {
+    width: 150px;
+    height: 60px;
+  }
+  header nav .container-nav {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+}
+@media (max-width: 768px) {
+  header .icon-header {
+    width: 120px;
+    height: 50px;
+  }
+  header nav {
+    flex-wrap: wrap;
+  }
+  header nav .container-nav {
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.3rem;
+  }
+  header nav .bar-search {
+    width: 100%;
+    justify-content: center;
+  }
+}
+@media (max-width: 600px) {
+  header .icon-header {
+    width: 90px;
+    height: 40px;
+  }
+  header nav .container-nav {
+    font-size: 0.9rem;
+  }
+  header nav .bar-search input {
+    width: 80%;
+  }
+}
+@media (max-width: 480px) {
+  header nav {
+    padding-bottom: 10px;
+  }
+  header .icon-header {
+    width: 70px;
+    height: 30px;
+  }
+  header nav .container-nav {
+    font-size: 0.8rem;
+  }
+  header nav .bar-search input {
+    width: 100%;
+  }
 }
 
 main {
@@ -172,6 +255,58 @@ main .container-main {
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
+  gap: 2rem;
+}
+@media (min-width: 480px) {
+  main .container-main {
+    gap: 0.5rem;
+  }
+}
+@media (min-width: 600px) {
+  main .container-main {
+    gap: 1.25rem;
+  }
+}
+@media (min-width: 768px) {
+  main .container-main {
+    gap: 1.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  main .container-main {
+    gap: 2rem;
+  }
+}
+@media (min-width: 1280px) {
+  main .container-main {
+    gap: 3rem;
+  }
+}
+@media (max-width: 1280px) {
+  main .container-main {
+    max-width: 90%;
+    gap: 1.5rem;
+  }
+}
+@media (max-width: 1024px) {
+  main .container-main {
+    max-width: 95%;
+    gap: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  main .container-main {
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    max-width: 98%;
+    padding: 0.5rem;
+  }
+}
+@media (max-width: 600px) {
+  main .container-main {
+    gap: 0.5rem;
+    padding: 0.2rem;
+  }
 }
 main .container-main .title-main {
   max-width: 100%;
@@ -179,8 +314,8 @@ main .container-main .title-main {
   color: #cca57c;
   border-top: 1px solid #c44e4e;
   border-bottom: 1px solid #c44e4e;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
 }
 
 footer {
@@ -189,7 +324,7 @@ footer {
   background-repeat: no-repeat;
   background-position: center center;
   width: 100%;
-  height: 30vh;
+  height: 31vh;
   position: relative;
 }
 @media (min-width: 480px) {
@@ -207,7 +342,7 @@ footer {
 @media (min-width: 768px) {
   footer {
     width: 100%;
-    height: 30vh;
+    height: 31vh;
   }
 }
 footer::before {
@@ -225,6 +360,8 @@ footer .container-footer {
   position: relative;
   color: #ffffff;
   width: 80%;
+  padding: 2rem;
+  width: 80%;
   height: 85%;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -232,6 +369,37 @@ footer .container-footer {
   gap: 1fr;
   justify-items: end;
   color: #ffffff;
+}
+@media (max-width: 1280px) {
+  footer .container-footer {
+    width: 90%;
+    padding: 1.5rem;
+  }
+}
+@media (max-width: 1024px) {
+  footer .container-footer {
+    width: 95%;
+    padding: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  footer .container-footer {
+    width: 98%;
+    padding: 0.5rem;
+  }
+  footer .container-footer ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .container-footer p {
+    text-align: center;
+  }
+}
+@media (max-width: 600px) {
+  footer .container-footer {
+    width: 100%;
+    padding: 0.2rem;
+  }
 }
 footer .container-footer .logo-footer {
   background-image: url(./asset/img/bg-container/logo_footer.png);
@@ -283,7 +451,7 @@ footer .container-footer .logo-footer {
 }
 footer .container-footer ul {
   display: flex;
-  padding: 1rem;
+  padding: 0.6rem;
   list-style-type: none;
 }
 @media (max-width: 600px) {
@@ -293,10 +461,35 @@ footer .container-footer ul {
   }
 }
 footer .container-footer ul li {
-  padding: 2rem;
+  padding: 0.6rem;
+}
+@media (min-width: 480px) {
+  footer .container-footer ul li {
+    font-size: 0.75rem;
+  }
+}
+@media (min-width: 600px) {
+  footer .container-footer ul li {
+    font-size: 0.9rem;
+  }
+}
+@media (min-width: 768px) {
+  footer .container-footer ul li {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  footer .container-footer ul li {
+    font-size: 1.1rem;
+  }
+}
+@media (min-width: 1280px) {
+  footer .container-footer ul li {
+    font-size: 1.1rem;
+  }
 }
 footer .container-footer p {
-  padding: 1rem;
+  padding: 0.6rem;
   text-align: center;
 }
 @media (min-width: 600px) {
@@ -306,12 +499,49 @@ footer .container-footer p {
 }
 
 aside {
+  width: 20%;
   max-height: 1100px;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(1, 1fr);
   gap: 4fr;
   gap: 1.5rem;
+}
+@media (max-width: 1280px) {
+  aside {
+    width: 25%;
+  }
+}
+@media (max-width: 1024px) {
+  aside {
+    width: 30%;
+  }
+}
+@media (max-width: 900px) {
+  aside {
+    width: 40%;
+  }
+}
+@media (max-width: 768px) {
+  aside {
+    width: 100%;
+    max-height: none;
+    margin: 0 auto;
+  }
+  aside .card-perso,
+  aside .card-aside,
+  aside .card-aside-1 {
+    width: 90%;
+    margin: 0.5rem auto;
+  }
+}
+@media (max-width: 600px) {
+  aside .card-perso,
+  aside .card-aside,
+  aside .card-aside-1 {
+    width: 98%;
+    margin: 0.2rem auto;
+  }
 }
 aside .container-card-perso {
   display: flex;
@@ -323,20 +553,19 @@ aside .container-card-perso {
 }
 aside .card-perso {
   background-image: url(./asset/img/galleries/me.jpg);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 284px;
-  height: 309px;
+  min-height: 309px;
   flex-direction: column;
   justify-content: flex-end;
   color: rgba(39, 39, 39, 0.7882352941);
-  padding: 1rem;
-  gap: 1rem;
+  padding: 0.6rem;
+  gap: 0.5rem;
 }
 aside .card-perso ul {
   display: flex;
@@ -344,7 +573,7 @@ aside .card-perso ul {
   justify-content: center;
   align-items: center;
   list-style-type: none;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 aside .card-perso span {
   display: flex;
@@ -376,7 +605,7 @@ aside .c-categorie ul {
   list-style-type: none;
 }
 aside .c-categorie ul li {
-  padding: 1rem;
+  padding: 0.6rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -391,7 +620,7 @@ aside .card-aside {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
-  min-height: 300px;
+  min-height: 314px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -413,7 +642,7 @@ aside .card-aside-1 {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
-  min-height: 300px;
+  min-height: 314px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -450,20 +679,46 @@ main .card-main {
 }
 main .container-card {
   align-items: center;
+  justify-items: center;
   margin: 0 auto;
   width: 80%;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(1, 1fr);
   gap: 1rem;
-  display: grid;
-  justify-content: center;
+  gap: 2rem;
 }
-@media (max-width: 750px) {
+@media (max-width: 1280px) {
   main .container-card {
-    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+@media (max-width: 1024px) {
+  main .container-card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 1rem;
+    gap: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  main .container-card {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 1rem;
+    gap: 0.7rem;
+    width: 95%;
+  }
+}
+@media (max-width: 600px) {
+  main .container-card {
+    gap: 0.5rem;
+    width: 98%;
+    padding: 0.2rem;
   }
 }
 main .container-card .card-1,
@@ -475,12 +730,12 @@ main .container-card .card-3 {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: 1rem;
 }
 main .container-card .card-1 h2,
 main .container-card .card-2 h2,
 main .container-card .card-3 h2 {
-  padding: 2rem;
+  padding: 1rem;
   border-top: 1px solid #cca57c;
   border-bottom: 1px solid #cca57c;
   color: #cca57c;
@@ -504,16 +759,43 @@ main .container-card .card-3 {
   background-position: center center;
 }
 
+@media (max-width: 1024px) {
+  .card-main {
+    width: 180px;
+    height: 180px;
+  }
+}
+@media (max-width: 768px) {
+  .card-main {
+    width: 140px;
+    height: 140px;
+  }
+}
+@media (max-width: 600px) {
+  .card-main {
+    width: 110px;
+    height: 110px;
+  }
+}
+@media (max-width: 480px) {
+  .card-main {
+    width: 90px;
+    height: 90px;
+  }
+}
+
 .card-recette {
-  width: 687px;
+  width: 60%;
+  display: grid;
+  justify-items: center;
 }
 
 .logo-card {
   background-image: url(./asset/img/bg-container/toque.png);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  width: 100%;
+  width: 40px;
   height: 40px;
   position: absolute;
   top: 50%;
@@ -523,12 +805,12 @@ main .container-card .card-3 {
 }
 
 .recette-1 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 .recette-1 .img-top {
   background-image: url(./asset/img/galleries/tacos.jpg);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   width: 100%;
@@ -537,12 +819,12 @@ main .container-card .card-3 {
 }
 
 .recette-2 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 .recette-2 .img-top {
   background-image: url(./asset/img/galleries/cote_de_boeuf.jpg);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   width: 100%;
@@ -551,12 +833,12 @@ main .container-card .card-3 {
 }
 
 .recette-3 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 .recette-3 .img-top {
   background-image: url(./asset/img/galleries/carrot.jpg);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   width: 100%;
@@ -569,12 +851,12 @@ main .container-card .card-3 {
 }
 
 .recette-4 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 .recette-4 .img-top {
   background-image: url(./asset/img/galleries/cookies.jpg);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   width: 100%;
@@ -598,6 +880,12 @@ main .container-card .card-3 {
   display: flex;
   gap: 0.75rem;
 }
+@media (max-width: 500px) {
+  .cont-recette-flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
 
 .container-galerie {
   width: 100%;
@@ -611,14 +899,61 @@ main .container-card .card-3 {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(1, 1fr);
   gap: 2fr;
+  gap: 2rem;
   width: 100%;
   gap: 0.75rem;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
+@media (max-width: 1280px) {
+  .container-galerie .container-card-img {
+    gap: 1.5rem;
+  }
+}
+@media (max-width: 1024px) {
+  .container-galerie .container-card-img {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 2fr;
+    gap: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  .container-galerie .container-card-img {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 1fr;
+    gap: 0.7rem;
+  }
+}
+@media (max-width: 600px) {
+  .container-galerie .container-card-img {
+    gap: 0.5rem;
+    padding: 0.2rem;
+  }
+}
 .container-galerie .container-card-img .card {
-  width: 100%;
-  height: 300px;
+  min-height: 20vh;
+}
+@media (max-width: 1024px) {
+  .container-galerie .container-card-img .card {
+    width: 100%;
+    height: 220px;
+  }
+}
+@media (max-width: 768px) {
+  .container-galerie .container-card-img .card {
+    width: 100%;
+    height: 180px;
+  }
+}
+@media (max-width: 600px) {
+  .container-galerie .container-card-img .card {
+    width: 100%;
+    height: 120px;
+  }
 }
 .container-galerie .container-card-img .card-img-1 {
   background-image: url(./asset/img/galleries/hamburger_small.jpg);

@@ -8,9 +8,16 @@ header {
   .icon-header {
     @include bg-image-cover('./asset/img/bg-container/logo_header.png');
     @include min-height-whidth(250px, 100px);
-    @include card-size1(250px, 100px, (50%, 50%));
+    @include card-size1(250px, 100px, ());
   }
   nav {
+    @media (max-width: 320px) {
+      height: 150px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
     min-width: 100%;
     position: absolute;
     bottom: 0;
@@ -21,12 +28,16 @@ header {
     @include responsive-gap-from-map;
     .container-nav {
       @include center-flex;
-
-      height: 100%;
+      @media (max-width: 320px) {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+      }
 
       li {
         list-style: none;
-        @include padding(p-xs);
+        @include padding(p-xxs);
+
         a {
           list-style-type: none;
           text-decoration: none;
@@ -36,7 +47,7 @@ header {
     }
     .bar-search {
       @include center-flex;
-      @include padding(p-xs);
+      @include padding(p-xxs);
 
       .icon-search {
         @include bg-image-cover('./asset/img/logo/search.svg');
@@ -58,6 +69,74 @@ header {
         &::placeholder {
           color: $color-secondary;
         }
+      }
+    }
+  }
+  @media (max-width: 1280px) {
+    .icon-header {
+      @include card-size1(200px, 80px, ());
+    }
+    nav {
+      min-width: 100%;
+      .container-nav li {
+        @include padding(p-xs);
+      }
+    }
+  }
+  @media (max-width: 1024px) {
+    .icon-header {
+      @include card-size1(150px, 60px, ());
+    }
+    nav {
+      .container-nav {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    .icon-header {
+      @include card-size1(120px, 50px, ());
+    }
+    nav {
+      flex-wrap: wrap;
+      .container-nav {
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.3rem;
+      }
+      .bar-search {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  }
+  @media (max-width: 600px) {
+    .icon-header {
+      @include card-size1(90px, 40px, ());
+    }
+    nav {
+      .container-nav {
+        font-size: 0.9rem;
+      }
+      .bar-search input {
+        width: 80%;
+      }
+    }
+  }
+  @media (max-width: 480px) {
+    nav {
+      padding-bottom: 10px;
+    }
+    .icon-header {
+      @include card-size1(70px, 30px, ());
+    }
+    nav {
+      .container-nav {
+        font-size: 0.8rem;
+      }
+      .bar-search input {
+        width: 100%;
       }
     }
   }

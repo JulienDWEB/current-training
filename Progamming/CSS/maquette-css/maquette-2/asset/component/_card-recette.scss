@@ -1,18 +1,22 @@
 // CARD RECETTE MAIN MIDDLE
 
 .card-recette {
-  width: 687px;
+  width: 60%;
+  display: grid;
+  justify-items: center;
 }
 .logo-card {
-  @include bg-image('./asset/img/bg-container/toque.png');
-  @include card-size1(100%, 40px, ());
+  @include bg-image-cover('./asset/img/bg-container/toque.png');
+  @include card-size1(40px, 40px, ());
   @include absolute-center;
   top: 100%;
 }
+
 .recette-1 {
   @include padding-y(p-xs);
+
   .img-top {
-    @include bg-image('./asset/img/galleries/tacos.jpg');
+    @include bg-image-cover('./asset/img/galleries/tacos.jpg');
     @include card-size1(100%, 278px, ());
 
     position: relative;
@@ -21,7 +25,7 @@
 .recette-2 {
   @include padding-y(p-xs);
   .img-top {
-    @include bg-image('./asset/img/galleries/cote_de_boeuf.jpg');
+    @include bg-image-cover('./asset/img/galleries/cote_de_boeuf.jpg');
     @include card-size1(100%, 205px, ());
     position: relative;
   }
@@ -29,7 +33,7 @@
 .recette-3 {
   @include padding-y(p-xs);
   .img-top {
-    @include bg-image('./asset/img/galleries/carrot.jpg');
+    @include bg-image-cover('./asset/img/galleries/carrot.jpg');
     @include card-size1(100%, 205px, ());
     position: relative;
   }
@@ -40,7 +44,7 @@
 .recette-4 {
   @include padding-y(p-xs);
   .img-top {
-    @include bg-image('./asset/img/galleries/cookies.jpg');
+    @include bg-image-cover('./asset/img/galleries/cookies.jpg');
     @include card-size1(100%, 278px, ());
     position: relative;
   }
@@ -60,4 +64,8 @@
 .cont-recette-flex {
   display: flex;
   @include gap(p-s);
+  @media (max-width: 500px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
