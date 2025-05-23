@@ -1,0 +1,79 @@
+$base-font-size: 16px !default;
+
+// 1. Déclarations existantes
+$breakpoints: (
+  xs: 480px,
+  sm: 600px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px,
+);
+
+$responsive-values: (
+  padding: (
+    xs: 0.5rem,
+    sm: 1.25rem,
+    md: 1.5rem,
+    lg: 2rem,
+    xl: 3rem,
+  ),
+  margin: (
+    xs: 0.25rem,
+    sm: 0.75rem,
+    md: 1rem,
+    lg: 1.5rem,
+    xl: 2rem,
+  ),
+  gap: (
+    xs: 0.5rem,
+    sm: 1rem,
+    md: 1.25rem,
+    lg: 1.75rem,
+    xl: 2.5rem,
+  ),
+);
+
+// 2. Mixin : prend une liste de propriétés et le nom de la map
+//    $props peut être un seul nom ou une liste (padding, margin, gap)
+@mixin responsive($props, $map-key) {
+  $values-map: map-get($responsive-values, $map-key);
+
+  // Si la clé est invalide, on avertit et on ne fait rien d’autre
+  @if not $values-map {
+    @warn "❌ Propriété `#{$map-key}` non trouvée dans $responsive-values.";
+  }
+  // Sinon, on exécute le mixin normalement
+  @else {
+    @each $break, $value in $values-map {
+      $bp: map-get($breakpoints, $break);
+
+      @if $bp {
+        @media (min-width: $bp) {
+          $props-list: if(type-of($props) == 'list', $props, ($props));
+
+          @each $prop in $props-list {
+            #{$prop}: #{$value};
+          }
+        }
+      } @else {
+        @warn "❌ Breakpoint `#{$break}` inconnu.";
+      }
+    }
+  }
+}
+
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+@function rem($size, $base-font-size: $base-font-size) {
+  @return ($size / strip-unit($base-font-size)) * 1rem;
+}
+
+@function em($size, $base-font-size: $base-font-size) {
+  @return ($size / strip-unit($base-font-size)) * 1em;
+}

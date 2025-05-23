@@ -1,0 +1,27 @@
+html,
+body {
+  height: 100vh;
+  background-color: rgb(86, 59, 105);
+  font-size: 16px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  transition: all 3s ease-in;
+}
+html .btn:hover,
+body .btn:hover {
+  font-size: 9.375rem;
+}
+
+main {
+  padding: 0.625rem;
+  background-color: rgb(196, 134, 240);
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.459);
+}
+
+.btn {
+  color: rgb(157, 108, 192);
+  background-color: rgb(62, 42, 76);
+  padding: 1.25rem;
+}/*# sourceMappingURL=index.css.map */
