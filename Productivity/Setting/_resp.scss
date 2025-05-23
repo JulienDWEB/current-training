@@ -1,4 +1,7 @@
+@use 'sass:math';
+
 $base-font-size: 16px !default;
+$design-height: 1080px !default;
 
 // 1. Déclarations existantes
 $breakpoints: (
@@ -71,9 +74,27 @@ $responsive-values: (
 }
 
 @function rem($size, $base-font-size: $base-font-size) {
-  @return ($size / strip-unit($base-font-size)) * 1rem;
+  // math.div remplace le slash pour la division
+  $ratio: math.div($size, strip-unit($base-font-size));
+  @return $ratio * 1rem;
 }
 
 @function em($size, $base-font-size: $base-font-size) {
-  @return ($size / strip-unit($base-font-size)) * 1em;
+  $ratio: math.div($size, strip-unit($base-font-size));
+  @return $ratio * 1em;
+}
+
+@function vh($size, $viewport-height: $design-height) {
+  $ref: strip-unit($viewport-height);
+  $ratio: math.div($size, $ref);
+  @return $ratio * 100vh;
+}
+$card-bg-colors: (
+  #b57cdd #8257a2 #563b69 #c486f0 #9d6cc0 #3e2a4c #6d4b86 #e1bdf5 #ae18ff
+    #403350 #260f3f #923afa
+);
+@for $i from 1 through length($card-bg-colors) {
+  .item:nth-child(#{$i}) {
+    background-color: nth($card-bg-colors, $i);
+  }
 }

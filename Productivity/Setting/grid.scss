@@ -1,0 +1,20 @@
+@import './resp';
+@import './color-main';
+
+body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  width: max-content;
+  height: max-content;
+  font-size: 16px;
+  gap: 20px;
+  .item {
+    height: vh(150);
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: rem(20);
+  }
+}

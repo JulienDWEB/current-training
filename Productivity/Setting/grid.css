@@ -46,40 +46,22 @@
   background-color: #923afa;
 }
 
-html,
 body {
-  height: 100vh;
-  background-color: rgb(86, 59, 105);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  width: -moz-max-content;
+  width: max-content;
+  height: -moz-max-content;
+  height: max-content;
   font-size: 16px;
+  gap: 20px;
+}
+body .item {
+  height: 13.8888888889vh;
+  width: 150px;
   display: flex;
-  gap: 10px;
-  align-items: center;
   justify-content: center;
-}
-html .btn::after,
-body .btn::after {
-  content: "";
-  transition: all 3s ease-in;
-  animation: font-size 3s infinite;
-}
-@keyframes font-size {
-  from {
-    font-size: 10rem;
-  }
-  to {
-    font-size: 1rem;
-  }
-}
-
-main {
-  padding: 6.25rem;
-  background-color: rgb(196, 134, 240);
-  box-shadow: -1px 7px 20px 0 rgba(0, 0, 0, 0.43);
-}
-
-.btn {
-  color: rgb(157, 108, 192);
-  background-color: rgb(62, 42, 76);
-  padding: 3.125rem;
-  border-radius: 16px;
-}/*# sourceMappingURL=index.css.map */
+  align-items: center;
+  font-size: 1.25rem;
+}/*# sourceMappingURL=grid.css.map */
