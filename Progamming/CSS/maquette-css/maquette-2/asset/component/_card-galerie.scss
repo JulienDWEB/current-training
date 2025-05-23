@@ -23,7 +23,8 @@
     @include gap(p-s);
     @include padding-y(p-s);
     .card {
-      min-height: 20vh;
+      min-width: 90%;
+      min-height: 400px;
       @media (max-width: 1024px) {
         @include card-size1(100%, 220px, ());
       }

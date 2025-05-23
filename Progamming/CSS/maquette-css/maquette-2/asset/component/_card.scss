@@ -49,7 +49,9 @@ main {
     .card-1,
     .card-2,
     .card-3 {
-      @include min-height-whidth(200px, 250px);
+      min-width: 90%;
+      min-height: 400px;
+      @include min-height-whidth(90%, 400px);
       @include center-flex;
       @include padding(p-xs);
 
@@ -73,15 +75,15 @@ main {
 
 .card-main {
   @media (max-width: 1024px) {
-    @include card-size1(180px, 180px, ());
+    @include card-size1(90%, 400px, (90%, 400px));
   }
   @media (max-width: 768px) {
-    @include card-size1(140px, 140px, ());
+    @include card-size1(140px, 140px, (70%, 300px));
   }
   @media (max-width: 600px) {
-    @include card-size1(110px, 110px, ());
+    @include card-size1(110px, 110px, (40%, 200px));
   }
   @media (max-width: 480px) {
-    @include card-size1(90px, 90px, ());
+    @include card-size1(90px, 90px, (20%, 100px));
   }
 }

@@ -1,22 +1,27 @@
 aside {
-  width: 20%;
+  max-height: 1200px;
+  min-width: 35%;
   @media (max-width: 1280px) {
-    width: 25%;
+    min-width: 35%;
+    max-height: 1200px;
   }
   @media (max-width: 1024px) {
-    width: 30%;
+    min-width: 35%;
+    max-height: 1000px;
   }
   @media (max-width: 900px) {
-    width: 40%;
+    width: 80%;
+    max-height: 800px;
   }
   @media (max-width: 768px) {
-    width: 100%;
+    max-height: 600px;
+    width: 80%;
     max-height: none;
     margin: 0 auto;
     .card-perso,
     .card-aside,
     .card-aside-1 {
-      width: 90%;
+      width: 60%;
       margin: 0.5rem auto;
     }
   }
@@ -24,11 +29,10 @@ aside {
     .card-perso,
     .card-aside,
     .card-aside-1 {
-      width: 98%;
+      width: 60%;
       margin: 0.2rem auto;
     }
   }
-  max-height: 1100px;
   @include grid(1, 4fr);
   @include gap(p-md);
   .container-card-perso {
@@ -84,7 +88,7 @@ aside {
     @include center-flex;
     .border-card {
       border: 1px solid $black;
-      @include card-size1(65%, 280px, ());
+      @include padding(p-xs);
       @include center-grid {
         justify-items: center;
       }
@@ -97,8 +101,8 @@ aside {
     min-height: 314px;
     @include center-flex;
     .border-card {
-      border: 1px solid black;
-      @include card-size1(65%, 280px, ());
+      border: 1px solid $black;
+      @include padding(p-xs);
       @include center-grid {
         justify-items: center;
       }
