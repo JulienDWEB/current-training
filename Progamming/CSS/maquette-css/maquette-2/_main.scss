@@ -3,8 +3,9 @@ main {
   .container-main {
     max-width: 80%;
     margin: 0 auto;
-    @include wrap-flex;
-    @include responsive-gap-from-map;
+    justify-content: center;
+    @include wrap-flex ;
+    @include gap(p-xxs);
     gap: 2rem;
     @media (max-width: 1280px) {
       max-width: 90%;
