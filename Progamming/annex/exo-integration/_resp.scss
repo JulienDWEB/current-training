@@ -16,3 +16,17 @@
     }
   }
 }
+@media (max-width: 600px) {
+  main {
+    width: 100%;
+    .cont-div {
+      display:flex;
+      flex-direction: column;
+      justify-items: center;
+      align-items: center;
+    }
+  }
+  footer {
+    width: 100%;
+  }
+}

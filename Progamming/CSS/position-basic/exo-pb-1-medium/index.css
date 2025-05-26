@@ -1,57 +1,38 @@
 nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   background-color: rgba(115, 146, 250, 0.63);
   height: 15vh;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   padding: 20px;
 }
 
 #nav-left {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   color: white;
 }
-
 #nav-left img {
   height: 30px;
 }
 
 #nav-right {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 #nav-right ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   gap: 20px;
   color: white;
   padding: 0;
 }
-
 #nav-right ul li {
   list-style-type: none;
   position: relative;
   cursor: pointer;
 }
-
 #nav-right ul li:hover {
-  color: #043157b4;
+  color: rgba(4, 49, 87, 0.7058823529);
 }
-
 #nav-right ul li::after {
   content: "";
   position: absolute;
@@ -60,28 +41,22 @@ nav {
   width: 0;
   height: 2px;
   background-color: blue;
-  -webkit-transition: width 0.3s ease-in-out;
   transition: width 0.3s ease-in-out;
 }
-
 #nav-right ul li:hover::after {
   width: 100%;
 }
-
 #nav-right ul button {
   cursor: pointer;
-  -webkit-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;
   border: 0;
   border-radius: 4px;
   background-color: rgba(122, 130, 248, 0.76);
   padding: 8px;
 }
-
 #nav-right ul button:hover {
   background-color: rgba(128, 180, 248, 0.712);
-  -webkit-box-shadow: -4px 5px 5px 1px rgba(22, 22, 22, 0.384);
-          box-shadow: -4px 5px 5px 1px rgba(22, 22, 22, 0.384);
+  box-shadow: -4px 5px 5px 1px rgba(22, 22, 22, 0.384);
   color: white;
 }
 
@@ -91,10 +66,9 @@ body {
 }
 
 @font-face {
-  font-family: 'PT Sans';
+  font-family: "PT Sans";
   src: url("/CSS/position-basic/exo-pb-1/asset/font/PTSans-Bold.ttf") format("truetype");
   src: url("/CSS/position-basic/exo-pb-1/asset/font/PTSans-BoldItalic.ttf") format("truetype");
   src: url("/CSS/position-basic/exo-pb-1/asset/font/PTSans-Italic.ttf") format("truetype");
   src: url("/CSS/position-basic/exo-pb-1/asset/font/PTSans-Regular.ttf") format("truetype");
-}
-/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */

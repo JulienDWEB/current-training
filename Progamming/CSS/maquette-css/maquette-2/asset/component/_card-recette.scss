@@ -3,7 +3,7 @@
 .card-recette {
   width: 60%;
   display: grid;
-  justify-items: center;
+ 
 }
 .logo-card {
   @include bg-image-cover('./asset/img/bg-container/toque.png');
@@ -21,6 +21,7 @@
 
     position: relative;
   }
+
 }
 .recette-2 {
   @include padding-y(p-xs);

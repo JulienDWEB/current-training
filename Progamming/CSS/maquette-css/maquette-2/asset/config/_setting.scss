@@ -3,6 +3,7 @@
 
   margin: 0;
   padding: 0;
+
   h1,
   h2,
   h3,
@@ -10,7 +11,8 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
       'Lucida Sans', Arial, sans-serif;
   }
-  border: 1px solid red;
+
+  // border: 1px solid red;
 }
 
 $color-main2: #b8b8b8d7;
@@ -25,8 +27,7 @@ $white70: #ffffffb7;
 $black: black;
 $btn-dark: #272727;
 //  MARGE & PADDING
-$spacing-scale: (
-  p-xxs: 0.15rem,
+$spacing-scale: (p-xxs: 0.15rem,
   //2px
   p-xs: 0.5rem,
   //8px
@@ -51,9 +52,12 @@ $spacing-scale: (
 // Padding all
 @mixin padding($size) {
   $val: map-get($spacing-scale, $size);
+
   @if $val {
     padding: $val * 2;
-  } @else {
+  }
+
+  @else {
     @warn "⚠️ `#{$size}` n'est pas une taille valide dans $spacing-scale.";
   }
 }
@@ -61,6 +65,7 @@ $spacing-scale: (
 // Padding X
 @mixin padding-x($size) {
   $val: map-get($spacing-scale, $size);
+
   @if $val {
     padding-left: $val * 2;
     padding-right: $val * 2;
@@ -70,6 +75,7 @@ $spacing-scale: (
 // Padding Y
 @mixin padding-y($size) {
   $val: map-get($spacing-scale, $size);
+
   @if $val {
     padding-top: $val * 2;
     padding-bottom: $val * 2;
@@ -79,24 +85,30 @@ $spacing-scale: (
 // Margin
 @mixin margin($size) {
   $val: map-get($spacing-scale, $size);
+
   @if $val {
     margin: $val * 2;
   }
 }
+
 @mixin margin-x($size) {
   $val: map-get($spacing-scale, $size);
+
   @if $val {
     margin-left: $val * 2;
     margin-right: $val * 2;
   }
 }
+
 @mixin margin-y($size) {
   $val: map-get($spacing-scale, $size);
+
   @if $val {
     margin-top: $val * 2;
     margin-bottom: $val * 2;
   }
 }
+
 @mixin border-y($color) {
   border-top: 1px solid $color;
   border-bottom: 1px solid $color;
@@ -106,17 +118,19 @@ $spacing-scale: (
 
 @mixin gap($size) {
   $val: map-get($spacing-scale, $size);
+
   @if $val {
     gap: $val;
-  } @else {
+  }
+
+  @else {
     @warn "⚠️ `#{$size}` n'est pas une taille valide dans \$spacing-scale.";
   }
 }
 
 // RESPONSIVE
 
-$breakpoints: (
-  xs: 480px,
+$breakpoints: (xs: 480px,
   sm: 600px,
   md: 768px,
   lg: 1024px,
@@ -131,29 +145,27 @@ $breakpoints: (
     @media (max-width: $breakpoint) {
       @content;
     }
-  } @else {
+  }
+
+  @else {
     @warn "❌ Le breakpoint `#{$size}` n'existe pas dans la map $breakpoints.";
   }
 }
 
-@mixin bg-image(
-  $url,
+@mixin bg-image($url,
   $size: contain,
   $repeat: no-repeat,
-  $position: center center
-) {
+  $position: center center) {
   background-image: url(#{$url});
   background-size: $size;
   background-repeat: $repeat;
   background-position: $position;
 }
 
-@mixin bg-image-cover(
-  $url,
+@mixin bg-image-cover($url,
   $size: cover,
   $repeat: no-repeat,
-  $position: center center
-) {
+  $position: center center) {
   background-image: url(#{$url});
   background-size: $size;
   background-repeat: $repeat;
@@ -173,12 +185,14 @@ $breakpoints: (
   justify-content: $content;
   align-items: center;
 }
+
 @mixin center-flex-around($content: space-around) {
   display: flex;
   flex-direction: row;
   justify-content: $content;
   align-items: center;
 }
+
 @mixin wrap-flex($direction: row) {
   display: flex;
   flex-direction: $direction;
@@ -201,12 +215,14 @@ $breakpoints: (
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 @mixin absolute-left {
   position: absolute;
   top: 50%;
   left: 20%;
   transform: translate(-50%, -50%);
 }
+
 @mixin absolute-right($offset: 2rem) {
   position: absolute;
   top: 50%;
@@ -232,14 +248,17 @@ $breakpoints: (
     transform: none;
     margin: 0 auto;
     justify-items: center;
+
     p {
       text-align: left;
     }
+
     h1 {
       text-align: center;
     }
   }
 }
+
 @mixin absolute-bottom-center($bottom: 1rem) {
   position: absolute;
   bottom: $bottom;
@@ -254,27 +273,32 @@ $breakpoints: (
   margin: 0 auto;
   padding: 0 1rem;
 }
+
 @mixin grid-fluid($min: 200px, $gap: 1rem) {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax($min, 1fr));
   gap: $gap;
 }
+
 @mixin grid($columns: 12, $gap: 1rem, $rows: 1) {
   display: grid;
   grid-template-columns: repeat($columns, 1fr);
   grid-template-rows: repeat($rows, 1fr);
   gap: $gap;
 }
+
 @mixin grid-2-rows($gap: 1rem) {
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: 1fr;
   gap: $gap;
 }
+
 @mixin grid-sb {
   display: grid;
   align-content: space-between;
 }
+
 @mixin center-grid {
   display: grid;
   justify-content: center;
@@ -282,6 +306,7 @@ $breakpoints: (
 
   @content;
 }
+
 // Bouton Hover
 
 // Bar de translation
@@ -298,13 +323,16 @@ $breakpoints: (
     left: 0;
     width: 0;
     bottom: -3px;
+
     &:hover::after {
       width: 100%;
     }
   }
 }
+
 @mixin slidebar1 {
   cursor: pointer;
+
   &::after {
     content: '';
     position: absolute;
@@ -315,6 +343,7 @@ $breakpoints: (
     width: 0;
     bottom: -3px;
   }
+
   &:hover::after {
     width: 100%;
   }
@@ -324,15 +353,18 @@ $breakpoints: (
   &:hover {
     animation: rotate 1s linear infinite;
   }
+
   @keyframes rotate {
     from {
       transform: rotateY(0);
     }
+
     to {
       transform: rotateY(360deg);
     }
   }
 }
+
 @mixin scaleimg {
   animation: scale 1s linear forwards;
   animation-delay: 0.8s;
@@ -341,6 +373,7 @@ $breakpoints: (
     from {
       transform: scale(0);
     }
+
     to {
       transform: scale(1);
     }
@@ -351,10 +384,12 @@ $breakpoints: (
   min-width: $min-width;
   min-height: $min-height;
 }
+
 @mixin max-height-whidth($max-width, $max-height) {
   max-width: $max-width;
   max-height: $max-height;
 }
+
 @mixin shadow-margin {
   cursor: pointer;
   margin: 4px;
@@ -362,14 +397,13 @@ $breakpoints: (
   -webkit-box-shadow: -1px 4px 12px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: -1px 4px 12px 0px rgba(0, 0, 0, 0.75);
 }
+
 // LARGEUR HAUTEUR
 
-@mixin card-size(
-  $width: 100px,
+@mixin card-size($width: 100px,
   $height: 100px,
   $max-width: 100%,
-  $max-height: 100%
-) {
+  $max-height: 100%) {
   width: $width;
   height: $height;
   max-height: $max-height;
@@ -382,5 +416,23 @@ $breakpoints: (
 
   @include respond(sm) {
     width: min($width, 80%);
+  }
+}
+
+@mixin card-resp {
+  @media (max-width: 1024px) {
+    @include card-size1(90%, 400px, (90%, 400px));
+  }
+
+  @media (max-width: 768px) {
+    @include card-size1(140px, 140px, (70%, 300px));
+  }
+
+  @media (max-width: 600px) {
+    @include card-size1(110px, 110px, (40%, 200px));
+  }
+
+  @media (max-width: 480px) {
+    @include card-size1(90px, 90px, (20%, 100px));
   }
 }

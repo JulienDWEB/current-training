@@ -1,9 +1,9 @@
-@use 'sass:math';
+@use 'sass:math'; // API MATHEMATIQUE
 
 $base-font-size: 16px !default;
 $design-height: 1080px !default;
 
-// 1. Déclarations existantes
+// 1. Déclarations existantes Taille d'écran, responsive
 $breakpoints: (
   xs: 480px,
   sm: 600px,
@@ -65,6 +65,8 @@ $responsive-values: (
   }
 }
 
+// Conversion Px vers REM, EM, VH
+
 @function strip-unit($number) {
   @if type-of($number) == 'number' and not unitless($number) {
     @return $number / ($number * 0 + 1);
@@ -89,12 +91,53 @@ $responsive-values: (
   $ratio: math.div($size, $ref);
   @return $ratio * 100vh;
 }
+
+// Grid / Flex //
+
+@mixin grid($columns: 12, $gap: 1rem, $rows: 1) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  grid-template-rows: repeat($rows, 1fr);
+  gap: $gap;
+}
+
+@mixin center-flex($direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+}
+
+
 $card-bg-colors: (
-  #b57cdd #8257a2 #563b69 #c486f0 #9d6cc0 #3e2a4c #6d4b86 #e1bdf5 #ae18ff
-    #403350 #260f3f #923afa
+  #b57cdd, #8257a2, #563b69, #c486f0, #9d6cc0, #3e2a4c, #6d4b86, #e1bdf5, #ae18ff,
+  #403350, #260f3f, #923afa
 );
-@for $i from 1 through length($card-bg-colors) {
+
+@for $i from 1 through 20 {
   .item:nth-child(#{$i}) {
-    background-color: nth($card-bg-colors, $i);
+    background-color: nth($card-bg-colors, (($i - 1) % length($card-bg-colors)) + 1);
   }
 }
+
+// Carte SIZE ! 
+
+@mixin card-size(
+  $width: 100px,
+  $height: 100px,
+  $max-width: 100%,
+  $max-height: 100%
+) {
+  width: $width;
+  height: $height;
+  max-height: $max-height;
+
+  @include respond(md) {
+    width: min($width, 90%);
+    height: auto;
+    min-height: $height;
+  }
+
+  @include respond(sm) {
+    width: min($width, 80%);
+  } }

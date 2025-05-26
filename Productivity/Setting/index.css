@@ -46,6 +46,38 @@
   background-color: #923afa;
 }
 
+.item:nth-child(13) {
+  background-color: #b57cdd;
+}
+
+.item:nth-child(14) {
+  background-color: #8257a2;
+}
+
+.item:nth-child(15) {
+  background-color: #563b69;
+}
+
+.item:nth-child(16) {
+  background-color: #c486f0;
+}
+
+.item:nth-child(17) {
+  background-color: #9d6cc0;
+}
+
+.item:nth-child(18) {
+  background-color: #3e2a4c;
+}
+
+.item:nth-child(19) {
+  background-color: #6d4b86;
+}
+
+.item:nth-child(20) {
+  background-color: #e1bdf5;
+}
+
 html,
 body {
   height: 100vh;

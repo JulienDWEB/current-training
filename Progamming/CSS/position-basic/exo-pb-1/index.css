@@ -8,7 +8,6 @@ video {
      object-fit: cover;
   z-index: -1;
 }
-
 video::before {
   content: "";
   position: absolute;
@@ -24,7 +23,6 @@ video::before {
 
 body {
   font-family: "PT Sans", sans-serif;
-  display: -ms-grid;
   display: grid;
   place-items: center;
   position: relative;
@@ -32,24 +30,19 @@ body {
   overflow: hidden;
   margin: 0;
 }
-
 body main {
-  display: -ms-grid;
   display: grid;
   justify-items: center;
   text-align: center;
   color: white;
 }
-
 body main h1 {
   color: white;
   margin: 10px auto;
 }
-
 body main p {
   margin: 10px auto;
 }
-
 body main button {
   margin: 10px auto;
   border-radius: 6px;
@@ -59,18 +52,15 @@ body main button {
   padding: 8px;
   color: white;
 }
-
 body main button:hover {
   background-color: rgba(112, 236, 118, 0.5);
-  -webkit-transition: 0.5em ease-in-out;
   transition: 0.5em ease-in-out;
 }
 
 @font-face {
-  font-family: 'PT Sans';
+  font-family: "PT Sans";
   src: url("/CSS/position-basic/exo-pb-1/asset/font/PTSans-Bold.ttf") format("truetype");
   src: url("/CSS/position-basic/exo-pb-1/asset/font/PTSans-BoldItalic.ttf") format("truetype");
   src: url("/CSS/position-basic/exo-pb-1/asset/font/PTSans-Italic.ttf") format("truetype");
   src: url("/CSS/position-basic/exo-pb-1/asset/font/PTSans-Regular.ttf") format("truetype");
-}
-/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */

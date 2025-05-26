@@ -23,8 +23,10 @@ header {
     bottom: 0;
     z-index: 1;
     background-color: $color-primary;
+    @include center-flex-between; 
+    
 
-    @include center-flex-around;
+  
     @include responsive-gap-from-map;
     .container-nav {
       @include center-flex;
