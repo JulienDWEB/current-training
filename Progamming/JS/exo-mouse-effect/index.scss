@@ -1,0 +1,38 @@
+@import './color-main';
+
+.mousecircle {
+    position: fixed;
+  opacity: 0.4;
+    width: var(--widht);
+    height: var(--height);
+    border-radius: 50%;
+    pointer-events: none;
+    transition: transform 0.05s ease-out;
+    z-index: 10000;
+animation: anim 8s ease-in forwards;
+  filter: hue-rotate(0deg);
+    mix-blend-mode: difference;
+}
+@keyframes anim {
+    to {
+        filter: hue-rotate(720deg);
+ } }
+
+.mousecircle1 {
+    position: fixed;
+  opacity: 0.8;
+ background-color: rgba(0, 0, 0, 0.336);
+    width: var(--widht);
+    height: var(--height);
+    border-radius: 50%;
+    pointer-events: none;
+    transition: transform 0.05s ease-out;
+    z-index: 100000;
+      mix-blend-mode: difference;
+}
+
+.mousecircle, .mousecircle1 {
+      transform: translate(-50%, -50%);
+  left: 0;
+  top: 0;
+}
