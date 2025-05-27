@@ -86,15 +86,28 @@ console.log(text1);  // Bonjour, je m'appelle Julien
 
 
 // Tableau a plusieur valeur  
-let age2 = 16;
+let age2 = 32;
 
 let personnes = [
   {prenom: "John", nom: "Doe", role: "chef", age: age2},
-  {prenom: "Julien", age: 28, role: "employer"},
-  {prenom: "Caroline", age: 35, role: "employer"},
-  {prenom: "Framboise", age: 22, role: "employer"},
+  {prenom: "Julien", age: 17, role: "employer"},
+  {prenom: "Caroline", age: 14, role: "employer"},
+  {prenom: "Framboise", age: 18, role: "employer"},
 ];
 
+console.table(personnes)
+
+function verifAge(personnes) {
+    for (let personne of personnes) {
+        if (personne.age >= 18 ) {
+            console.log(`${personne.prenom} Tu es majeur!`);
+        } else {
+            console.log(`${personne.prenom} tu es mineur!`);
+        }
+    }
+}
+
+verifAge(personnes);
 age++ //age + 1 
 
 // function bonjour()
@@ -165,9 +178,37 @@ let montantTVA = prix - tva ;
 let description = `
 Produit : ${produit} 
 Prix TTC : ${prix.toFixed(2)} €  
-Total TVA : ${montantTVA.toFixed(2)}
+Total TVA : ${montantTVA.toFixed(2)} €  
 Total Avec TVA : ${tva.toFixed(2)}  € 
 Offre spéciale : -10% jusqu'à dimanche !
 `;
 // toFixed permet de mettre en parametre combien de 0 on veut apres la virgule //
 console.log(description);
+i = 1
+function tabNub() { // for renvoie la valeur de i jusqu'a ca atteigne 10 //
+  for (let i = 1; i <= 10; i++) { 
+    console.log(i);
+  }
+}
+
+tabNub(); 
+
+let tab1 = [
+  [12, 16, "trois", 17],
+  [12, 16, "c", 22]
+];
+tab1.push("orange","courgette","abricot");
+
+// console.log(tab1[0][2]); 
+console.table(tab1[1]); 
+
+
+function tabNub() {
+  let resultats = [];
+  for (let i = 1; i <= 10; i++) {
+    resultats.push(i); 
+  }
+  return resultats;
+}
+
+console.table(tabNub()); // [1, 2, 3, ..., 10]
