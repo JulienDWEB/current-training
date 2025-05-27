@@ -120,7 +120,7 @@ $card-bg-colors: (
 );
 
 @for $i from 1 through 20 {
-  .bubble:nth-child(#{$i}) {
+  .mousecircle:nth-child(#{$i}) {
     background-color: nth($card-bg-colors, (($i - 1) % length($card-bg-colors)) + 1);
   }
 }

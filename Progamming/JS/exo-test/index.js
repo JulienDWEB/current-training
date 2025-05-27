@@ -71,3 +71,103 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
  console.log(3**3)
+
+let text1 = "Bonjour";
+
+// Ajout simple
+text1 = text1 + " je m'appelle Julien";
+
+// OU version moderne avec interpolation
+text1 = `${text1}, je m'appelle Julien`;
+
+console.log(text1);  // Bonjour, je m'appelle Julien
+
+ console.log(text1)
+
+
+// Tableau a plusieur valeur  
+let age2 = 16;
+
+let personnes = [
+  {prenom: "John", nom: "Doe", role: "chef", age: age2},
+  {prenom: "Julien", age: 28, role: "employer"},
+  {prenom: "Caroline", age: 35, role: "employer"},
+  {prenom: "Framboise", age: 22, role: "employer"},
+];
+
+age++ //age + 1 
+
+// function bonjour()
+// { console.log("je vous salue")
+// }
+// bonjour()
+
+function bonjour()
+{ console.log("je vous salue")
+}
+bonjour()
+
+
+
+// function phrase(text) {
+//     console.log(text)
+// }
+// phrase("j'ecrit un text")  // Appelle au paramettre
+
+// Lucas = 17  
+// Ameli = 3  
+// Thomas = 10  
+// Damien = 20  
+// function moyenne(personnes){
+//     console.log(`Sa moyenne est de ${personnes}`)
+// }
+
+// moyenne(Lucas)
+// moyenne(Ameli)
+// moyenne(Thomas)
+// moyenne(Damien)
+
+// console.log(personnes[0].age); 
+
+//  console.log(personnes);
+
+//  let b 
+//  moyenne2 = (b) => {console.log(`Sa moyenne est de $(b)`);} pas a preconiser
+
+let alice = 'Alice'
+function saluer(nom) {
+    return `Bonjour, ${nom}`;
+}
+saluer(alice)
+console.log(saluer(alice));
+
+function saluer(nom) {
+  console.log(`Bonjour, ${nom}`);
+}
+
+saluer(alice); // Bonjour, Alice
+
+let nombre2 = 25 ;
+let nombre1 = nombre2 * 2 ;
+
+function multiplication(nombre1, nombre2) {
+    return nombre1 * nombre2
+}
+console.log(multiplication(24,25))
+
+
+// Fiche Produit Variable [Tableau] 
+
+let produit = "Clavier mécanique";
+let prix = 79.99;
+let tva = prix / 1.20;
+let montantTVA = prix - tva ; 
+let description = `
+Produit : ${produit} 
+Prix TTC : ${prix.toFixed(2)} €  
+Total TVA : ${montantTVA.toFixed(2)}
+Total Avec TVA : ${tva.toFixed(2)}  € 
+Offre spéciale : -10% jusqu'à dimanche !
+`;
+// toFixed permet de mettre en parametre combien de 0 on veut apres la virgule //
+console.log(description);
