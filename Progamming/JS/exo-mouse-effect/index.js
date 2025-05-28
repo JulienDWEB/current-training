@@ -5,28 +5,22 @@
 // S'assurer que les liens sont clickables
 
 // Donner un style de transparence aux 2 plus gros ronds (mix-blend-mode)
+
+// (e) = evenement 
+
+// Toujour rajouter les "px" a un evenement comme mousemove
+
 // Mouse Effect //
+window.addEventListener('mousemove', (e) => {
+cursor.style.top = e.y + "px";
+cursor.style.left = e.x + "px";
+mouse1.style.top = e.y + "px";
+mouse1.style.left = e.x + "px";
+mouse2.style.top = e.y + "px";
+mouse2.style.left = e.x + "px";
 
-document.addEventListener("DOMContentLoaded", () => {
-  const circle = document.createElement('div');
-  document.body.appendChild(circle);
-  circle.classList.add("mousecircle");
-  const size = Math.random() * 200 + 100 + "px";
-  circle.style.height = size;
-  circle.style.width = size;
+  
+})
 
-  const circle1 = document.createElement('div');
-  document.body.appendChild(circle1);
-  circle1.classList.add("mousecircle1");
-  const size1 = Math.random() * 200 + 1 + "px";
-  circle1.style.height = size1;
-  circle1.style.width = size1;
-
-  document.addEventListener("mousemove", (e) => {
-    circle.style.left = `${e.clientX}px`;
-    circle.style.top = `${e.clientY}px`;
-
-    circle1.style.left = `${e.clientX}px`;
-    circle1.style.top = `${e.clientY}px`;
-  });
-});
+const mouses = document.querySelectorAll(".mouse")
+console.log(mouses);

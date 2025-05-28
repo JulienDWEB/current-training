@@ -1,42 +1,3 @@
-@import './color-main';
-
-.mousecircle {
-    position: fixed;
-  opacity: 0.4;
-    width: var(--widht);
-    height: var(--height);
-    border-radius: 50%;
-    pointer-events: none;
-    transition: transform 0.05s ease-out;
-    z-index: 10000;
-animation: anim 8s ease-in forwards;
-  filter: hue-rotate(0deg);
-    mix-blend-mode: difference;
-}
-@keyframes anim {
-    to {
-        filter: hue-rotate(720deg);
- } }
-
-.mousecircle1 {
-    position: fixed;
-  opacity: 0.8;
- background-color: rgba(0, 0, 0, 0.336);
-    width: var(--widht);
-    height: var(--height);
-    border-radius: 50%;
-    pointer-events: none;
-    transition: transform 0.05s ease-out;
-    z-index: 100000;
-      mix-blend-mode: difference;
-}
-
-.mousecircle, .mousecircle1 {
-      transform: translate(-50%, -50%);
-  left: 0;
-  top: 0;
-}
-
 /// Style page /// 
 * {
   margin: 0;
@@ -52,6 +13,8 @@ a:visited {
   color: white;
   text-decoration: none;
   transition: 0.3s;
+  z-index: 1000;
+  position: relative;
 }
 a:hover {
   font-size: 1.3rem;
@@ -61,6 +24,31 @@ body {
   background: rgb(27, 27, 27);
   color: rgb(246, 246, 246);
   min-height: 100vh;
+  cursor: none;
+}
+.mouse {
+  position: absolute;
+  border-radius: 1500px;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+}
+#cursor {
+  background-color: #2128bd;
+  width: 14px;
+  height: 14px;
+  
+}
+#mouse1 {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  transition: 0.1s ease;
+}
+#mouse2 {
+  height: 200px;
+  width: 200px;
+  background-color: rgb(33, 23, 23);
+  transition: 0.2s ease-out;
 }
 nav {
   display: grid;
