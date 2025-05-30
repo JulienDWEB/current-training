@@ -24,3 +24,4 @@ mouse2.style.left = e.x + "px";
 
 const mouses = document.querySelectorAll(".mouse")
 console.log(mouses);
+

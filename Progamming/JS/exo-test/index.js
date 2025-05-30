@@ -220,6 +220,11 @@ function getStatus(age) {
   return age >= 18 ? "majeur(e)" : "mineur(e)";
 }
 
+if (age >= 18 ) {
+  console.log("Je suis majeur");
+} else {
+  console.log("Je suis mineur");
+};
 
 let prenom = "Alice";
 let nom = "juga";
@@ -326,4 +331,79 @@ console.log(phraseA);
 console.log(phraseB);
 console.log(phraseC);
 
+let count = 0; // On initialise count à 0
+while (count < 10) { // Tant que count est inférieur à 10
+    count++; // On incrémente count de 1
+}
+console.log(count);
 
+
+let num = 2;
+
+switch (num) {
+    case 1:
+        console.log("One");
+        break;
+    case 2:
+        console.log("Two");
+        break;
+    case 3:
+        console.log("Three");
+        break;
+    default:
+        console.log("Default case");
+}
+
+let num1= 1;
+
+switch (num1) {
+    case 1:
+        console.log("One");
+    case 2:
+        console.log("Two");
+    case 3:
+        console.log("Three");
+        break;
+    default:
+        console.log("Default case");
+}
+
+// i++  
+// i = i + 1 // Maniere d'ajouter +1 
+// i+= 1 
+let tabA = ["bordeaux","Montpellier", "Toulouse"]
+let mot = ""
+
+for ( let i = 0; i < tabA[0].length; i++) {
+    mot += tabA[0][i]
+    console.log(mot);
+    
+}
+
+// let phraseD = "je fais une phrase" 
+// phraseD++ // NAN 
+
+let paire = [2,4,6,8,10,12,14,16,18,20] // je creer deux tableau , pair && impair , pour pouvoir les réutiliser dans ma boucle
+let impaire = [1,3,5,7,9,11,13,15,17,19]
+
+for (let i = 0; i < 10; i++) {
+    
+console.log("pair :", paire[i]);
+console.log("impair :", impaire[i]);
+console.log(paire);
+
+}
+for (let i = 0; i < 10; i++) {
+  console.log(` ${i} → Pair: ${paire[i]} | Impair: ${impaire[i]}`); // version Concaténer 
+}
+for (let index = 2; index <= 20; index = index + 2) {
+  console.log(index);   
+  
+}
+for (let i = 0; i <= 20 ; i++) {
+  if (i % 2 == 0) {
+    console.log(i);
+    
+  }
+  
+} 
