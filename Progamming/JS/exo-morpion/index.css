@@ -206,6 +206,10 @@ body {
     opacity: 1;
   }
 }
+body {
+  margin: 0;
+}
+
 .controls {
   padding: 20px;
   z-index: 1000;
