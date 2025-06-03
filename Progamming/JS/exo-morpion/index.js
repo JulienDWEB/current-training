@@ -6,7 +6,7 @@ const annonce = document.querySelector(".annonce");
 let gameActive      = true;   
 let currentPlayer = "x";
 
-const winCombos = [ 
+const winCombos = [ // Combos Gagnant 
     [0,1,2],
     [3,4,5],
     [6,7,8],
@@ -30,16 +30,16 @@ function checkWin(){
     }) 
 }
 
-function checkDraw() {
-    return [...cells].every((clickedCase) => clickedCase.textContent !== "" );
+function checkDraw() { // Function qui permet de verifier ce qui et ecrit dans les case 
+    return [...cells].every((clickedCase) => clickedCase.textContent !== "" ); // permet de ne pas changer le symbole de la case ! 
 }
 
 
-function switchPlayer() {
+function switchPlayer() { // Si x a etait ajouter a une case alors O inversement Pour O
     if(currentPlayer === "x") {
-        currentPlayer = "0";
+        currentPlayer = "O";
     }
-    else if (currentPlayer === "0") {
+    else if (currentPlayer === "O") {
         currentPlayer = "x";
     }
 }
