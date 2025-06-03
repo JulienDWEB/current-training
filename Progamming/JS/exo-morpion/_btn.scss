@@ -1,0 +1,15 @@
+.controls {
+    padding: 20px;
+    #restart {
+        padding: 10px;
+        background-color: rgb(180, 130, 238);
+        list-style-type: none;
+        text-decoration: none;
+        cursor: pointer;
+        border: 0;
+        border-radius: 8px;
+        &:hover {
+           background-color: rgba(180, 130, 238, 0.685); 
+        }
+    }
+}

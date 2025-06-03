@@ -391,19 +391,32 @@ for (let i = 0; i < 10; i++) {
 console.log("pair :", paire[i]);
 console.log("impair :", impaire[i]);
 console.log(paire);
-
 }
 for (let i = 0; i < 10; i++) {
   console.log(` ${i} → Pair: ${paire[i]} | Impair: ${impaire[i]}`); // version Concaténer 
 }
 for (let index = 2; index <= 20; index = index + 2) {
   console.log(index);   
-  
 }
 for (let i = 0; i <= 20 ; i++) {
   if (i % 2 == 0) {
-    console.log(i);
-    
-  }
-  
+    console.log(i); 
+  }  
 } 
+const carre = document.getElementsByClassName('test');
+const body = document.body
+
+
+function changeSize(elem,w,h){
+    const carre = document.getElements(elem);
+
+    carre.addEventListener("click", () => {
+    carre.style.backgroundColor = "yellow";
+    carre.style.width = w + "px";
+    carre.style.height = h + "px";
+    
+})
+}
+
+changeSize("test", 300, 500)
+changeSize("demo2", 600, 10)

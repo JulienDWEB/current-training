@@ -1,0 +1,68 @@
+.board {
+    display: grid;
+    width: 300px;
+    height: 300px;
+background-color: rgba(0, 0, 0, 0.637);
+grid-template-columns: repeat(3,1fr);
+grid-template-rows: repeat(3,1fr);
+justify-items: center;
+align-items: center;
+box-shadow: -20px 9px 0px 1px #000000c2;
+@media (max-width: 400px ) {
+     width: 150px;
+     height: 150px;   
+    }
+
+}
+.case {
+    width: 90px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.801);
+    cursor: pointer;
+    font-size: 3rem;
+    &:hover {
+        background-color: rgba(184, 155, 196, 0.801);
+    }
+    @media (max-width: 400px) {
+        height: 45px;
+        width: 45px;
+    }
+}
+body {
+    height: 100vh;
+    background-color: rgb(155, 54, 238);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.annonce {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    font-size: 2rem;
+   color: white;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+    animation: slideDown 0.5s ease-out;
+}
+@keyframes slideDown {
+    from {
+        transform: translateY(0);
+        opacity: 0;
+       
+    }
+    to {
+        transform: translateY(150px);
+        opacity: 1;
+        
+    }
+}
