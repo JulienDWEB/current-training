@@ -7,27 +7,51 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <div id="startScreen">
+<nav>
+    <div class="logo"></div>
+</nav>
+
+    <h1>Bienvenue dans le jeu de Morpion !</h1>
+    <button id="startGame">Commencer la partie</button>
+</div>
+<div id="gameContainer" style="display: none;">
+     <span class="mouse" id="cursor"></span>
+  <span class="mouse" id="mouse1"></span>
+  <span class="mouse" id="mouse2"></span>
+    
     <section><div class="pulse">
         <span style="--i: 0"></span><span style="--i: 1"></span
         ><span style="--i: 2"></span><span style="--i: 3"></span
         ><span style="--i: 4"></span>
       </div> </section>
-    
+      <div class="score">
+        <ul>
+            <li>Joueur 1</li>
+            <li>(X)</li>
+            <li class="scoreStatueX"></li>
+        </ul>
+        <ul>
+            <li>Joueur 2</li>
+            <li>(O)</li>
+            <li class="scoreStatueO"></li>
+        </ul>
+    </div>
     <div class="board" id="board">
-        <div class="case case1" id="case"></div>
-        <div class="case case2"  id="case"></div>
-        <div class="case case3" id="case"></div>
-        <div class="case case4" id="case"></div>
-        <div class="case case5" id="case"></div>
-        <div class="case case6" id="case"></div>
-        <div class="case case7" id="case"></div>
-        <div class="case case8" id="case"></div>
-        <div class="case case9" id="case"></div>
+        <div class="case case1"></div>
+        <div class="case case2" ></div>
+        <div class="case case3"></div>
+        <div class="case case4"></div>
+        <div class="case case5"></div>
+        <div class="case case6"></div>
+        <div class="case case7"></div>
+        <div class="case case8"></div>
+        <div class="case case9"></div>
     </div>
     <div class="annonce"></div>
     <div class="controls">
   <button id="restart">Rejouer 🔄</button>
-</div>
+</div></div>
     <script src="index.js"></script>
 </body>
 </html>

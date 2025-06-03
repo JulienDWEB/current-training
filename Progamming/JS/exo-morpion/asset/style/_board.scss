@@ -12,7 +12,12 @@ box-shadow: -20px 9px 0px 1px $black70;
      width: 150px;
      height: 150px;   
     }
-
+z-index: 1000;
+}
+#gameContainer {
+    display: none;
+    justify-items: center;
+align-items: center;
 }
 .case {
     width: 90px;
@@ -34,8 +39,8 @@ box-shadow: -20px 9px 0px 1px $black70;
 html {
     height: 100%;
       animation: colorSpin 8s linear infinite;
-}
-body {
+    }
+    body {
     height: 100vh;
     background-color: $Color-purple-9-rgba;
     display: flex;
@@ -43,33 +48,33 @@ body {
     justify-content: center;
     align-items: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-   
+    
 }
 @keyframes colorSpin {
-      0%   { filter: hue-rotate(0deg);   }
-  100% {
+    0%   { filter: hue-rotate(0deg);   }
+    100% {
     filter: hue-rotate(360deg);
-  }
+}
 }
 
 .annonce {
     position: absolute;
-    top: 25%;
+    top: 15%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 20px;
     font-size: 2rem;
    color: white;
-    font-weight: bold;
-    text-align: center;
-    border-radius: 10px;
+   font-weight: bold;
+   text-align: center;
+   border-radius: 10px;
     animation: slideDown 0.5s ease-out;
 }
 @keyframes slideDown {
     from {
         transform: translateY(0);
         opacity: 0;
-       
+        
     }
     to {
         transform: translateY(150px);
