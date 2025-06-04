@@ -69,8 +69,10 @@ function handleClick(event) {
 
     if (checkWin()) {
       annonce.textContent = currentPlayer +  " a gagné!";
+      togglePopup()
       annonce.style.display = "block"; // Assure que l'élément est visible 
     annonce.classList.add("annonce-animation");
+    
       gameActive = false;     
      if (currentPlayer === "x") {  // Ajout +1 au score pour le gagnant
         scoreX++;
@@ -103,22 +105,38 @@ function resetGame() {
   annonce.textContent= "";                          // 4. Cacher l’annonce 
   annonce.style.display = "none";
   annonce.classList.remove("annonce-animation");
+  
 }
 const restartBtn = document.getElementById("restart");
 restartBtn.addEventListener("click", resetGame);
 
 board.addEventListener("click" , handleClick);
 
-window.addEventListener('mousemove', (e) => {
-cursor.style.top = e.y + "px";
-cursor.style.left = e.x + "px";
-mouse1.style.top = e.y + "px";
-mouse1.style.left = e.x + "px";
-mouse2.style.top = e.y + "px";
-mouse2.style.left = e.x + "px";
 
+
+window.addEventListener('mousemove', (e) => {
+  const maxX = window.innerWidth - cursor.offsetWidth;
+  const maxY = window.innerHeight - cursor.offsetHeight;
   
-})
+  const x = Math.min(e.clientX, maxX);
+  const y = Math.min(e.clientY, maxY);
+  
+  cursor.style.top = y + "px";
+  cursor.style.left = x + "px";
+  mouse1.style.top = y + "px";
+  mouse1.style.left = x + "px";
+  mouse2.style.top = y + "px";
+  mouse2.style.left = x + "px";
+});
+
+function togglePopup(){
+    let popup = document.querySelector("#popup-overlay");
+    popup.classList.toggle("open")
+}
+function removePopup(){
+    let popup = document.querySelector("#popup-overlay");
+    popup.classList.remove("open")
+}
 
 const mouses = document.querySelectorAll(".mouse")
 console.log(mouses);

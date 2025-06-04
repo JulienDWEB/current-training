@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+
+<!-- Page D'accueil -->
+
     <div id="startScreen">
 <nav>
     <div class="logo"></div>
@@ -15,6 +18,10 @@
     <h1>Bienvenue dans le jeu de Morpion !</h1>
     <button id="startGame">Commencer la partie</button>
 </div>
+
+
+<!-- Page Morpion -->
+
 <div id="gameContainer" style="display: none;">
      <span class="mouse" id="cursor"></span>
   <span class="mouse" id="mouse1"></span>
@@ -51,6 +58,14 @@
     <div class="annonce"></div>
     <div class="controls">
   <button id="restart">Rejouer 🔄</button>
+  <div id="popup-overlay" class="open">
+    <div id="popup-content">
+       <h3> Vous avez Gagné , Bravo ! </h3>
+      <span>Voulez-vous, relancer une Partie</span> 
+       <button id="restart">Rejouer 🔄</button>
+       <a href="javascript:void(0)" onclick="togglePopup()" class="popup-exit">X</a>
+    </div>
+  </div>
 </div></div>
     <script src="index.js"></script>
 </body>

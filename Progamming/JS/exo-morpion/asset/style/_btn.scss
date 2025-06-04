@@ -14,5 +14,9 @@
            background-color: rgba(180, 130, 238, 0.685); 
            color: white;
         }
+        &:active {
+            background-color: rgba(0, 0, 0, 0.548);
+            box-shadow: 0px;
+        }
     }
 }
