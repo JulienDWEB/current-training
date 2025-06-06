@@ -53,7 +53,6 @@ form.addEventListener('submit', function(event) {
     const valeur = parseInt(inputValue.value);
 
     if (!isNaN(valeur) && valeur >= 50 && valeur <= 100) {
-        alert('Valeur correcte');
         erreur.style.display = 'none'; // Cache le message d’erreur s’il était affiché
     } else {
         erreur.style.display = 'block'; // Affiche le message d’erreur

@@ -22,13 +22,20 @@ document.addEventListener("DOMContentLoaded", () => {
       // Scroll vers le haut : restaurer la taille normale
       navscroll.style.height = "100px"; // taille initiale
     }
-
+  
     lastScrollTop = positionScroll <= 0 ? 0 : positionScroll;
 
-    // Detecter si on est en bas de la page
-    if (window.scrollY + window.innerHeight >= document.body.offsetHeight) {
-      console.log("vous êtes en bas");
-      // Tu peux aussi déclencher une action ici
-    }
-  });
+   
+   window.addEventListener('scroll', function () {
+     if (window.scrollY + window.innerHeight >= document.body.offsetHeight) {
+       const popup = document.getElementsByClassName('pop-up')[0];
+ // Tu peux aussi déclencher une action ici
+ if (popup) {
+   popup.style.transform = 'translateX(50px)';
+   popup.style.opacity = 1
+   
+ }
+     }
+   });
+   }) // Detecter si on est en bas de la page
 });

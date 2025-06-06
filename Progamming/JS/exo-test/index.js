@@ -23,7 +23,7 @@ document.getElementsByTagName
 Number
 String
 undefined // creer mais pas affecter 
-null // Existe pas
+null // Existe mais na pas de valeur
 
 Boolean // vrai ou faux // True or False //
 Array 
