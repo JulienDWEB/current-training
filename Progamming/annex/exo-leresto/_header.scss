@@ -26,6 +26,9 @@ nav {
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.5);
 
+    .onglet-nav {
+      width: 10px;
+    }
     ul {
       display: flex;
       justify-content: space-around;
@@ -35,8 +38,6 @@ nav {
       li {
         cursor: pointer;
         position: relative;
-        width: 20px;
-        height: 20px;
         display: block;
 
         &::before {
@@ -51,6 +52,7 @@ nav {
 
         &.icon-search::before {
           background-image: url('img/ic-slider-01.png');
+          background-size: contain;
         }
 
         &.icon-twitter::before {

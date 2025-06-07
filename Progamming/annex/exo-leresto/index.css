@@ -158,6 +158,9 @@ nav .cont-nav {
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.5);
 }
+nav .cont-nav .onglet-nav {
+  width: 10px;
+}
 nav .cont-nav ul {
   display: flex;
   justify-content: space-around;
@@ -167,8 +170,6 @@ nav .cont-nav ul {
 nav .cont-nav ul li {
   cursor: pointer;
   position: relative;
-  width: 20px;
-  height: 20px;
   display: block;
 }
 nav .cont-nav ul li::before {
@@ -182,6 +183,7 @@ nav .cont-nav ul li::before {
 }
 nav .cont-nav ul li.icon-search::before {
   background-image: url("img/ic-slider-01.png");
+  background-size: contain;
 }
 nav .cont-nav ul li.icon-twitter::before {
   background-image: url("img/google_white5.png");
