@@ -33,8 +33,27 @@ p {
 }
 #side-bar.active {
   left: 0;
+
 }
-.active ≈ .content {
+
+.active span {
+  position: absolute;
+  
+  
+}
+.active span:nth-child(1) {
+  /* display: none; */
+  opacity: 0;
+}
+
+.active span:nth-child(2) {
+  transform: rotate(45deg);
+}
+.active span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+.active ~ .content {
   opacity: 0.3;
 }
 .toggle-btn {
@@ -44,6 +63,7 @@ p {
   cursor: pointer;
   height: 50px;
   width: 50px;
+  transition:   1s;
 }
 .toggle-btn span {
   width: 60px;
@@ -54,7 +74,8 @@ p {
   margin-top: 4px;
   transition: 0.3s ease;
 }
-li {
+
+ li {
   color: #292929;
   list-style: none;
   font-size: 2.5rem;

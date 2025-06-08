@@ -37,10 +37,6 @@ btnToggle.addEventListener('click', () => {
 contentMain.addEventListener('click', () => {
     if (sidebarVisible) {
         sideBar.style.left = '-250px';
-        contentMain.style.opacity = '1';
         sidebarVisible = false;
     } 
-
-    
-
 });

@@ -7,8 +7,13 @@
 
 // Aide
 // Priorités en CSS : !important > id > classe > baliseHtml
-const sidebar = document.getElementById('side-bar')
-btn.addEventListener('click', () => {
-    sidebar.classList.toggle('active')
+const sidebar = document.getElementById('side-bar') 
+const content = document.querySelector('.content')
+    btn.addEventListener('click', () => {
+            sidebar.classList.toggle('active')
     
-})
+    })
+content.addEventListener('click', ()=> {
+    sidebar.classList.remove('active')
+    
+}) 
