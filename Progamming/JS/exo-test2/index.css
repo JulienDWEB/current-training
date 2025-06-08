@@ -1,0 +1,46 @@
+.circle {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  position: absolute;
+  top: 50px;
+  left: 100px;
+  cursor: pointer;
+  transition: transform 0.5s ease-in;
+  z-index: 2;
+}
+
+.circle.falling {
+  transform: translateY(150px);
+}
+
+.active {
+  background-color: red;
+}
+
+.carre {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 200px;
+  left: 100px;
+  background-color: black;
+  transform: perspective(500px) rotateX(35deg);
+  transform-style: preserve-3d;
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body h1 {
+  margin: 0;
+}/*# sourceMappingURL=index.css.map */
