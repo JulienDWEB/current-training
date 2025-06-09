@@ -47,10 +47,10 @@ window.addEventListener('scroll', function () {
   }
   
 
-  closePopup.addEventListener('click', () => {
-    popup.style.transform = "translateX(500px)"
-    popup.style.opacity = 0;
-  })
  
   
 });
+  closePopup.addEventListener('click', () => {
+    popup.style.transform = "translateX(500px)"
+    popup.style.opacity = 0;
+  });
