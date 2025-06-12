@@ -1,0 +1,50 @@
+header {
+  height: 400px;
+  width: 100%;
+  background-color: rgba(44, 44, 44, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  height: 200px;
+  width: 400px;
+  background-color: rgba(95, 160, 103, 0.805);
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  border-radius: 16px;
+  text-align: center;
+}
+
+#btn {
+  position: relative;
+  padding: 10px;
+  border: 0;
+  border-radius: 16px;
+  background-color: rgb(123, 255, 123);
+  animation: TranslateDown 1s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
+  transform: translateY(-100px);
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+#btn:hover {
+  color: white;
+  background-color: rgb(49, 88, 49);
+  font-size: 1.1rem;
+}
+
+@keyframes TranslateDown {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}/*# sourceMappingURL=index.css.map */
