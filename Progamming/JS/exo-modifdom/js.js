@@ -37,44 +37,47 @@ document.addEventListener('DOMContentLoaded', () => {
 const caseRight = document.querySelector('.case3')
   caseMiddle.addEventListener('click', () => {
     caseLeft.style.backgroundColor = "red";
-    if (caseLeft.style.backgroundColor="red") {
+    if (caseLeft.style.backgroundColor === "red") {
         caseRight.style.backgroundColor = "blue"
     }
   });
 });
-function BuzzerDelete() {
-    buzzer.addEventListener('click', () => {
-        const topBuzzer = document.querySelector('.top-buzzer1');
-        const Entete = document.querySelector('.entete')
-        topBuzzer.style.transform = "translateY(10px)";
-        setTimeout(() => {
-            topBuzzer.style.transform = "translateY(0)";
-        }, 500);
 
-        const newLn = document.createElement('li');
-        newLn.textContent = "Nouvel Élément !";
-        Entete.appendChild(newLn);
-        const lastChild = Entete.lastElementChild;
-if (lastChild) {
-    Entete.removeChild(lastChild);
-}
-    });
-}
-function BuzzerActive() {
-    buzzer.addEventListener('click', () => {
-        const topBuzzer = document.querySelector('.top-buzzer');
-        console.log(topBuzzer);
-        
-        const Entete = document.querySelector('.entete')
-        topBuzzer.style.transform = "translateY(10px)";
-        setTimeout(() => {
-            topBuzzer.style.transform = "translateY(0)";
-        }, 500);
+document.addEventListener('DOMContentLoaded', () => {
+  // Sélection des boutons et du conteneur où afficher les éléments
+  const addButton = document.querySelector('.top-buzzer');
+  const removeButton = document.querySelector('.top-buzzer1');
+  const container = document.querySelector('.entete');
 
-        const newLn = document.createElement('li');
-        newLn.textContent = "Nouvel Élément !";
-        Entete.appendChild(newLn);
-        
-    });
-}
-BuzzerActive();
+  // Bouton "Ajouter"
+  addButton.addEventListener('click', () => {
+
+    addButton.style.transform = "translateY(10px)";
+    setTimeout(() => {
+      addButton.style.transform = "translateY(0)";
+    }, 500);
+    // Création d'un nouvel élément <li>
+    const newItem = document.createElement('li');
+    newItem.classList.add('auto-added'); // On note qu'il a été ajouté dynamiquement
+    newItem.textContent = "Nouvel Élément !";
+    container.appendChild(newItem);
+  });
+
+  // Bouton "Supprimer"
+  removeButton.addEventListener('click', () => {
+
+    removeButton.style.transform = "translateY(10px)";
+    setTimeout(() => {
+      removeButton.style.transform = "translateY(0)";
+    }, 500);
+
+    // Récupération de tous les éléments créés
+    const items = container.querySelectorAll('.auto-added');
+    // S'il y a au moins un élément, on supprime le dernier
+    if (items.length > 0) {
+      const lastItem = items[items.length - 1];
+      lastItem.remove();
+    }
+  });
+});
+
