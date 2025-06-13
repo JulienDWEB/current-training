@@ -1,0 +1,33 @@
+nav {
+    span {
+    width: 50px;
+    height: 10px;
+    background-color: black;
+    border-radius: 16px;
+}
+
+.active {
+span {
+        transform: rotateX('80deg'); 
+
+}
+span:nth-child(2) {
+        display: none;
+    }
+}
+    height: 30vh;
+    .logo-menu {
+        display: grid;
+        gap: 2px;
+        height: 35px;
+        width: 50px;
+       
+    }
+}
+
+
+
+.ulmenu {
+    list-style: none;
+    display: none;
+}

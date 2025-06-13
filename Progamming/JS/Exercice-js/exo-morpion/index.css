@@ -1,0 +1,359 @@
+.mousecircle:nth-child(1) {
+  background-color: #6D59F5;
+}
+
+.mousecircle:nth-child(2) {
+  background-color: #C2C100;
+}
+
+.mousecircle:nth-child(3) {
+  background-color: #A7F500;
+}
+
+.mousecircle:nth-child(4) {
+  background-color: #F5A001;
+}
+
+.mousecircle:nth-child(5) {
+  background-color: #D1754B;
+}
+
+.mousecircle:nth-child(6) {
+  background-color: #F01F01;
+}
+
+.mousecircle:nth-child(7) {
+  background-color: #31F54A;
+}
+
+.mousecircle:nth-child(8) {
+  background-color: #F56100;
+}
+
+.mousecircle:nth-child(9) {
+  background-color: #64DBF5;
+}
+
+.mousecircle:nth-child(10) {
+  background-color: #E6E142;
+}
+
+.mousecircle:nth-child(11) {
+  background-color: #F5C101;
+}
+
+.mousecircle:nth-child(12) {
+  background-color: #B6D6F5;
+}
+
+.mousecircle:nth-child(13) {
+  background-color: #F5D300;
+}
+
+.mousecircle:nth-child(14) {
+  background-color: #C1F552;
+}
+
+.mousecircle:nth-child(15) {
+  background-color: #F53B00;
+}
+
+.mousecircle:nth-child(16) {
+  background-color: #F5E500;
+}
+
+.mousecircle:nth-child(17) {
+  background-color: #FA605A;
+}
+
+.mousecircle:nth-child(18) {
+  background-color: #D1BC3C;
+}
+
+.mousecircle:nth-child(19) {
+  background-color: #19494F;
+}
+
+.mousecircle:nth-child(20) {
+  background-color: #F54D00;
+}
+
+.mouse {
+  position: absolute;
+  border-radius: 1500px;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+  z-index: -1;
+}
+
+#cursor {
+  background-color: #2128bd;
+  width: 14px;
+  height: 14px;
+  z-index: -1;
+}
+
+#mouse1 {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  transition: 0.1s ease;
+  z-index: -1;
+}
+
+#mouse2 {
+  height: 200px;
+  width: 200px;
+  background-color: rgb(33, 23, 23);
+  transition: 0.2s ease-out;
+  z-index: -1;
+}
+
+#startScreen {
+  text-align: center;
+  height: 100vh;
+  width: 100%;
+}
+
+nav {
+  width: 100%;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+nav .logo {
+  background-image: url(/current-training/Progamming/JS/exo-morpion/asset/img/Logo_Morpion.png);
+  background-size: contain;
+  width: 100px;
+  height: 100px;
+}
+
+#startGame {
+  padding: 10px;
+  background-color: rgb(180, 130, 238);
+  list-style-type: none;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: -4px 3px 1px 1px rgba(0, 0, 0, 0.4392156863);
+}
+#startGame:hover {
+  background-color: rgba(180, 130, 238, 0.685);
+  color: white;
+}
+
+.pulse {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: #0ef;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  z-index: -2;
+}
+
+.pulse span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #0ef;
+  border-radius: inherit;
+  opacity: 0.8;
+  animation: pulseAnimate 4s ease-out infinite;
+  animation-delay: calc(1s * var(--i));
+}
+
+@keyframes pulseAnimate {
+  100% {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+.board {
+  display: grid;
+  width: 300px;
+  height: 300px;
+  background-color: rgba(0, 0, 0, 0.5);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+  box-shadow: -20px 9px 0px 1px rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
+@media (max-width: 400px) {
+  .board {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+#gameContainer {
+  display: none;
+  justify-items: center;
+  align-items: center;
+}
+
+.case {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  font-size: 3rem;
+}
+.case:hover {
+  background-color: rgba(184, 155, 196, 0.801);
+}
+@media (max-width: 400px) {
+  .case {
+    height: 45px;
+    width: 45px;
+  }
+}
+
+html {
+  height: 100%;
+  animation: colorSpin 8s linear infinite;
+}
+
+body {
+  height: 100vh;
+  background-color: rgb(174, 24, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@keyframes colorSpin {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+.annonce {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  font-size: 2rem;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 10px;
+  animation: slideDown 0.5s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(150px);
+    opacity: 1;
+  }
+}
+body {
+  margin: 0;
+}
+
+.controls {
+  padding: 20px;
+  z-index: 1000;
+}
+.controls #restart {
+  padding: 10px;
+  background-color: rgb(180, 130, 238);
+  list-style-type: none;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: -4px 3px 1px 1px rgba(0, 0, 0, 0.4392156863);
+}
+.controls #restart:hover {
+  background-color: rgba(180, 130, 238, 0.685);
+  color: white;
+}
+.controls #restart:active {
+  background-color: rgba(0, 0, 0, 0.548);
+  box-shadow: 0px;
+}
+
+.score {
+  display: flex;
+  gap: 1rem;
+}
+.score ul {
+  display: grid;
+  justify-items: center;
+  list-style-type: none;
+  padding: 0;
+  gap: 1rem;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 1rem;
+  border-radius: 16px;
+  box-shadow: -6px 11px 1px 1px rgba(0, 0, 0, 0.6);
+}
+
+#popup-overlay {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  right: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+#popup-overlay.open {
+  display: flex !important;
+}
+
+#popup-content {
+  min-width: 600px;
+  width: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 16px;
+  position: relative;
+}
+#popup-content span {
+  padding-right: 10px;
+}
+#popup-content h3 {
+  margin: 0;
+}
+
+.popup-exit {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.7);
+  transition: transform 0.4s ease-in;
+}
+.popup-exit:hover {
+  font-size: 1.1rem;
+}/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <section class="page1">
+        <section id="regles-poulet" >
+  <h2>🐔 Règles du jeu : Le Poulet Déplumé</h2>
+  <p><strong>Objectif :</strong> Le joueur 2 doit deviner le mot secret choisi par le joueur 1 avant que notre pauvre poulet ne perde toutes ses plumes !</p>
+
+  <h3>👥 Mise en place :</h3>
+  <ul>
+    <li>Le joueur 1 entre un mot secret dans un champ prévu à cet effet (le mot reste caché).</li>
+    <li>Le mot s’affiche sous forme de tirets (ex : <code>_ _ _ _</code>).</li>
+    <li>Un poulet tout fier de ses plumes attend sagement à l’écran.</li>
+  </ul>
+
+  <h3>🕹️ Déroulement :</h3>
+  <ul>
+    <li>Le joueur 2 propose une lettre à chaque tour.</li>
+    <li>Si la lettre est bonne, elle est révélée dans le mot.</li>
+    <li>Si elle est mauvaise, notre pauvre poulet perd une plume (animation ou image modifiée).</li>
+    <li>Le joueur gagne s’il découvre le mot avant que le poulet ne soit complètement à poil !</li>
+    <li>Il perd si toutes les plumes tombent avant la fin du mot (généralement après 6 à 8 erreurs).</li>
+  </ul>
+
+</section>
+
+    <div class="container-title">
+        <h1> LE DÉPLUMER ! </h1>
+        <div class="arrow-title"></div>
+        <div class="logochicken"><img src="./style/img/ChickenStart.png" alt="Chicken" srcset=""><img src="./style/img/plume.jpg" alt="" srcset=""></div>
+
+    </div>
+    <div class="container-entervalue">
+<div class="player1"><h2>Player 1</h2></div>
+<h3>Veuillez rentrer un mot à deviner</h3>
+<input type="text">
+<button>Start</button>
+</div>
+</section>
+
+    <script src="./js.js"></script>
+</body>
+</html>
