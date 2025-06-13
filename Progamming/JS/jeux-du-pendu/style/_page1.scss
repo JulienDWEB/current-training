@@ -2,22 +2,31 @@
     margin: 0;
     padding: 0;
 }
-
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #feda6d;
+}
 
 .page1 {
+    margin: 20px;
     display: flex;
     flex-direction: column;
-align-items: flex-start;
+align-items: center;
     justify-content: center;
     position: relative;
-    height: 100vh;
+    max-height: 800px;
+    max-width: 1200px;
 background-color: #FFBE45;
+box-shadow: 0px 0px 13px 0px;
 .container-title {
-    position: relative;
+    position: absolute;
     display: flex;
-    position: fixed;
-left: 70%;
-top: 2%;
+    
+right: -50%;
+top: 10px;
     justify-content: center;
     align-items: center;
     width: 421px ;
@@ -45,8 +54,7 @@ clip-path: polygon(0 0, 100% 0, 115% 0%, 50% 80%, -14% 0%);
 } 
 .container-entervalue {
     display: grid;
-    gap: 10px
-    ;
+    gap: 10px;
     padding: 10px;
     
     .player1 {
@@ -59,7 +67,7 @@ clip-path: polygon(0 0, 100% 0, 115% 0%, 50% 80%, -14% 0%);
         width: 140px;
         height: 30px;
         box-shadow: 0px 6px 0px 0px #00000035;
-
+        margin: 0 auto;
         
     }
     input {
@@ -80,6 +88,18 @@ box-shadow: 0px 6px 0px 0px #00000085;
             font-size: 1.1rem;
         }
     }
+    span {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: black;
+}
+span:nth-last-child {
+    width: 10px;
+    height: 10px;
+    background-color: red;
+}
 }
 .logochicken {
 position: absolute;
@@ -95,10 +115,41 @@ position: absolute;
     background-position: center;
     background-size: contain
     }
+
 }   
 #regles-poulet {
     max-width: 600px; 
     font-family: sans-serif; 
     line-height: 1.6;
     padding: 20px;
+    ul {
+        list-style-type: none;
+        li {
+            padding: 5px;
+        }
+    }
+}
+
+
+
+
+@media (max-width: 800px) {
+
+.container-title {
+
+   display: none;
+   
+}
+.logochicken {
+    display: none;
+    max-height: 300px;
+    max-width: 300px;
+     right: -95px;
+        top: 100px;
+    img {
+       
+           max-height: 300px;
+    max-width: 300px;
+    }
+}
 }
