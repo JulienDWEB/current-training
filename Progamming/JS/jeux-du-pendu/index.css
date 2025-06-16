@@ -93,11 +93,6 @@ body {
   border-radius: 50%;
   background-color: black;
 }
-.container-entervalue span:nth-last-child {
-  width: 10px;
-  height: 10px;
-  background-color: red;
-}
 
 .logochicken {
   position: absolute;

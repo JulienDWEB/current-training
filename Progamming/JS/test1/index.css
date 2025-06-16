@@ -1,0 +1,64 @@
+@charset "UTF-8";
+body {
+  height: 100vh;
+  position: relative;
+}
+
+span {
+  width: 70px;
+  height: 100px;
+  border-radius: 50%;
+  border: 5px solid black;
+  transform-style: preserve-3d;
+  transform: perspective(500px) rotateX(320deg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  animation: RotatePerspective 3s infinite ease-in-out;
+  transition: all 1s;
+  mix-blend-mode: difference;
+}
+
+span:nth-child(1) {
+  top: 45%;
+  width: 70px;
+  height: 100px;
+}
+
+span:nth-child(2) {
+  top: 40%;
+  width: 70px;
+  height: 100px;
+  transform: translateX(500px);
+}
+
+span:nth-child(4) {
+  top: 35%;
+  width: 70px;
+  height: 100px;
+  transform: translateX(500px);
+}
+
+span:nth-child(5) {
+  top: 30%;
+  width: 70px;
+  height: 100px;
+  transform: translateX(500px);
+}
+
+span:nth-child(6) {
+  top: 25%;
+  width: 70px;
+  height: 100px;
+  transform: translateX(500px);
+}
+
+/* Animation à placer en dehors */
+@keyframes RotatePerspective {
+  from {
+    transform: perspective(100px) rotateX(0deg);
+  }
+  to {
+    transform: perspective(800px) rotateX(360deg);
+  }
+}/*# sourceMappingURL=index.css.map */
