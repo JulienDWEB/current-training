@@ -76,7 +76,11 @@ if (victoire) {
         window.location.reload(); // Ou redirige vers une page de victoire
     }, 300);
 }
-
+if (tentative === 0) {
+    alert("Vous avez perdu !")
+    return window.location.href = "/page1/index1.html"
+  
+}
 
 
 });
