@@ -66,9 +66,7 @@ fetch("https://rickandmortyapi.com/api/character/")
 .then((data) => {
     console.log(data.info.pages
     );
-    
-    cardPerso.textContent = `${numberOfCards} personnages trouvés`;
-   
+       
    btnreload.addEventListener("click", () => { 
     cardPerso.textContent = ""; // Réinitialiser le contenu des cartes
     for (let i = 0; i < numberOfCards; i++) {
